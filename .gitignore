@@ -1,0 +1,29 @@
+# Python and test caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+
+# OS/editor noise
+.DS_Store
+
+# Generated or mutable SDLC state
+/.knowledge-sdlc/runtime/
+/ai_docs/
+/candidate-workspace/
+/sdlc.config.toml
+
+# Build and release outputs
+build/
+dist/
+release/
+*.egg-info/
+*.zip
+*.tar.gz
+*.git.bundle
+
+# Local verification workspaces and logs
+.clean-install-*/
+.extracted-verification-*/
+verification-logs/
+*.log
