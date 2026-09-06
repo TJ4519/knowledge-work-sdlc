@@ -87,17 +87,106 @@ Six included recipe families cover these common shapes without hard-coding a
 profession. The main agent adapts the nearest recipe and records the resulting
 execution plan. Recipes guide judgement; they are not executable state machines.
 
-## How it works
+## Cold-start dependency chart
+
+Read this console from `[00]` to `[07]`. `-->` marks activation or control,
+`==>` marks durable state, and `..>` marks a dependency included only when the
+commission earns it.
 
 ```text
-natural-language commission
-→ concierge preserves wording and settles enough meaning to act
-→ the same main agent composes and owns one run
-→ skills handle interactive work; specialists handle bounded fresh work
-→ named artefacts carry evidence and outputs between contexts
-→ challenge and human gates appear only when consequence earns them
-→ index + run record + live outputs make continuation recoverable
++============================================================================+
+| KNOWLEDGE WORK SDLC // COLD-BOOT TO FRESH-SESSION RESUME                   |
++============================================================================+
+
+  CONCEPTUAL CONSOLE                 ACTUAL SYSTEM SURFACE
+  ------------------                 ---------------------
+  HOST / CPU + I-O                   model, tools, files, approvals
+  BOOT INSTRUCTIONS                  AGENTS.md
+  PROGRAM LIBRARY                    skills, recipes, specialist definitions
+  WORK DISK                          ai_docs/ initiative state and artefacts
+  RUNNING EXECUTIVE                  the host's main agent
+
+[00] CANONICAL METHOD SOURCE
+     AGENTS.md + .knowledge-sdlc/ + mechanical installer
+          |
+          |  ./install.sh /absolute/path/to/client-repository
+          v
+[01] CLIENT REPOSITORY / INSTALLED METHOD
+     +-- AGENTS.md ---------------- standing operating contract
+     +-- .agents/skills/ ---------- host-discoverable procedures
+     +-- .knowledge-sdlc/
+     |   +-- agents/ -------------- bounded fresh-worker definitions
+     |   +-- recipes/ ------------- composition defaults
+     |   +-- templates/ ----------- shapes for earned artefacts
+     |   `-- install.json --------- managed-file ownership
+     `-- ai_docs/initiatives/index.md -- neutral identity/status pointer
+          |
+          |  open this repository in a compatible agent host
+          v
+[02] HOST BOOT
+     host supplies model + execution + tools + permissions
+     host discovers AGENTS.md + skills; no SDLC server is launched
+          |
+          |  user states one ordinary professional commission
+          v
+[03] MAIN AGENT :: CONCIERGE POSTURE
+     reads the compact initiative index first
+     preserves exact wording ==> meaning-r1.md
+     creates initiative ID + run ID ==> open run record
+          |
+          |  accepted meaning is settled enough to act
+          v
++----------------------------------------------------------------------------+
+| [04] MAIN AGENT :: ORCHESTRATOR POSTURE                                    |
+|                                                                            |
+| REQUIRED STATE     meaning revision + open run record                      |
+| COMPOSITION INPUT  nearest recipe + confirmed context + admitted methods  |
+| RECORDED CONTROL   execution plan, rationale, gates, next legal action     |
+|                                                                            |
+|      +--> [INLINE SKILL] -----------------------------------+               |
+|      +..> [FRESH BOUNDED SPECIALIST] -----------------------+               |
+|      +..> [HOST TOOL / EXCEL / MCP / CLI AFTER PREFLIGHT] --+==> ARTEFACTS |
+|      `..> [HUMAN DECISION FOR CONSEQUENTIAL AUTHORITY] -----+               |
+|                                                                            |
+| A specialist may produce its named output; it cannot route, spawn,         |
+| reconcile, or approve the run. Those obligations return here.              |
++----------------------------------------------------------------------------+
+          |
+          |  every material stage follows one save order
+          v
+[05] DURABLE SAVE ORDER
+     semantic output ==> open run record ==> compact initiative index
+          |
+          v
+[06] USER RETURN
+     useful work product or decision-grade blocker
+     + material limitation + next action + run status
+          |
+          |  the conversation may end; semantic state remains
+          v
+[07] FRESH SESSION / REPLACEMENT MAIN AGENT
+     index --> user confirms initiative --> kw-prime
+           --> active run + meaning + decisions + named live outputs
+           --> kw-orchestration resumes the same run at [04]
+
+     NO TRANSCRIPT REPLAY.  NO SECOND MANAGER.  NO PARALLEL CONTROL PLANE.
 ```
+
+The central orchestrator therefore depends on four things: a host that can
+execute, the installed contract that gives the main agent its posture, one
+initiative's durable meaning and run state, and the named artefacts that carry
+work back from tools or specialists. Recipes guide composition and capabilities
+enable operations, but neither can seize orchestration authority.
+
+To audit a run, start at `[04]` and walk backwards: without the host there is no
+agent; without the installed contract there is no Knowledge Work behaviour;
+without meaning and an open run record there is no governed plan. Then walk
+forwards: without a named output there is no handoff, and without the save order
+there is no reliable fresh-session continuation.
+
+This is a static contract trace, not proof that every host activates it. A host
+must actually discover the installed instructions and skills, and any required
+tool or fresh-specialist capability must be observed for that run.
 
 One accepted intent creates an **initiative**. One composed attempt or follow-on
 pass creates a **run**.
