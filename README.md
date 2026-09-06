@@ -228,8 +228,9 @@ instructions, client skills, and all `ai_docs/` initiative state remain
 client-owned.
 
 The plugin archive contains generated Codex and Claude manifests, skills,
-specialist definitions, method resources, documentation, and an example expert
-extension. It contains no Python runtime, credentials, connectors, or hooks.
+specialist definitions, method resources, and documentation. It contains no
+profession-specific method bundle, Python runtime, credentials, connectors, or
+hooks.
 
 See [Installation and provider boundaries](docs/guides/installation-and-providers.md)
 for provider-specific routes, upgrade recovery, and capability limits.
