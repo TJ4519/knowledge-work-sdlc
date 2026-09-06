@@ -1,9 +1,11 @@
 # Knowledge Work SDLC
 
-**A file-native orchestration harness for defensible professional work.**
+**One accountable agent across many durable initiatives—for defensible
+professional work.**
 
-Knowledge Work SDLC helps an agent turn an ordinary commission into work that
-another capable professional can inspect, correct, and continue.
+Knowledge Work SDLC gives a professional lead one main agent through which to
+commission and continue multiple bodies of work. It turns an ordinary request
+into a result another capable professional can inspect, correct, and continue.
 
 It adds a compact operating contract, on-demand skills, bounded specialist
 roles, readable recipes, durable artefact templates, and safe distribution.
@@ -11,6 +13,36 @@ The host agent remains the only orchestrator.
 
 It does not add a workflow server, a case-management layer, a model router, or
 a hidden memory system.
+
+## One agent, many initiatives
+
+Most agent interfaces organise work around conversations. As the work grows,
+the user has to remember which thread contains which decision, choose which
+agent to ask, repeat context, and reconcile competing answers. The user becomes
+the router, memory system, and integration layer.
+
+Knowledge Work SDLC organises work around the undertaking instead. The user
+states the desired outcome to one accountable main agent. That agent identifies
+or creates the relevant initiative, reconstructs its current state, composes the
+next run, and brings in bounded fresh specialists only when the work warrants
+them. The main agent remains responsible for reconciliation and the result.
+
+A session is where an agent happens to execute; an **initiative** is the durable
+body of work created by one accepted intent. Sessions and specialists may come
+and go while the initiative preserves its meaning, evidence, outputs,
+decisions, limitations, and next action. Multiple initiatives can therefore
+coexist without becoming one giant context or a collection of disconnected
+chats.
+
+```text
+centralise accountability     one main agent owns the undertaking
+partition semantic state      each initiative retains its own history
+decentralise bounded work      fresh specialists contribute when useful
+carry work through artefacts  sessions are disposable; meaning is not
+```
+
+The commissioner experiences one continuing relationship with the work, not an
+agent topology they must operate.
 
 ## Quick start
 
