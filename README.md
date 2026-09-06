@@ -1,48 +1,62 @@
 # Knowledge Work SDLC
 
-**One accountable agent across many durable initiatives—for defensible
-professional work.**
+**One agent to talk to. Work that survives the conversation.**
 
-Knowledge Work SDLC gives a professional lead one main agent through which to
-commission and continue multiple bodies of work. It turns an ordinary request
-into a result another capable professional can inspect, correct, and continue.
+Your work is not a pile of AI chats. It is a set of ongoing decisions,
+investigations, documents, and models. Those undertakings outlive whichever
+conversation happened to start them.
 
-It adds a compact operating contract, on-demand skills, bounded specialist
-roles, readable recipes, durable artefact templates, and safe distribution.
-The host agent remains the only orchestrator.
+Most AI tools make you carry that continuity yourself. As conversations and
+specialist agents multiply, you become the person asking:
 
-It does not add a workflow server, a case-management layer, a model router, or
-a hidden memory system.
+- “Which chat has the latest version?”
+- “Which agent did I tell about that constraint?”
+- “Do I need to paste the sources and explain the work again?”
+- “Which answer is current when two agents disagree?”
+
+Knowledge Work SDLC removes that coordination job. Tell one main agent what you
+need in ordinary language. It restores the right work, brings in specialist
+help when useful, reconciles the result, and leaves the work ready to continue.
+
+**You do not operate the SDLC. The agent does.**
 
 ## One agent, many initiatives
 
-Most agent interfaces organise work around conversations. As the work grows,
-the user has to remember which thread contains which decision, choose which
-agent to ask, repeat context, and reconcile competing answers. The user becomes
-the router, memory system, and integration layer.
+Imagine using the same agent across a working week:
 
-Knowledge Work SDLC organises work around the undertaking instead. The user
-states the desired outcome to one accountable main agent. That agent identifies
-or creates the relevant initiative, reconstructs its current state, composes the
-next run, and brings in bounded fresh specialists only when the work warrants
-them. The main agent remains responsible for reconciliation and the result.
+**Monday:** “Work out whether the supplier delay threatens our launch.”
 
-A session is where an agent happens to execute; an **initiative** is the durable
-body of work created by one accepted intent. Sessions and specialists may come
-and go while the initiative preserves its meaning, evidence, outputs,
-decisions, limitations, and next action. Multiple initiatives can therefore
-coexist without becoming one giant context or a collection of disconnected
-chats.
+**Tuesday:** “Review whether the renewal weakness is temporary.”
+
+**Friday:** “Continue the launch-risk work with the new supplier schedule.”
+
+The first two requests become separate **initiatives**—durable bodies of work
+created by accepted intents. On Friday, the main agent reloads only the
+launch-risk initiative and continues from its evidence, decisions, and outputs.
+
+The user does not find the old chat, choose a specialist, or reconstruct the
+brief. Sessions and specialists can come and go because the initiative—not the
+conversation—preserves what the work means and where it has reached.
+
+If the launch analysis needs one contract checked, the main agent can ask a
+fresh specialist. The finding returns to the main agent instead of becoming
+another conversation the user must manage.
 
 ```text
-centralise accountability     one main agent owns the undertaking
-partition semantic state      each initiative retains its own history
-decentralise bounded work      fresh specialists contribute when useful
-carry work through artefacts  sessions are disposable; meaning is not
+you
+ `-- one accountable main agent
+      |-- launch-risk initiative
+      |-- renewal initiative
+      `-- fresh specialist work when useful
 ```
 
-The commissioner experiences one continuing relationship with the work, not an
-agent topology they must operate.
+The harness centralises responsibility, not thought. The main agent can
+distribute bounded work, but specialists return their contribution instead of
+becoming more relationships for the user to manage.
+
+Behind that experience, instructions guide the agent and durable files carry
+the work. The repository adds no workflow server, case-management layer, model
+router, or hidden memory system.
 
 ## Quick start
 
@@ -87,7 +101,25 @@ Six included recipe families cover these common shapes without hard-coding a
 profession. The main agent adapts the nearest recipe and records the resulting
 execution plan. Recipes guide judgement; they are not executable state machines.
 
-## Cold-start dependency chart
+## How it works
+
+```text
+say what you need
+→ the main agent identifies or creates the right initiative
+→ it composes the work and brings in fresh specialists only when useful
+→ it returns the useful result through the same relationship
+→ it saves the meaning, evidence, decisions, outputs, and next action
+→ a fresh session can continue without a reconstructed chat
+```
+
+The simple journey above is the product. The full chart below exposes the
+mechanism for readers who want to audit how installation, orchestration,
+artefact handoff, and fresh-session recovery connect.
+
+<details>
+<summary>Open the full cold-start dependency chart</summary>
+
+<br>
 
 Read this console from `[00]` to `[07]`. `-->` marks activation or control,
 `==>` marks durable state, and `..>` marks a dependency included only when the
@@ -187,6 +219,8 @@ there is no reliable fresh-session continuation.
 This is a static contract trace, not proof that every host activates it. A host
 must actually discover the installed instructions and skills, and any required
 tool or fresh-specialist capability must be observed for that run.
+
+</details>
 
 One accepted intent creates an **initiative**. One composed attempt or follow-on
 pass creates a **run**.
