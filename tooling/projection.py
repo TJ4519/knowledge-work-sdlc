@@ -194,7 +194,6 @@ def _plugin_documentation(root: Path) -> dict[str, bytes]:
     )
     for relative in consumer_docs:
         files[relative] = (root / relative).read_bytes()
-    files.update(_regular_files(root / "examples" / "expert-extensions", root))
     return files
 
 

@@ -160,9 +160,8 @@ explicit import request
 Custody is under
 `ai_docs/methods/extensions/<id>/revisions/<revision>/`. The methods index is an
 opaque discovery view, not operative instruction. Optional provider-native
-installation is a separate action and never selects a method. The sell-side
-bundle under `examples/` demonstrates extension shape without narrowing the
-generic core.
+installation is a separate action and never selects a method. The core ships no
+profession-specific expert method; a lead supplies and governs each extension.
 
 Project context, expert methods, client templates, runtime capabilities, and
 reusable lessons are distinct tailoring surfaces. Project context states
@@ -229,7 +228,6 @@ knowledge-work-sdlc/
   docs/
     README.md  methodology.md  getting-started.md  guides/
   examples/
-    expert-extensions/      lead-owned method example
     manual-exercises/       optional prompt sheets and fixtures
   tooling/
   tests/
@@ -245,11 +243,11 @@ operating-system read-only mount; the install record makes edits to managed
 files visible and requires explicit upgrade handling.
 
 The plugin archive contains generated native skills/agents, provider manifests,
-managed recipe/template resources, user documentation, a licence, and one
-example expert extension. Generated views are deterministic derivatives, not
-independently maintained authorities. Every generated skill and agent states
-the relative path of the one shared resource root; the package does not rely on
-a second copied prompt corpus.
+managed recipe/template resources, user documentation, and a licence. It
+contains no profession-specific expert method. Generated views are deterministic
+derivatives, not independently maintained authorities. Every generated skill
+and agent states the relative path of the one shared resource root; the package
+does not rely on a second copied prompt corpus.
 
 ## Tooling and installation
 

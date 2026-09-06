@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.6.1 — 2026-09-06
+
+- Explain the one-main-agent, many-initiatives product model and its cold-start
+  dependency chain in the public README.
+- Remove the bundled profession-specific extension example from canonical
+  source and generated plugin packages; expert methods remain client-owned
+  inputs.
+
 ## 0.6.0 — 2026-09-03
 
 Initial release.

@@ -3,8 +3,8 @@
 This generated package supplies a file-native professional-work method to
 Codex, Claude Code, and Claude Cowork. It contains skills, bounded specialist
 definitions, readable recipes, durable artefact templates, documentation, and
-one example expert extension. It contains no Python runtime, lifecycle hooks,
-credentials, connectors, or model router.
+no profession-specific method bundle. It contains no Python runtime, lifecycle
+hooks, credentials, connectors, or model router.
 
 ## Install
 

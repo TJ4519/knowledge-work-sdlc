@@ -77,7 +77,7 @@ make validate
 make package
 ```
 
-The output is `dist/knowledge-work-sdlc-harness-v0.6.0.zip` plus a manifest that
+The output is `dist/knowledge-work-sdlc-harness-v0.6.1.zip` plus a manifest that
 binds every packaged path to its SHA-256 and the exact source commit. The
 archive contains no Python or lifecycle hooks. It supplies methods and
 specialists; credentials, connectors, and client files remain host- or
@@ -90,7 +90,7 @@ new process:
 
 ```bash
 mkdir -p /absolute/path/to/knowledge-work-sdlc-plugin
-unzip dist/knowledge-work-sdlc-harness-v0.6.0.zip \
+unzip dist/knowledge-work-sdlc-harness-v0.6.1.zip \
   -d /absolute/path/to/knowledge-work-sdlc-plugin
 claude --plugin-dir /absolute/path/to/knowledge-work-sdlc-plugin
 ```

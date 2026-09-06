@@ -64,8 +64,7 @@ An optional provider-native copy is a separate explicit installation action. It
 does not select the extension for a run, and provider configuration never
 becomes the portable authority.
 
-The shipped
-[sell-side research example](../../examples/expert-extensions/sell-side-research/extension.md)
-shows the boundary: a lead-owned bundle may adapt vocabulary and method cues,
-but it cannot change the generic initiative/run grammar, manufacture evidence,
-or acquire protected-write and human authority.
+A lead-owned bundle may adapt professional vocabulary and method cues, but it
+cannot change the generic initiative/run grammar, manufacture evidence, or
+acquire protected-write and human authority. The core ships no profession-
+specific method bundle; the lead supplies the method to be curated.
