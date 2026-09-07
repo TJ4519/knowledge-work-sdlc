@@ -1,66 +1,45 @@
 # Knowledge Work SDLC
 
-**One agent to talk to. Work that survives the conversation.**
+![One main agent coordinating several durable initiatives](docs/assets/knowledge-work-sdlc-hero.jpg)
 
-Your work is not a pile of AI chats. It is a set of ongoing decisions,
-investigations, documents, and models. Those undertakings outlive whichever
-conversation happened to start them.
+Knowledge Work SDLC is an installable plugin for agent applications and a
+project skill set for repository-based agents. It gives research, analysis,
+documents, and models a durable working life.
 
-Most AI tools make you carry that continuity yourself. As conversations and
-specialist agents multiply, you become the person asking:
+The method runs inside a compatible host and works beside the skills,
+templates, and tools a professional team already uses.
 
-- “Which chat has the latest version?”
-- “Which agent did I tell about that constraint?”
-- “Do I need to paste the sources and explain the work again?”
-- “Which answer is current when two agents disagree?”
+The host supplies the model, execution, tools, and permissions. The harness
+supplies a method for commissioning work, producing it, checking it, resuming
+it, and learning from correction without turning old experience into new fact.
 
-Knowledge Work SDLC removes that coordination job. Tell one main agent what you
-need in ordinary language. It restores the right work, brings in specialist
-help when useful, reconciles the result, and leaves the work ready to continue.
+Install it into a repository or load the generated plugin package. State the
+work in ordinary language. One main agent remains answerable for the
+undertaking. Fresh specialists return their part without becoming new
+relationships for the user to manage.
 
-**You do not operate the SDLC. The agent does.**
+## Contents
 
-## One agent, many initiatives
+- [Install](#install)
+- [First commission](#first-commission)
+- [Why knowledge work needs a life cycle](#why-knowledge-work-needs-a-life-cycle)
+- [The life cycle](#the-life-cycle)
+- [One main agent, many initiatives](#one-main-agent-many-initiatives)
+- [Architecture](#architecture)
+- [Bring your own practice](#bring-your-own-practice)
+- [Continuity, memory, and feedback](#continuity-memory-and-feedback)
+- [Distribution and provider boundaries](#distribution-and-provider-boundaries)
+- [Repository map](#repository-map)
+- [Documentation](#documentation)
+- [Validation and claim limits](#validation-and-claim-limits)
+- [Intellectual background](#intellectual-background)
+- [Contributing](#contributing)
+- [Licence](#licence)
 
-Imagine using the same agent across a working week:
+## Install
 
-**Monday:** “Work out whether the supplier delay threatens our launch.”
-
-**Tuesday:** “Review whether the renewal weakness is temporary.”
-
-**Friday:** “Continue the launch-risk work with the new supplier schedule.”
-
-The first two requests become separate **initiatives**—durable bodies of work
-created by accepted intents. On Friday, the main agent reloads only the
-launch-risk initiative and continues from its evidence, decisions, and outputs.
-
-The user does not find the old chat, choose a specialist, or reconstruct the
-brief. Sessions and specialists can come and go because the initiative—not the
-conversation—preserves what the work means and where it has reached.
-
-If the launch analysis needs one contract checked, the main agent can ask a
-fresh specialist. The finding returns to the main agent instead of becoming
-another conversation the user must manage.
-
-```text
-you
- `-- one accountable main agent
-      |-- launch-risk initiative
-      |-- renewal initiative
-      `-- fresh specialist work when useful
-```
-
-The harness centralises responsibility, not thought. The main agent can
-distribute bounded work, but specialists return their contribution instead of
-becoming more relationships for the user to manage.
-
-Behind that experience, instructions guide the agent and durable files carry
-the work. The repository adds no workflow server, case-management layer, model
-router, or hidden memory system.
-
-## Quick start
-
-Prerequisites: Git, Python 3.10 or newer, and an existing client repository.
+The repository route needs Git, Python 3.10 or newer, and an existing client
+repository.
 
 ```bash
 git clone https://github.com/TJ4519/knowledge-work-sdlc.git
@@ -68,251 +47,454 @@ cd knowledge-work-sdlc
 ./install.sh /absolute/path/to/client-repository
 ```
 
-Open the client repository in a new Codex task and state the work normally:
+Open the client repository in a new agent task after installation. The
+installer preserves existing project instructions and skills. It adds the
+Knowledge Work operating contract, discoverable procedures, and method files.
+
+Codex, Claude Code, and Claude Cowork can also load a generated plugin archive.
+The [latest release](https://github.com/TJ4519/knowledge-work-sdlc/releases/latest)
+contains the archive, which needs no Python at run time. See
+[Installation and provider boundaries](docs/guides/installation-and-providers.md)
+for the exact route supported by each host.
+
+## First commission
+
+A commission is the piece of work entrusted to the agent, together with its
+purpose and intended use.
+
+Address the agent as you would address a capable colleague:
 
 ```text
-Compare the two source packs, explain which interpretation is supportable,
-and give me a one-page decision brief that preserves the unresolved disagreement.
+Compare the two source packs. Tell me which explanation is better supported,
+where the evidence remains weak, and what would change the conclusion. Give me
+a one-page decision brief.
 ```
 
-There is no workflow command to learn. The installed `AGENTS.md` block supplies
-standing behaviour, and `.agents/skills/` supplies procedures when the work
-calls for them.
+No stage names or workflow commands are required. The main agent preserves the
+commission, inspects the available material, settles the meaning that matters,
+and composes a proportionate route through the installed methods.
 
-The harness creates durable initiative state behind the useful result. A fresh
-agent can recover the accepted meaning, current run, evidence, outputs,
-limitations, and next legal action without relying on the old conversation.
+The visible result remains the object you asked for. The files written behind
+it let another capable agent inspect the evidence, correct the reasoning, or
+continue the same undertaking after the conversation has ended.
 
-See [Getting started](docs/getting-started.md) for a complete first commission,
-material correction, and fresh-task continuation.
+See [Getting started](docs/getting-started.md) for one complete journey through
+installation, production, correction, and continuation in a fresh task.
 
-## What it adds
+## Why knowledge work needs a life cycle
 
-| Need | Harness contribution |
+Software teams do not mistake a plausible code response for a finished system.
+They preserve requirements, control dependencies, inspect changes, run checks,
+keep versions, and retain a route back when a release goes wrong.
+
+Knowledge work seldom receives equal discipline. A brief can read well while
+using the wrong definition. A spreadsheet can keep its appearance after a
+formula breaks.
+
+A recommendation can outrun its sources. A decisive correction can disappear
+with the chat in which it was given.
+
+AI widens the gap. A lead can correct one definition on Tuesday, then receive a
+polished Friday answer built on the old definition. The later agent may never
+see the correction, its source, or the decision it changed.
+
+[The New SDLC With Vibe Coding](https://www.kaggle.com/whitepaper-the-new-SDLC-with-vibe-coding)
+describes coding agents moving human effort away from syntax and towards
+intent, architecture, and judgment.
+
+Knowledge work begins on that side of the boundary. Its raw material is already
+language.
+
+Faster drafting therefore leaves the difficult work in place. Someone must
+settle the commission, choose what deserves reliance, preserve the reasoning,
+and decide what may act on the world.
+
+The letters **SDLC** are used in that sense. A memo is not software, and a
+professional judgment cannot be compiled. Both still need a life before and
+after generation: intent, dependencies, production, challenge, release,
+maintenance, and recovery.
+
+| Software discipline | Knowledge-work counterpart |
 |---|---|
-| Research or decision brief | Source custody, rival explanations, an evidence-bearing candidate, and proportionate challenge |
-| Source interpretation | Exact definitions, periods, scope, conflicts, and a correctable reading |
-| Independent challenge | A fresh bounded attempt to falsify a candidate without inheriting its producer's narrative |
-| Protected artefact update | Candidate-copy discipline, editable and protected scope, capability proof, conformance checks, and human promotion |
-| Material correction | Superseded meaning, traced dependants, targeted re-production, and visible residual limitations |
-| Method adaptation | A candidate method improvement with evidence, a falsifier, and a rollback condition |
+| Requirements | The exact commission and a visible, correctable interpretation |
+| Source and dependencies | Evidence, professional methods, templates, and live capabilities |
+| Build | A candidate document, model, analysis, or decision product |
+| Test and review | Provenance, native-object checks, and independent challenge when consequence warrants it |
+| Release | Explicit human disposition and protected promotion |
+| Versioning and maintenance | Initiative history, corrected successors, continuation, and governed learning |
 
-Six included recipe families cover these common shapes without hard-coding a
-profession. The main agent adapts the nearest recipe and records the resulting
-execution plan. Recipes guide judgement; they are not executable state machines.
+The analogy supplies discipline rather than certainty. Code often has an
+executable specification.
 
-## How it works
+Knowledge work more often has incomplete evidence, contested meanings, and
+decisions whose authority belongs to a person. The harness keeps those
+differences visible.
+
+## The life cycle
+
+One accepted intent creates an **initiative**: the durable identity of the
+undertaking. One composed attempt or follow-on pass creates a **run** inside
+that initiative.
+
+1. **State the work.** The user gives an ordinary professional commission. The
+   agent preserves the wording before it starts to improve or interpret it.
+2. **Settle the meaning.** The agent identifies the desired object, audience,
+   use, scope, material assumptions, and rival readings. It asks only when an
+   unresolved point could change the route or result.
+3. **Compose the run.** The main agent adapts the nearest recipe. It records the
+   methods included, the methods pruned, the required inputs, and each gate.
+4. **Bind evidence and capability.** Sources remain distinguishable from
+   inference. A tool or connector is trusted only for the exact operation that
+   the eventual worker can harmlessly prove.
+5. **Produce the candidate.** The main agent may work directly or commission a
+   bounded specialist. Each worker receives named inputs and returns a named
+   artefact rather than a conversational recap.
+6. **Challenge and decide.** Consequential work receives a fresh challenge when
+   the host can supply one. A human retains authority over protected changes,
+   admitted methods, and material promotion.
+7. **Save and continue.** Semantic artefacts are written first, the open run
+   record second, and the compact initiative index last. A fresh task can then
+   reconstruct only the relevant work.
+8. **Correct and learn.** A correction repairs the present work before any
+   reusable lesson is proposed. Later influence requires a separate, reversible
+   human decision and a bounded use whose effect can be inspected.
 
 ```text
-say what you need
-→ the main agent identifies or creates the right initiative
-→ it composes the work and brings in fresh specialists only when useful
-→ it returns the useful result through the same relationship
-→ it saves the meaning, evidence, decisions, outputs, and next action
-→ a fresh session can continue without a reconstructed chat
+ordinary commission
+        |
+        v
+correctable meaning --> evidence and capability --> composed run
+                                                    |
+                                                    v
+                                  candidate work product
+                                                    |
+                                      challenge when earned
+                                                    |
+                                                    v
+                                      human disposition
+                                                    |
+                         +--------------------------+-------------------+
+                         |                                              |
+                         v                                              v
+                durable continuation                       governed correction
 ```
 
-The simple journey above is the product. The full chart below exposes the
-mechanism for readers who want to audit how installation, orchestration,
-artefact handoff, and fresh-session recovery connect.
+Six included recipe families cover professional research, source
+interpretation, independent challenge, protected-artifact updates,
+knowledge-work correction, and method adaptation.
 
-<details>
-<summary>Open the full cold-start dependency chart</summary>
+The recipes are starting routes, not a closed vocabulary of professions or an
+executable state machine.
 
-<br>
+The return appears as the work accumulates. A later run can reuse confirmed
+project context, admitted methods, evidence paths, and exact decisions without
+asking the user to rebuild a prompt or trust an old conversational summary.
 
-Read this console from `[00]` to `[07]`. `-->` marks activation or control,
+## One main agent, many initiatives
+
+A person usually delegates an outcome to one accountable colleague. A swarm
+quietly reverses that arrangement when every specialist becomes another thread
+whose brief, status, and disagreements the user must carry.
+
+Knowledge Work SDLC preserves that relationship. The agent first acts as a
+concierge: it works out which undertaking the request belongs to and what the
+commission means. It then acts as the orchestrator for the accepted run.
+
+Several initiatives can coexist without sharing their substance. The compact
+index reveals their identity and status; each initiative retains its own
+meaning, evidence, decisions, and outputs.
+
+```text
+you
+ `-- one accountable main agent
+      |-- supplier-risk initiative
+      |-- renewal initiative
+      |-- policy-redraft initiative
+      `-- temporary specialist work when one run earns it
+```
+
+Specialists add cognition, tool access, or an independent reading. They do not
+become new managers. The main agent alone composes the run, dispatches work,
+reconciles disagreement, records the state, and returns to the user.
+
+Central orchestration therefore removes a human coordination burden. Durable
+initiatives prevent that convenience from becoming one enormous conversation
+or one undifferentiated memory.
+
+## Architecture
+
+The diagram follows a clean installation from canonical source to a useful
+result and then to a fresh-session continuation. `-->` marks control,
 `==>` marks durable state, and `..>` marks a dependency included only when the
 commission earns it.
 
 ```text
 +============================================================================+
-| KNOWLEDGE WORK SDLC // COLD-BOOT TO FRESH-SESSION RESUME                   |
+| KNOWLEDGE WORK SDLC // SOURCE, RUNTIME, WORK, AND CONTINUATION              |
 +============================================================================+
 
-  CONCEPTUAL CONSOLE                 ACTUAL SYSTEM SURFACE
-  ------------------                 ---------------------
-  HOST / CPU + I-O                   model, tools, files, approvals
-  BOOT INSTRUCTIONS                  AGENTS.md
-  PROGRAM LIBRARY                    skills, recipes, specialist definitions
-  WORK DISK                          ai_docs/ initiative state and artefacts
-  RUNNING EXECUTIVE                  the host's main agent
-
 [00] CANONICAL METHOD SOURCE
-     AGENTS.md + .knowledge-sdlc/ + mechanical installer
+     AGENTS.md + skills + recipes + specialist definitions + templates
           |
-          |  ./install.sh /absolute/path/to/client-repository
+          |  repository install or generated plugin package
           v
-[01] CLIENT REPOSITORY / INSTALLED METHOD
-     +-- AGENTS.md ---------------- standing operating contract
-     +-- .agents/skills/ ---------- host-discoverable procedures
-     +-- .knowledge-sdlc/
-     |   +-- agents/ -------------- bounded fresh-worker definitions
-     |   +-- recipes/ ------------- composition defaults
-     |   +-- templates/ ----------- shapes for earned artefacts
-     |   `-- install.json --------- managed-file ownership
-     `-- ai_docs/initiatives/index.md -- neutral identity/status pointer
-          |
-          |  open this repository in a compatible agent host
-          v
-[02] HOST BOOT
+[01] COMPATIBLE AGENT HOST
      host supplies model + execution + tools + permissions
-     host discovers AGENTS.md + skills; no SDLC server is launched
+     harness supplies standing rules + callable professional procedures
           |
-          |  user states one ordinary professional commission
+          |  one ordinary-language commission
           v
-[03] MAIN AGENT :: CONCIERGE POSTURE
-     reads the compact initiative index first
-     preserves exact wording ==> meaning-r1.md
-     creates initiative ID + run ID ==> open run record
+[02] MAIN AGENT :: CONCIERGE
+     compact index distinguishes new work from continuation
+     exact request ==> meaning-r1.md
+     accepted intent ==> initiative ID + run ID + open run record
           |
-          |  accepted meaning is settled enough to act
+          |  meaning is settled enough to act
           v
 +----------------------------------------------------------------------------+
-| [04] MAIN AGENT :: ORCHESTRATOR POSTURE                                    |
+| [03] MAIN AGENT :: ORCHESTRATOR                                            |
 |                                                                            |
-| REQUIRED STATE     meaning revision + open run record                      |
-| COMPOSITION INPUT  nearest recipe + confirmed context + admitted methods  |
-| RECORDED CONTROL   execution plan, rationale, gates, next legal action     |
+|  INPUTS     current meaning + confirmed context + evidence + bound methods |
+|  PLAN       nearest recipe adapted to this commission and recorded in run  |
+|  AUTHORITY  compose, dispatch, retry, replan, gate, reconcile, save         |
 |                                                                            |
-|      +--> [INLINE SKILL] -----------------------------------+               |
+|      +--> [INLINE SKILL IN MAIN CONTEXT] -------------------+               |
 |      +..> [FRESH BOUNDED SPECIALIST] -----------------------+               |
-|      +..> [HOST TOOL / EXCEL / MCP / CLI AFTER PREFLIGHT] --+==> ARTEFACTS |
-|      `..> [HUMAN DECISION FOR CONSEQUENTIAL AUTHORITY] -----+               |
+|      +..> [EXCEL / CONNECTOR / MCP / CLI AFTER PREFLIGHT] --+==> ARTEFACTS |
+|      `..> [HUMAN DECISION FOR MATERIAL AUTHORITY] ----------+               |
 |                                                                            |
-| A specialist may produce its named output; it cannot route, spawn,         |
-| reconcile, or approve the run. Those obligations return here.              |
+|  Specialists return named outputs. They cannot route, spawn, reconcile,   |
+|  approve, or become a second orchestrator.                                 |
 +----------------------------------------------------------------------------+
           |
-          |  every material stage follows one save order
+          |  candidate and evidence are sufficient for the planned gate
+          v
+[04] CHALLENGE AND DISPOSITION
+     candidate ..> fresh producer-independent challenge when earned
+     findings  --> targeted correction or explicit degraded/blocked state
+     protected or consequential action --> exact human disposition
+          |
           v
 [05] DURABLE SAVE ORDER
      semantic output ==> open run record ==> compact initiative index
           |
-          v
-[06] USER RETURN
-     useful work product or decision-grade blocker
-     + material limitation + next action + run status
-          |
-          |  the conversation may end; semantic state remains
-          v
-[07] FRESH SESSION / REPLACEMENT MAIN AGENT
-     index --> user confirms initiative --> kw-prime
-           --> active run + meaning + decisions + named live outputs
-           --> kw-orchestration resumes the same run at [04]
+          +-------------------------------+
+          |                               |
+          v                               v
+[06] USER RETURN                    [07] FRESH TASK OR HOST PROCESS
+     useful work product                 index --> initiative confirmation
+     material limitation                 --> kw-prime reads active run
+     next executable action              --> current meaning and live outputs
+                                          --> same run resumes at [03]
 
      NO TRANSCRIPT REPLAY.  NO SECOND MANAGER.  NO PARALLEL CONTROL PLANE.
+
+[08] MATERIAL FEEDBACK, WHEN IT OCCURS
+     correct present work first
+          |
+          `..> reusable beyond this initiative?
+                 --> inactive lesson candidate + rival reading
+                 --> exact human retain / amend / reject
+                 --> later initiative interpreted without lesson content
+                 --> neutral nomination + Select / Narrow / Decline
+                 --> one bounded pending effect + observable outcome
+                 --> retain / revise / suspend / retire
 ```
 
-The central orchestrator therefore depends on four things: a host that can
-execute, the installed contract that gives the main agent its posture, one
-initiative's durable meaning and run state, and the named artefacts that carry
-work back from tools or specialists. Recipes guide composition and capabilities
-enable operations, but neither can seize orchestration authority.
+Four files carry four different authorities. `AGENTS.md` and skills carry the
+operating method. The initiative index carries identity and status. The run
+record carries the plan and progress. Linked artefacts carry the professional
+substance.
 
-To audit a run, start at `[04]` and walk backwards: without the host there is no
-agent; without the installed contract there is no Knowledge Work behaviour;
-without meaning and an open run record there is no governed plan. Then walk
-forwards: without a named output there is no handoff, and without the save order
-there is no reliable fresh-session continuation.
+No universal case file or generated master summary competes with those owners.
+Scripts project and inspect the method, but they do not interpret a commission,
+select a recipe, judge evidence, or grant authority.
 
-This is a static contract trace, not proof that every host activates it. A host
-must actually discover the installed instructions and skills, and any required
-tool or fresh-specialist capability must be observed for that run.
+## Bring your own practice
 
-</details>
+The core is deliberately profession-neutral. Existing host and project skills
+may continue to help the agent. Their presence does not silently turn them into
+project policy or give them control over the initiative.
 
-One accepted intent creates an **initiative**. One composed attempt or follow-on
-pass creates a **run**.
+A durable method supplied by a professional lead can be imported as an expert
+extension. Import establishes custody; curation exposes purpose, inputs,
+outputs, tools, conflicts, and authority.
 
-The compact index owns identity and the current-run pointer. The run record owns
-the plan, rationale, outcomes, limitations, gates, and next action. Output
-artefacts own the professional substance.
+A human admits one immutable revision and a run binds it explicitly.
 
-The system deliberately has no universal case file or master summary.
+```text
+import method bytes
+→ curate contract and conflicts
+→ human admits immutable revision A
+→ one run binds A for one stated effect
+→ an update creates revision B
+→ old runs still resolve A
+→ suspend or retire future eligibility without erasing history
+```
 
-## Bring your own expertise
+A client workbook, document, or slide template remains a protected input. The
+agent records which parts carry shape, method, or policy, works in a candidate
+copy, checks the native object, and waits for exact authority before replacing
+the original.
 
-The core method is generic. A lead can add stronger professional procedures,
-house templates, project rules, and runtime tools without merging their
-authority or silently modifying the core.
+Connectors, MCP servers, Excel, and CLIs remain host capabilities. The plan
+first derives the operation it needs. The orchestrator then finds a plausible
+facility, checks access, and proves the harmless operation for the same actor
+who will produce the work.
 
-| Input | How the harness treats it |
-|---|---|
-| Stable project facts or source rules | Confirmed project context, created only when earned |
-| A lead's reusable procedure | An imported, curated, immutable expert extension explicitly bound to a run |
-| A workbook or document template | A protected initiative input edited only through a candidate copy |
-| Excel, a connector, an MCP server, or a CLI | A runtime capability proved for the exact actor and operation |
-| A correction that may help later | An inactive lesson candidate requiring human retention and later bounded selection |
+```text
+required operation
+→ visible facility
+→ reachable asset
+→ authentication and scope
+→ harmless same-actor proof
+→ bind, degrade, or stop
+```
 
-Provider-global skills may remain useful supporting procedures. Discovery alone
-does not make them project policy, admitted expert methods, or evidence.
+The method therefore travels without a hard-coded connector catalogue. An
+installation does not confer access, and a successful operation in one host
+does not prove that another host can perform it.
 
-## Install or package
+## Continuity, memory, and feedback
 
-Knowledge Work SDLC has one canonical method and two generated delivery shapes.
+Continuity answers one narrow question: what must a fresh agent read to resume
+this undertaking correctly? The answer is an index entry, the selected run,
+its current meaning and decisions, and the live outputs named by that run.
 
-| Route | Use it when |
-|---|---|
-| Repository install | The agent works in a Git repository and reads `AGENTS.md` plus project skills |
-| Plugin archive | The host accepts a Codex or Claude plugin package |
+```text
+initiative index
+→ user names or confirms one initiative
+→ prime reads its active or latest run
+→ prime reads current meaning, decisions, and named live outputs
+→ orchestration resumes at the next warranted action
+```
 
-Repository installation is additive and records which files it owns. Client
-instructions, client skills, and all `ai_docs/` initiative state remain
-client-owned.
+Conversation transcripts are neither required nor replayed. The useful facts
+are written to the file that owns them when they become material. Fresh-session
+cost follows the current work rather than the length of its chat history.
 
-The plugin archive contains generated Codex and Claude manifests, skills,
-specialist definitions, method resources, and documentation. It contains no
-profession-specific method bundle, Python runtime, credentials, connectors, or
-hooks.
+The agent does not reload the repository as one giant prompt. Standing rules
+remain thin, and methods load when called.
 
-See [Installation and provider boundaries](docs/guides/installation-and-providers.md)
-for provider-specific routes, upgrade recovery, and capability limits.
+The index selects one initiative, and the run record names the live files. Each
+piece of context has an owner and a reason to enter the present task.
 
-## Why the source includes Python
+Personalisation answers a different question: may a correction from one
+initiative influence later work? Automatic reuse would convert an old episode
+into present truth. The harness uses a slower, inspectable route.
 
-The code under `tooling/` performs repeatable mechanical work:
+```text
+material correction with an observed consequence
+→ source-linked lesson candidate
+→ human retain, amend, or reject
+→ later commission interpreted without lesson content
+→ one neutral nomination
+→ human Select, Narrow, or Decline for one pending step
+→ observable outcome
+→ retain, revise, suspend, or retire
+```
 
-- validate declared method and recipe relationships;
-- install and upgrade managed files without overwriting client state;
-- generate deterministic workspace and plugin projections; and
-- build a commit-bound release archive and content manifest.
+Provider-native memory has no authority in either path. A provider may remember
+something useful, but remembered content is not project evidence, a continuation
+record, an admitted method, or permission to influence new work.
 
-Python never interprets a commission, selects a recipe, invokes a model, judges
-evidence, or grants human authority. Installed workspaces and plugin archives
-contain no Python.
+## Distribution and provider boundaries
+
+Knowledge Work SDLC has one authored method and two generated delivery shapes.
+
+| Delivery shape | What it supplies | What it leaves alone |
+|---|---|---|
+| Repository install | A managed `AGENTS.md` block, discoverable skills, method resources, and a neutral initiative index | Client instructions, client skills, credentials, tools, and all later project state |
+| Plugin archive | Native Codex and Claude manifests, skills, specialists, recipes, templates, and user documentation | Python, hooks, connectors, credentials, models, and client files |
+
+The method is model-neutral and avoids provider-specific professional logic.
+Runtime compatibility remains an observed claim.
+
+A host must actually discover the instructions, load the skills, expose the
+required tools, and support any fresh-worker behaviour claimed for that run.
+
+Delegated work uses the concierge model by default when the host exposes exact
+inheritance. The harness never chooses a cheaper or different model on its own.
+A user may configure an explicit override where the host supports one.
+
+## Repository map
+
+```text
+knowledge-work-sdlc/
+  README.md                 product orientation, install, and first use
+  AGENTS.md                 canonical standing operating contract
+  DESIGN.md                 exact architecture and authority boundaries
+  install.sh                repository installation entry
+  .knowledge-sdlc/
+    agents/                 bounded specialist definitions
+    skills/                 one authored procedure corpus
+    recipes/                adaptable composition routes
+    templates/              shapes for earned durable artefacts
+  docs/                     methodology, getting started, and focused guides
+  examples/manual-exercises optional human-run journeys and fixtures
+  tooling/                  projection, installation, packaging, and checks
+  tests/                    mechanical contract and distribution tests
+```
+
+Python exists only in the source repository. It validates declared relations,
+installs without taking ownership of client state, generates deterministic
+delivery shapes, and builds a source-bound archive.
+
+Installed workspaces and plugin packages contain no Python runtime.
 
 ## Documentation
 
-The documentation follows the system's dependency order:
+The documentation follows the order in which a reader acquires the system:
 
 ```text
-README.md                  orientation and first use
+README.md                  what the product is, why it exists, and first use
 docs/getting-started.md    one ordinary end-to-end journey
 docs/methodology.md        governing problem and invariants
-DESIGN.md                  exact architecture and authority map
+DESIGN.md                  exact source, runtime, state, and authority map
 docs/guides/               one mechanism or operator concern per guide
-AGENTS.md                  always-loaded runtime rules
-.knowledge-sdlc/skills/    procedures loaded when needed
+AGENTS.md                  always-loaded runtime contract
+.knowledge-sdlc/skills/    procedures loaded when the work calls for them
 ```
 
 Start with the [documentation map](docs/README.md). Maintainers should read
 [Maintaining the harness](docs/guides/maintaining-the-harness.md) before
 changing canonical source or building a package.
 
-## Validate and build
+## Validation and claim limits
 
 ```bash
 make validate
 make package
 ```
 
-`make validate` checks mechanical contracts, containment, installation,
-upgrade, projection, documentation links, and package structure.
+`make validate` checks method relationships, containment, installation,
+upgrade, generated projections, documentation links, and package structure.
+Those checks establish mechanical properties of an exact source revision.
 
-These checks do not prove that a host activated the method or that professional
-work is useful. Inspect those claims through representative work on the exact
-host and retain the observed limitations.
+They do not prove that an agent understood a commission, that a professional
+work product is useful, or that a host supplied an independent reviewer.
+
+Those claims require observed use on the named host, with the commission,
+revision, outputs, and limitations retained.
+
+## Intellectual background
+
+Knowledge Work SDLC applies the lifecycle argument in
+[The New SDLC With Vibe Coding](https://www.kaggle.com/whitepaper-the-new-SDLC-with-vibe-coding)
+outside software.
+
+Professional work lacks code's compiler and executable truth. Its discipline
+therefore rests on meaning, evidence, challenge, human authority, continuation,
+and correction.
+
+## Contributing
+
+Questions and defect reports are welcome through
+[GitHub Issues](https://github.com/TJ4519/knowledge-work-sdlc/issues).
+
+Discuss a material method or architecture change before preparing a
+contribution. The authority and projection boundaries are easy to duplicate by
+accident.
 
 ## Licence
 
