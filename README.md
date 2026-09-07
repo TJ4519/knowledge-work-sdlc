@@ -2,16 +2,18 @@
 
 ![One main agent coordinating several durable initiatives](docs/assets/knowledge-work-sdlc-hero.jpg)
 
-Knowledge Work SDLC is an installable plugin for agent applications and a
-project skill set for repository-based agents. It gives research, analysis,
-documents, and models a durable working life.
+Knowledge Work SDLC is a portable context life cycle, distributed as an
+installable plugin and repository skill set. It lets one accountable agent
+delegate and review bounded specialist work while project files keep each
+undertaking resumable.
 
 The method runs inside a compatible host and works beside the skills,
 templates, and tools a professional team already uses.
 
-The host supplies the model, execution, tools, and permissions. The harness
-supplies a method for commissioning work, producing it, checking it, resuming
-it, and learning from correction without turning old experience into new fact.
+The host supplies the model, execution, tools, and permissions. The context
+life cycle supplies a method for commissioning work, producing it, checking it,
+resuming it, and learning from correction without turning old experience into
+new fact.
 
 Install it into a repository or load the generated plugin package. State the
 work in ordinary language. One main agent remains answerable for the
@@ -53,9 +55,10 @@ Knowledge Work operating contract, discoverable procedures, and method files.
 
 Codex, Claude Code, and Claude Cowork can also load a generated plugin archive.
 The [latest release](https://github.com/TJ4519/knowledge-work-sdlc/releases/latest)
-contains the archive, which needs no Python at run time. See
-[Installation and provider boundaries](docs/guides/installation-and-providers.md)
-for the exact route supported by each host.
+contains the archive, which needs no Python at run time.
+
+The [installation and provider guide](docs/guides/installation-and-providers.md)
+gives the exact route supported by each host.
 
 ## First commission
 
@@ -127,7 +130,7 @@ The analogy supplies discipline rather than certainty. Code often has an
 executable specification.
 
 Knowledge work more often has incomplete evidence, contested meanings, and
-decisions whose authority belongs to a person. The harness keeps those
+decisions whose authority belongs to a person. The method keeps those
 differences visible.
 
 ## The life cycle
@@ -157,7 +160,8 @@ that initiative.
    reconstruct only the relevant work.
 8. **Correct and learn.** A correction repairs the present work before any
    reusable lesson is proposed. Later influence requires a separate, reversible
-   human decision and a bounded use whose effect can be inspected.
+   human decision and a bounded use whose effect can be inspected. A defect in
+   the method takes a separate route before any skill changes.
 
 ```text
 ordinary commission
@@ -240,7 +244,7 @@ commission earns it.
           v
 [01] COMPATIBLE AGENT HOST
      host supplies model + execution + tools + permissions
-     harness supplies standing rules + callable professional procedures
+     installed lifecycle supplies standing rules + callable procedures
           |
           |  one ordinary-language commission
           v
@@ -292,13 +296,19 @@ commission earns it.
 [08] MATERIAL FEEDBACK, WHEN IT OCCURS
      correct present work first
           |
-          `..> reusable beyond this initiative?
-                 --> inactive lesson candidate + rival reading
-                 --> exact human retain / amend / reject
-                 --> later initiative interpreted without lesson content
-                 --> neutral nomination + Select / Narrow / Decline
-                 --> one bounded pending effect + observable outcome
-                 --> retain / revise / suspend / retire
+          +..> reusable preference or review heuristic?
+          |      --> inactive lesson candidate + rival reading
+          |      --> exact human retain / amend / reject
+          |      --> later initiative interpreted without lesson content
+          |      --> neutral nomination + Select / Narrow / Decline
+          |      --> one bounded pending effect + observable outcome
+          |      --> retain / revise / suspend / retire
+          |
+          `..> defect in an installed professional method?
+                 --> separate method-adaptation initiative
+                 --> evidence + candidate change + fresh challenge
+                 --> exact human Adopt / Amend / Reject
+                 --> separate source-change commission before any skill edit
 ```
 
 Four files carry four different authorities. `AGENTS.md` and skills carry the
@@ -381,7 +391,7 @@ piece of context has an owner and a reason to enter the present task.
 
 Personalisation answers a different question: may a correction from one
 initiative influence later work? Automatic reuse would convert an old episode
-into present truth. The harness uses a slower, inspectable route.
+into present truth. Knowledge Work SDLC uses a slower, inspectable route.
 
 ```text
 material correction with an observed consequence
@@ -397,6 +407,17 @@ material correction with an observed consequence
 Provider-native memory has no authority in either path. A provider may remember
 something useful, but remembered content is not project evidence, a continuation
 record, an admitted method, or permission to influence new work.
+
+A flaw in an installed procedure follows a different path. The agent opens a
+method-adaptation initiative, traces the observed error to the current method,
+proposes a candidate change, and sends it through fresh challenge and human
+disposition.
+
+An adopted proposal opens a separate source-change commission. Only that later
+work may revise and release a skill.
+
+The feedback loop can therefore compound human steering into better procedures
+without allowing one persuasive episode to rewrite the system that judged it.
 
 ## Distribution and provider boundaries
 
@@ -414,7 +435,7 @@ A host must actually discover the instructions, load the skills, expose the
 required tools, and support any fresh-worker behaviour claimed for that run.
 
 Delegated work uses the concierge model by default when the host exposes exact
-inheritance. The harness never chooses a cheaper or different model on its own.
+inheritance. The method never chooses a cheaper or different model on its own.
 A user may configure an explicit override where the host supports one.
 
 ## Repository map
@@ -457,7 +478,7 @@ AGENTS.md                  always-loaded runtime contract
 ```
 
 Start with the [documentation map](docs/README.md). Maintainers should read
-[Maintaining the harness](docs/guides/maintaining-the-harness.md) before
+[the maintainer guide](docs/guides/maintaining-the-harness.md) before
 changing canonical source or building a package.
 
 ## Validation and claim limits
