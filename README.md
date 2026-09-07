@@ -40,6 +40,18 @@ relationships for the user to manage.
 
 ## Install
 
+> **Installing into an existing repository**
+>
+> The installer preserves the existing `AGENTS.md` and appends one marked
+> Knowledge Work block. Existing project skills remain in place unless an
+> installed skill would occupy the same path; any such collision stops the
+> installation without overwriting the client file.
+>
+> The agent host will read both instruction sets. The installer can detect file
+> collisions, but it cannot judge contradictions in meaning. Conflicting rules
+> about delegation, writing, review, or project state must be resolved before
+> relying on the combined setup.
+
 The repository route needs Git, Python 3.10 or newer, and an existing client
 repository.
 
