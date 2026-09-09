@@ -51,7 +51,10 @@ main agent's own context.
    run because the conversation or model changed.
 7. Check external state whose freshness can change the next action. Use Git or
    provider attestation when present, but label their absence honestly.
-8. State a compact recovery view: accepted intent, latest completed stage, live
+8. For a consequential resumed return, use the evidence-backed delivery procedure
+   in `kw-orchestration` after the recovery checks. Do not repeat an old assurance
+   claim until its candidate and relevant source/method dependencies are reconciled.
+9. State a compact recovery view: accepted intent, latest completed stage, live
    outputs, material uncertainty, and next action. Then load
    `kw-orchestration` and continue without asking the user to reconstruct
    durable facts.

@@ -1,5 +1,16 @@
 # Changelog
 
+## 0.6.2 — 2026-09-09
+
+- Make evidence-backed delivery an explicit responsibility of the existing
+  orchestration procedure, including consequential partial and revised returns.
+- Require the opening to state the substantive finding with its conditions;
+  distinguish actual observations from instructions, reported work and approval.
+- Connect resumed delivery to the same procedure after checking current
+  candidate identity and the applicability of prior evidence.
+- Explain the delivery and continuation boundaries without adding a skill,
+  controller, ledger, automatic approval or profession-specific checklist.
+
 ## 0.6.1 — 2026-09-06
 
 - Explain the one-main-agent, many-initiatives product model and its cold-start

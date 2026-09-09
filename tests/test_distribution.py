@@ -71,8 +71,9 @@ print(json.dumps([digest(plan_workspace(root)), digest(plan_plugin(root))]))
         with tempfile.TemporaryDirectory(prefix="kw-frontmatter-") as raw:
             path = Path(raw) / "SKILL.md"
             path.write_bytes(projected)
-            metadata, _ = parse_frontmatter(path)
+            metadata, body = parse_frontmatter(path)
         canonical = methods["kw-orchestration"]
+        self.assertEqual(body.strip(), canonical["body"].strip())
         for field in ("inputs", "outputs", "allowed_tools", "excluded_context", "independence", "authority"):
             self.assertEqual(metadata[field], canonical[field])
 
@@ -121,6 +122,22 @@ print(json.dumps([digest(plan_workspace(root)), digest(plan_plugin(root))]))
         )
         self.assertNotIn("Agent", metadata["tools"])
         self.assertEqual(validate_plugin(files, SOURCE), [])
+
+        # Canonical body preservation is checked independently of the plan
+        # validator, which otherwise compares a projection with itself.
+        workspace = plan_workspace(SOURCE)
+        for name, method in methods.items():
+            if method["kind"] != "skill":
+                continue
+            with tempfile.TemporaryDirectory(prefix="kw-body-projection-") as raw:
+                native = Path(raw) / "SKILL.md"
+                native.write_bytes(workspace[f".agents/skills/{name}/SKILL.md"])
+                _, body = parse_frontmatter(native)
+                self.assertEqual(body.strip(), method["body"].strip(), name)
+                native.write_bytes(files[f"skills/{name}/SKILL.md"])
+                _, body = parse_frontmatter(native)
+                self.assertTrue(body.rstrip().endswith(method["body"].rstrip()), name)
+                self.assertEqual(body.count(method["body"].strip()), 1, name)
 
         link = re.compile(r"\[[^\]]+\]\(([^)]+)\)")
         missing_links: list[str] = []

@@ -59,6 +59,32 @@ purpose-specific packet, not the producer transcript. Findings cite exact
 evidence and are ranked by consequence. The reviewer does not promote or repair
 the candidate it is reviewing.
 
+## Delivery is part of the work
+
+The main agent returns an explanation of the useful result, not just an
+inventory of files. The evidence-backed delivery section in `kw-orchestration`
+owns this duty for consequential completions, partial or blocked returns, and
+material corrections. A supporting briefing or visual skill can shape the
+presentation; it does not replace that responsibility.
+
+The opening states what the work establishes and the conditions that matter.
+A known consequential defect appears beside the claim it affects. Otherwise,
+the principal result and conclusion-changing assumptions come before a
+resolved defect's history. Supporting detail may be deferred; a caveat that
+changes the headline may not.
+
+The agent checks its account against the actual candidate and relevant
+source, change and review records. An instruction records required work, not
+its execution; a recorded probe supports only the behaviour it tested.
+Reusing valid checks is appropriate when their target and dependencies still
+apply. Newly performed inspections must be identified as new work.
+
+The user-facing explanation must stand on its own, with precise evidence
+locations available for further inspection. It distinguishes proposed,
+performed and checked work, including useful ordinary checks rather than
+only noteworthy defects. This is a model-mediated procedure, not a renderer,
+automatic financial approval, or proof that every future return will comply.
+
 ## Failure and retry
 
 A failed method remains a stage outcome even if fallback succeeds. A correction

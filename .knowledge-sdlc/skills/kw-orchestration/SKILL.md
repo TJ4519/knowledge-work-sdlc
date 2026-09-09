@@ -241,6 +241,79 @@ return it for exact disposition when consequence requires. Reconciliation and
 re-derivation may diagnose or reproduce effects; neither substitutes for the
 producer authorised to create the successor.
 
+## Evidence-backed delivery
+
+At a consequential completion, partial/blocked return, or material revised
+delivery, the main agent owes the reader a usable account of the work, not only
+a file list. Ordinary progress messages do not require this full procedure.
+On continuation, reconcile the current object and applicable evidence before
+repeating a prior conclusion. This section owns that procedure; a supporting
+briefing or visual skill may shape its presentation without replacing it.
+
+Recover the professional job, audience and intended use from current meaning
+and the actual result. Identify the exact candidate, information date, units
+and actual/forecast boundary where relevant. Do not infer the job only from
+sheet names, a plan or the producer's summary. Do not require a commissioner
+to supply professional approval merely to receive an explanation.
+
+Compare requested coverage with actual output for omissions, and consequential
+changes with their source or methodological basis. Group the result into
+material actions, not tool calls or prescribed stages; an unchanged assumption
+can matter as much as a changed input. For consequential statements, inspect
+the exact output location, source or assumption, transformation, affected
+result and applicable check. Routine homogeneous mappings may share compact
+support; per-cell paperwork is not required.
+
+An instruction establishes what was required. A producer account records what
+its author reports. An inspected candidate establishes content. An observed
+operation or reproduction supports the behaviour actually tested under its
+conditions. A hash identifies bytes, not truth; a reviewer name is not a check.
+Reuse applicable recorded checks rather than rerunning the whole analysis.
+Describe inspections performed for this delivery as new work, not old events.
+
+Lead with the useful result and the conditions that matter to its intended
+use. Before sending, inspect the opening paragraph alone: does it state the
+substantive finding and its binding condition, rather than merely announcing
+artifact availability, completion or a resolved defect? If not, rewrite the
+opening. A reader should learn what the work establishes before following a
+file link. Put a known consequential defect or unsupported use beside the affected
+claim immediately. Otherwise prioritise the assumptions and disagreements
+most capable of changing the conclusion, then specific checks and correction
+history, including relevant ordinary successful paths. For a selected ordinary check,
+state what was tested, what happened and where its evidence can be reached;
+merely naming a checked path does not make its support understandable. Ranking is judgment
+about consequence, uncertainty, sensitivity and checked scope, not a universal
+score or a quota of actions, citations or findings. Keep fixed premises beside
+changed premises. A checked consequence does not establish its premise.
+
+Give the explanation directly in the user-facing response. Supporting links or
+a read-only view should reach the exact source passage, artifact location and
+recorded observation without a folder search. If native cell links are not
+supported, provide the workbook, accurate sheet/cell address and a relevant
+excerpt; do not invent a deep link. Supporting detail may be deferred, but not
+a caveat that changes the headline. Explain who inspected, changed in scratch,
+observed, reproduced, authorised, repaired and rechecked at the recorded scope.
+The commissioner and professional reader may need different depth, not
+conflicting accounts or another approval ceremony.
+
+Distinguish explicitly unperformed work, work not independently checked, and
+work for which no supporting record was found. Missing support narrows the
+claim; it must not become a fabricated rationale. Separate calculation
+behaviour, source interpretation, assumption plausibility and human acceptance.
+Do not call the whole object verified from selected checks. Proposed next
+investigations are not completed checks or automatically authorised work.
+
+Bind the account to its current candidate and relevant source/method state.
+After a revision, carry a check forward only where its target and dependencies
+remain applicable; unchanged numbers do not prove unchanged meaning. Where
+the affected extent is uncertain, say which claim needs review rather than
+promising automatic invalidation. Label exported views as dated snapshots,
+not live monitoring. Record the delivery and its evidence scope in the existing
+run; do not create another ledger. Financial/professional work may be complete
+while its delivery remains incomplete: return the supported work promptly with
+the precise gap. Do not withhold useful work pending comparative superiority,
+or use a polished explanation as evidence of that superiority.
+
 ## Completion
 
 A run is complete only when no earned causal obligation remains open and its

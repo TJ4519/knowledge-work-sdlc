@@ -21,6 +21,18 @@ initiative index
 The compact index contains no initiative's substantive work. The main agent
 reads it directly at the start of continuation; no lifecycle hook is required.
 
+Before a consequential resumed return, `kw-prime` directs the main agent to
+the evidence-backed delivery procedure in `kw-orchestration`. The agent must
+reconcile the current candidate and relevant source or method state before
+repeating an earlier assurance claim. An unchanged number does not guarantee
+unchanged meaning, and a check of one revision does not automatically cover
+another. Unknown dependency effects remain explicit review needs.
+
+A saved presentation is a dated snapshot, not a monitor. Continuation should
+produce a useful current explanation without requiring the user to reconstruct
+the old conversation. No additional evidence ledger or automatic invalidation
+engine is introduced.
+
 Prime runs in the main context because its purpose is reconstruction. A
 separate worker returning a recap would recreate the failure this mechanism
 avoids.

@@ -30,6 +30,7 @@ ordinary professional commission
 → sufficient method composed by the main host agent
 → evidence-bearing candidate work product
 → real independent challenge when earned
+→ user receives the result, material conditions and reachable evidence
 → consequential authority remains human
 → durable initiative/run/artefact state supports a fresh actor
 → governed feedback may improve one later bounded step
@@ -96,6 +97,16 @@ retained initiatives triggers reconstruction rather than blank replacement.
 The save order is semantic output, open run record, compact index. Closed run
 records are immutable. A post-closure correction or authorised follow-on opens
 one predecessor-linked successor.
+
+Consequential delivery is owned by `kw-orchestration`, not a separate agent.
+Its evidence-backed delivery procedure reconciles the explanation with the
+current candidate and applicable records, then presents the substantive result
+and its conditions before artifact availability or resolved-defect history.
+`kw-prime` invokes the same duty for resumed returns. Supporting presentation
+skills may assist composition without becoming a second source of authority.
+The operating contract and these skill instructions supply the context path;
+they do not mechanically enforce semantic compliance or prove comparative
+quality.
 
 ## Composition and specialists
 
