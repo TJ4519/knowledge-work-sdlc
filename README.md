@@ -1,24 +1,57 @@
 # Knowledge Work SDLC
 
-![One main agent coordinating several durable initiatives](docs/assets/knowledge-work-sdlc-hero.jpg)
+Knowledge Work SDLC is a plugin you install into a repository you already use
+with Codex, Claude Cowork, or Claude Code.
 
-Knowledge Work SDLC is a portable context life cycle, distributed as an
-installable plugin and repository skill set. It lets one accountable agent
-delegate and review bounded specialist work while project files keep each
-undertaking resumable.
+It sits beside the repository's existing files, instructions, skills,
+templates, and tools. It does not replace the agent application, supply a
+model, or require a new workflow service.
 
-The method runs inside a compatible host and works beside the skills,
-templates, and tools a professional team already uses.
+The plugin gives one main agent a working method for ambiguous knowledge work:
+research, synthesis, documents, models, and decisions whose meaning can change
+as evidence and human judgment arrive.
 
-The host supplies the model, execution, tools, and permissions. The context
-life cycle supplies a method for commissioning work, producing it, checking it,
-resuming it, and learning from correction without turning old experience into
-new fact.
+The main agent records the request as a durable body of work, plans the present
+attempt, and gives a well-scoped task to another agent when a fresh context or
+specialist would help.
 
-Install it into a repository or load the generated plugin package. State the
-work in ordinary language. One main agent remains answerable for the
-undertaking. Fresh specialists return their part without becoming new
-relationships for the user to manage.
+Each contribution returns through a named file. The user keeps one point of
+contact rather than managing a collection of agent threads.
+
+When a draft could influence an important decision, the main agent can give the
+draft and its evidence to a fresh reviewer. The reviewer tries to disprove it
+without inheriting the producer's conversation.
+
+The findings return to the main agent, and the human decides what to use.
+
+That separation provides the cross-context check. A new context challenges the
+same work; it does not acquire authority to approve it.
+
+When a correction changes the meaning of the work, the main agent finds the
+affected outputs and derives them again. The old assumption does not survive as
+a caveat beside an otherwise unchanged answer.
+
+The repository becomes the system of record for the work. It keeps the accepted
+commission, sources, plan, candidates, challenges, human decisions, and next
+action.
+
+It does not archive every model trace. A later agent or reviewer can recover
+what matters without searching old conversations.
+
+The current run record is the short route into an audit. It points to the live
+meaning, evidence, draft, review, human decision, limitations, and next action.
+
+The included skills and recipes provide the common method. A team can keep its
+own project skills and can import its professional procedures, templates, and
+tools.
+
+Useful feedback first corrects the present work. A human may later retain it as
+a narrow lesson, or commission a separately reviewed change to a skill.
+Provider memory cannot quietly apply it to new work.
+
+Other file-aware agent tools can use the same method when they read repository
+instructions and discover project skills. Compatibility is checked in the host
+rather than inferred from a model name.
 
 ## Contents
 
