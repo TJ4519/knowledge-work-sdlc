@@ -4,6 +4,7 @@ import hashlib
 import json
 import shutil
 import subprocess
+import sys
 import tempfile
 import unittest
 from pathlib import Path
@@ -99,6 +100,48 @@ class InstallationTests(unittest.TestCase):
             (fake / ".git").write_text("not a repository\n", encoding="utf-8")
             with self.assertRaises(IntegrityError):
                 install(SOURCE, fake)
+
+    def test_fresh_dry_run_reports_plan_without_changing_client_repository(
+        self,
+    ) -> None:
+        with tempfile.TemporaryDirectory(prefix="kw-install-preview-") as raw:
+            target = init_repository(Path(raw) / "workspace")
+            agents = target / "AGENTS.md"
+            agents.write_text(
+                "# Client instructions\n\nKeep these.\n", encoding="utf-8"
+            )
+            client_skill = target / ".agents/skills/client-method/SKILL.md"
+            client_skill.parent.mkdir(parents=True)
+            client_skill.write_text("# Client method\n", encoding="utf-8")
+            before = snapshot(target)
+
+            completed = subprocess.run(
+                [
+                    sys.executable,
+                    "-m",
+                    "tooling.installer",
+                    "--source-root",
+                    str(SOURCE),
+                    "--dry-run",
+                    str(target),
+                ],
+                cwd=SOURCE,
+                text=True,
+                capture_output=True,
+                check=True,
+            )
+            result = json.loads(completed.stdout)
+
+            self.assertEqual(snapshot(target), before)
+            self.assertEqual(result["operation"], "install")
+            self.assertEqual(result["mode"], "dry-run")
+            self.assertTrue(result["existing_agents_md"])
+            self.assertEqual(result["agents_action"], "append-managed-block")
+            self.assertTrue(result["semantic_review_required"])
+            self.assertFalse(result["writes_performed"])
+            self.assertTrue(result["preflight_passed"])
+            self.assertNotIn("validation_passed", result)
+            self.assertIn("AGENTS.md", result["planned_files"])
 
     def test_fresh_install_is_contained_complete_and_nonduplicative(self) -> None:
         with tempfile.TemporaryDirectory(prefix="kw-install-") as raw:

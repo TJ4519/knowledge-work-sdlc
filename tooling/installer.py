@@ -269,6 +269,40 @@ def install(source_root: Path, target_root: Path) -> dict[str, Any]:
     }
 
 
+def preview_install(source_root: Path, target_root: Path) -> dict[str, Any]:
+    """Plan and validate a fresh install without changing the target."""
+
+    source_root = source_root.resolve()
+    target = _target_path(target_root)
+    agents_path = target / "AGENTS.md"
+    existing = (
+        _regular_bytes(agents_path, "existing AGENTS.md")
+        if agents_path.exists()
+        else None
+    )
+    planned = plan_workspace(source_root, existing)
+    _fresh_preflight(target, planned)
+    block = managed_agents_block(source_root)
+    return {
+        "operation": "install",
+        "mode": "dry-run",
+        "target": str(target),
+        "existing_agents_md": existing is not None,
+        "existing_agents_sha256": (
+            sha256_bytes(existing) if existing is not None else None
+        ),
+        "agents_action": (
+            "append-managed-block" if existing is not None else "create"
+        ),
+        "managed_agents_block_sha256": sha256_bytes(block),
+        "planned_files": sorted(planned),
+        "planned_file_count": len(planned),
+        "semantic_review_required": True,
+        "writes_performed": False,
+        "preflight_passed": True,
+    }
+
+
 def _block_slice(data: bytes) -> tuple[int, int, bytes]:
     begin, end = BEGIN.encode(), END.encode()
     if data.count(begin) != 1 or data.count(end) != 1:
@@ -533,7 +567,10 @@ def upgrade(source_root: Path, target_root: Path, *, apply: bool) -> dict[str, A
 
 
 def main() -> int:
-    parser = argparse.ArgumentParser(description="Install or upgrade the repository-local Knowledge Work harness.", allow_abbrev=False)
+    parser = argparse.ArgumentParser(
+        description="Install or upgrade the repository-local Knowledge Work lifecycle.",
+        allow_abbrev=False,
+    )
     parser.add_argument("--source-root", default=".")
     parser.add_argument("--upgrade", action="store_true")
     parser.add_argument("--apply", action="store_true")
@@ -543,13 +580,15 @@ def main() -> int:
     args = parser.parse_args()
     if args.apply and args.dry_run:
         parser.error("choose --apply or --dry-run")
-    if (args.apply or args.dry_run) and not args.upgrade:
-        parser.error("--apply/--dry-run require --upgrade")
+    if args.apply and not args.upgrade:
+        parser.error("--apply requires --upgrade")
     try:
         if args.recover:
             result = recover_upgrade(Path(args.source_root), Path(args.target))
         elif args.upgrade:
             result = upgrade(Path(args.source_root), Path(args.target), apply=args.apply and not args.dry_run)
+        elif args.dry_run:
+            result = preview_install(Path(args.source_root), Path(args.target))
         else:
             result = install(Path(args.source_root), Path(args.target))
     except (IntegrityError, ValueError, OSError, json.JSONDecodeError) as exc:

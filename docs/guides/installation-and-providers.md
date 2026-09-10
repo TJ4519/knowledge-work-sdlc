@@ -21,17 +21,32 @@ second authored copies of the method.
 
 Prerequisites: Python 3.10 or newer and an existing client repository.
 
+The ordinary route is agent-led. Give an agent attached to the client
+repository the installation message in the root README. It acquires this source
+in a temporary directory outside the client repository, previews the plan,
+checks the existing instructions, and applies the install only when both checks
+pass. The agent must not change branches, commit, push, or clone this source
+inside the client repository unless the user separately requests that action.
+
+The equivalent manual commands are:
+
 ```bash
 git clone https://github.com/TJ4519/knowledge-work-sdlc.git
 cd knowledge-work-sdlc
+./install.sh --dry-run /absolute/path/to/client-repository
 ./install.sh /absolute/path/to/client-repository
 ```
 
-The installer plans the complete payload, refuses unsafe paths and collisions,
-stages and validates it, then writes only inside the named repository. An
-existing `AGENTS.md` and existing client-owned `.agents/skills/` content are
-preserved. Managed files are listed in `.knowledge-sdlc/install.json`; project
-state under `ai_docs/` becomes client-owned immediately.
+Fresh-install dry-run validates the target and complete payload, reports every
+planned file and the proposed `AGENTS.md` action, and performs no writes. It
+also states that semantic review remains required; deterministic code cannot
+decide whether two natural-language instruction sets agree.
+
+Apply refuses unsafe paths and collisions, stages and validates the payload,
+then writes only inside the named repository. An existing `AGENTS.md` and
+existing client-owned `.agents/skills/` content are preserved. Managed files
+are listed in `.knowledge-sdlc/install.json`; project state under `ai_docs/`
+becomes client-owned immediately.
 
 For Codex, open the client repository as a new task or start a new CLI session
 from its root. Codex reads root-to-leaf `AGENTS.md` guidance before work and can

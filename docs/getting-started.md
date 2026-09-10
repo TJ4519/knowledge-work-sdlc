@@ -18,9 +18,15 @@ settings, credentials, or another project.
 
 ## 1. Install into the client repository
 
-From a clean Knowledge Work SDLC checkout:
+The ordinary route is to send the copyable installation message in the root
+README to an agent attached to the client repository. The agent retrieves the
+source outside the repository, previews the exact writes, checks existing
+instructions, and installs without choosing a branch or committing changes.
+
+The manual equivalent from a clean Knowledge Work SDLC checkout is:
 
 ```bash
+./install.sh --dry-run /absolute/path/to/client-repository
 ./install.sh /absolute/path/to/client-repository
 ```
 

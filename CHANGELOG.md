@@ -10,6 +10,10 @@
   candidate identity and the applicability of prior evidence.
 - Explain the delivery and continuation boundaries without adding a skill,
   controller, ledger, automatic approval or profession-specific checklist.
+- Add a non-writing fresh-install preview which reports the exact file plan,
+  existing `AGENTS.md` action and remaining semantic-review obligation.
+- Make one agent-facing installation commission the primary public route, with
+  Git acquisition confined to temporary space outside the client repository.
 
 ## 0.6.1 — 2026-09-06
 

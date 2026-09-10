@@ -52,12 +52,48 @@ relationships for the user to manage.
 > about delegation, writing, review, or project state must be resolved before
 > relying on the combined setup.
 
+### Ask your agent to install it
+
+Send this message from a task attached to the repository where the work will
+live:
+
+```text
+Install the latest Knowledge Work SDLC from the main branch of
+https://github.com/TJ4519/knowledge-work-sdlc into the Git repository attached
+to this task.
+
+Treat my repository and its instructions as client-owned. Do not clone the
+SDLC inside it, change branches, reset, commit, push, or edit application code.
+Determine the exact Git root and acquire the SDLC source in an operating-system
+temporary directory outside the repository.
+
+Read the existing root AGENTS.md, if present, and the source AGENTS.md that the
+installer proposes to append. Run ./install.sh --dry-run against the client
+repository. Check every planned path and identify any material conflict between
+the two instruction sets.
+
+If the preview passes and no material conflict exists, run ./install.sh against
+the client repository. If a collision or instruction conflict exists, leave the
+client repository unchanged and report the exact conflict. On success, report
+the files added or changed and tell me to open a fresh task for activation.
+
+If Git, Python 3.10, or the required filesystem access is unavailable, do not
+improvise a partial installation. Report the missing capability and stop.
+```
+
+The tester does not operate Git in this route. Git only retrieves the source in
+the agent's temporary directory; the installer then projects the method into
+the attached repository.
+
+### Manual equivalent
+
 The repository route needs Git, Python 3.10 or newer, and an existing client
-repository.
+repository. Clone the source beside the client repository, not inside it.
 
 ```bash
 git clone https://github.com/TJ4519/knowledge-work-sdlc.git
 cd knowledge-work-sdlc
+./install.sh --dry-run /absolute/path/to/client-repository
 ./install.sh /absolute/path/to/client-repository
 ```
 
@@ -65,7 +101,10 @@ Open the client repository in a new agent task after installation. The
 installer preserves existing project instructions and skills. It adds the
 Knowledge Work operating contract, discoverable procedures, and method files.
 
-Codex, Claude Code, and Claude Cowork can also load a generated plugin archive.
+The repository route installs the context life cycle into one project. A host
+plugin is the other delivery form: Codex, Claude Code, and Claude Cowork can
+load a generated plugin archive through their own plugin surfaces.
+
 The [latest release](https://github.com/TJ4519/knowledge-work-sdlc/releases/latest)
 contains the archive, which needs no Python at run time.
 
