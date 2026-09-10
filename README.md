@@ -1,19 +1,6 @@
 # Knowledge Work SDLC
 
-![Louis-Alexandre Berthier, Napoleon's chief of staff](docs/assets/louis-alexandre-berthier.jpg)
-
-> **Louis-Alexandre Berthier (1753–1815)** was a Marshal of the Empire and
-> chief of staff of Napoleon's Grande Armée.
->
-> He developed and ran the staff system that let Napoleon command widely
-> separated corps as one army.
->
-> During the Waterloo campaign, Berthier's absence contributed to confused
-> orders, delayed communications, and wasted movement. Napoleon later said of
-> Waterloo: “If I had had Berthier, I would not have met this misfortune.”
->
-> Sources: [Fondation Napoléon](https://www.napoleon.org/en/history-of-the-two-empires/biographies/berthier-louis-alexandre/)
-> and [Defence in Depth](https://defenceindepth.co/2015/06/15/the-road-to-waterloo/).
+![One main agent coordinating several durable initiatives](docs/assets/knowledge-work-sdlc-hero.jpg)
 
 Knowledge Work SDLC is a portable context life cycle, distributed as an
 installable plugin and repository skill set. It lets one accountable agent
