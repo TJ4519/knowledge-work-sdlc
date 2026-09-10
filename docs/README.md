@@ -23,6 +23,8 @@ explains what you observed.
 
 ## Tailor it
 
+- [Bundled buy-side support](guides/buy-side-method.md) gives the tester's
+  installation, first commission, four skills and evidence limits.
 - [Expert-owned method extensions](guides/expert-extensions.md) covers import,
   curation, binding, update, retirement, and removal.
 - [Protected work and runtime capabilities](guides/protected-work-and-capabilities.md)

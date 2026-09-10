@@ -12,6 +12,7 @@ from .util import parse_frontmatter, sha256_file
 
 SAFE_NAME = re.compile(r"[A-Za-z0-9][A-Za-z0-9._-]*\Z")
 COMPOSITION = re.compile(r"```json\s*(\[.*?\])\s*```", re.DOTALL)
+MARKDOWN_LINK = re.compile(r"\[[^\]]+\]\(([^)]+)\)")
 LIST_FIELDS = (
     "allowed_tools",
     "inputs",
@@ -21,6 +22,7 @@ LIST_FIELDS = (
     "optional_outputs",
     "required_capabilities",
     "optional_capabilities",
+    "references",
 )
 RETIRED_FIELDS = {"model_profile", "model_floor"}
 ALLOWED_TOOLS = {"Read", "Grep", "Shell", "Write", "Task", "WebSearch", "WebFetch"}
@@ -101,6 +103,53 @@ def _method_paths(root: Path) -> list[tuple[str, Path]]:
         *(("skill", path) for path in sorted((base / "skills").glob("*/SKILL.md"))),
         *(("agent", path) for path in sorted((base / "agents").glob("*.md"))),
     ]
+
+
+def reference_paths(root: Path) -> list[Path]:
+    """Shared authored Markdown resources; never project state or executables."""
+    directory = root / ".knowledge-sdlc" / "references"
+    if (root / ".knowledge-sdlc").is_symlink() or directory.is_symlink() or not directory.is_dir():
+        return []
+    return [path for path in sorted(directory.rglob("*.md"))
+            if path.is_file() and not path.is_symlink()
+            and not any((root / parent).is_symlink()
+                        for parent in path.relative_to(root).parents)]
+
+
+def _reference_defects(root: Path, methods: dict[str, dict[str, Any]]) -> list[Defect]:
+    defects: list[Defect] = []
+    directory = root / ".knowledge-sdlc" / "references"
+    if ((root / ".knowledge-sdlc").is_symlink() or directory.is_symlink()
+            or (directory.exists() and not directory.is_dir())):
+        defects.append(Defect("reference-tree", ".knowledge-sdlc/references", "missing directory or linked tree"))
+    elif directory.is_dir():
+        for path in sorted(directory.rglob("*")):
+            if path.is_symlink() or (path.is_file() and path.suffix != ".md"):
+                defects.append(Defect("reference-tree", path.relative_to(root).as_posix(), "references must be regular Markdown files in an unlinked tree"))
+    available = {path.relative_to(root).as_posix() for path in reference_paths(root)}
+    # Shared guidance can itself depend on another shared document. Check that
+    # mechanical edge too; a skill's direct declaration is not the whole tree.
+    for path in reference_paths(root):
+        for raw in MARKDOWN_LINK.findall(path.read_text(encoding="utf-8")):
+            target = raw.split("#", 1)[0]
+            if not target or "://" in target or target.startswith("mailto:"):
+                continue
+            resolved = (path.parent / target).resolve()
+            try:
+                relative = resolved.relative_to(root).as_posix()
+            except ValueError:
+                relative = ""
+            if relative not in available:
+                defects.append(Defect("reference-link", path.relative_to(root).as_posix(), f"missing or unsafe shared reference link: {raw}"))
+    for method in methods.values():
+        for reference in method["references"]:
+            if (not _safe_relative(reference)
+                    or not reference.startswith(".knowledge-sdlc/references/")
+                    or Path(reference).suffix != ".md"):
+                defects.append(Defect("method-reference-path", method["source_path"], f"unsafe managed reference: {reference}"))
+            elif reference not in available:
+                defects.append(Defect("method-reference-missing", method["source_path"], f"missing or linked managed reference: {reference}"))
+    return defects
 
 
 def discover_methods(root: Path) -> dict[str, dict[str, Any]]:
@@ -300,6 +349,7 @@ def validate_source(root: Path) -> list[Defect]:
         return [Defect("recipe-discovery", None, str(exc))]
 
     defects.extend(_method_defects(methods))
+    defects.extend(_reference_defects(root, methods))
     defects.extend(_recipe_defects(recipes, methods))
     skills = {name for name, item in methods.items() if item["kind"] == "skill"}
     agents = {name for name, item in methods.items() if item["kind"] == "agent"}
@@ -343,6 +393,7 @@ def source_inventory(root: Path) -> list[dict[str, str]]:
     paths.extend(path for _, path in _method_paths(root))
     paths.extend(sorted((root / ".knowledge-sdlc" / "recipes").glob("*.md")))
     paths.extend(sorted((root / ".knowledge-sdlc" / "templates").glob("*.md")))
+    paths.extend(reference_paths(root))
     paths.extend(
         root / relative
         for relative in (

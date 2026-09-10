@@ -26,6 +26,7 @@ AGENTS.md                     standing operating contract
 .knowledge-sdlc/agents/       bounded fresh specialist definitions
 .knowledge-sdlc/recipes/      human-readable composition defaults
 .knowledge-sdlc/templates/    durable artefact shapes
+.knowledge-sdlc/references/   shared optional supporting guidance
 docs/ + DESIGN.md             explanation and operator guidance
 ```
 
@@ -34,6 +35,9 @@ sources. The repository view puts skills under `.agents/skills/` for discovery
 and managed resources under `.knowledge-sdlc/`. The plugin view puts generated
 skills and agents at plugin root and method resources under `resources/`.
 Neither projection may contain an independently maintained prompt body.
+Optional `references` metadata lists canonical managed-root Markdown paths.
+The source validator and both projections must close those dependencies;
+references are neither project policy nor automatic method selection.
 Provider-native enforcement fields are generated from the canonical contract;
 for example, Claude agent `tools` derive from `allowed_tools`.
 

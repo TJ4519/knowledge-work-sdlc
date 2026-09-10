@@ -1,5 +1,18 @@
 # Changelog
 
+## 0.7.0 — 2026-09-10
+
+- Include four optional buy-side company-model skills and one shared reference
+  tree in the normal repository and plugin projections.
+- Connect scoped discovery to the existing intake; preserve analyst-owned
+  methods, protected originals and the distinction between availability and use.
+- Validate declared reference containment and delivery, with existing guarded
+  ownership handling upgrades and collisions rather than overwriting client work.
+- Add an analyst-facing installation/first-use guide. No financial source pack,
+  practitioner transcript, model, runtime engine or effectiveness claim is shipped.
+- Reject recovery combined with preview, upgrade or apply flags before dispatch;
+  a dry-run request must never silently trigger recovery writes.
+
 ## 0.6.2 — 2026-09-09
 
 - Make evidence-backed delivery an explicit responsibility of the existing

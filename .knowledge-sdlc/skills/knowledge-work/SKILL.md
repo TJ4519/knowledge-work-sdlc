@@ -14,6 +14,7 @@ authority: proposal-and-route-control-only-no-professional-authority
 standalone: true
 idempotency: "Route the same accepted intent to the same initiative and an open run to its existing record; never fork authority because the host or conversation changed."
 phase: intake
+references: [".knowledge-sdlc/references/buy-side-method/README.md"]
 ---
 # Knowledge work intake
 
@@ -112,6 +113,11 @@ owners can carry; record that necessity in the run before creating it.
 
 ## Feedback and expert-method routes
 
+- For a company-model commission that requests or warrants the bundled buy-side
+  support, read `.knowledge-sdlc/references/buy-side-method/README.md` and select
+  only relevant helpers in the existing run. These canonical supporting skills
+  do not adopt a firm's method, financial assumptions or protected edits.
+  Resolve logical managed paths using the repository root or plugin binding.
 - An explicit request to import, inspect, update, bind, unbind, retire, or
   remove an expert method loads `kw-expert-extension`.
 - A material correction or observed consequence may load `kw-feedback-review`,

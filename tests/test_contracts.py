@@ -14,7 +14,7 @@ SOURCE = Path(__file__).resolve().parents[1]
 def copy_method_source(destination: Path) -> Path:
     root = destination / "source"
     (root / ".knowledge-sdlc").mkdir(parents=True)
-    for name in ("agents", "skills", "recipes", "templates"):
+    for name in ("agents", "skills", "recipes", "templates", "references"):
         shutil.copytree(SOURCE / ".knowledge-sdlc" / name, root / ".knowledge-sdlc" / name)
     shutil.copy2(SOURCE / ".knowledge-sdlc/VERSION", root / ".knowledge-sdlc/VERSION")
     shutil.copy2(SOURCE / "AGENTS.md", root / "AGENTS.md")

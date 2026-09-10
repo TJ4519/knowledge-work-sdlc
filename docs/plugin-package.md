@@ -3,7 +3,7 @@
 This generated package supplies a file-native professional-work method to
 Codex, Claude Code, and Claude Cowork. It contains skills, bounded specialist
 definitions, readable recipes, durable artefact templates, documentation, and
-no profession-specific method bundle. It contains no Python runtime, lifecycle
+four optional buy-side company-model skills with shared references. It contains no Python runtime, lifecycle
 hooks, credentials, connectors, or model router.
 
 ## Install
@@ -31,6 +31,9 @@ The active client workspace owns `ai_docs/` initiative state and professional
 outputs. The package's generated skills and agents resolve their shared method
 resources under `resources/.knowledge-sdlc/` relative to the package root.
 Those bundled recipes and templates are method inputs, never project facts.
+Optional buy-side references follow the same resource binding; logical
+`.knowledge-sdlc/...` cues refer to that managed root. Availability does not
+select the helpers for every run or approve the client's financial method.
 On a fresh attached workspace, the entry skill creates only the neutral
 initiative index before creating the files earned by the first commission.
 
@@ -42,6 +45,8 @@ work visibly.
 
 ## Read next
 
+- `docs/guides/buy-side-method.md` — included skills,
+  analyst-facing prompt and limits
 - `docs/getting-started.md` — ordinary use and continuation
 - `docs/methodology.md` — governing function and invariants
 - `DESIGN.md` — exact architecture and authority boundaries

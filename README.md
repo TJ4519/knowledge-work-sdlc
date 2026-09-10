@@ -57,6 +57,7 @@ rather than inferred from a model name.
 
 - [Install](#install)
 - [First commission](#first-commission)
+- [Buy-side company-model work](#buy-side-company-model-work)
 - [Why knowledge work needs a life cycle](#why-knowledge-work-needs-a-life-cycle)
 - [The life cycle](#the-life-cycle)
 - [One main agent, many initiatives](#one-main-agent-many-initiatives)
@@ -167,6 +168,19 @@ continue the same undertaking after the conversation has ended.
 
 See [Getting started](docs/getting-started.md) for one complete journey through
 installation, production, correction, and continuation in a fresh task.
+
+## Buy-side company-model work
+
+The normal installation includes four optional buy-side skills: derive the
+model-update brief, produce an evidence-bound candidate, challenge it, and
+verify consequential claims. They keep reported history, analytical changes,
+forecasts and their supporting checks distinct without replacing the analyst's
+own modelling method. They are available on installation, not four running
+agents or an automatically approved firm policy.
+
+Send a tester the [buy-side installation and first-use guide](docs/guides/buy-side-method.md).
+Use a current `main` checkout; an older release archive may not include this
+addition. Real workbook, source and calculation access still belong to the host.
 
 ## Why knowledge work needs a life cycle
 
@@ -535,6 +549,7 @@ knowledge-work-sdlc/
     skills/                 one authored procedure corpus
     recipes/                adaptable composition routes
     templates/              shapes for earned durable artefacts
+    references/             shared optional method guidance, not project state
   docs/                     methodology, getting started, and focused guides
   examples/manual-exercises optional human-run journeys and fixtures
   tooling/                  projection, installation, packaging, and checks

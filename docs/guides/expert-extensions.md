@@ -66,5 +66,8 @@ becomes the portable authority.
 
 A lead-owned bundle may adapt professional vocabulary and method cues, but it
 cannot change the generic initiative/run grammar, manufacture evidence, or
-acquire protected-write and human authority. The core ships no profession-
-specific method bundle; the lead supplies the method to be curated.
+acquire protected-write and human authority. Optional canonical buy-side
+supporting skills ship beside the profession-neutral core; their use is normal
+run composition, not automatic admission of an expert-owned project method.
+The lead still supplies and governs the firm's method. See the
+[buy-side guide](buy-side-method.md) for the distinction and first use.

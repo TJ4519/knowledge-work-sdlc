@@ -171,8 +171,10 @@ explicit import request
 Custody is under
 `ai_docs/methods/extensions/<id>/revisions/<revision>/`. The methods index is an
 opaque discovery view, not operative instruction. Optional provider-native
-installation is a separate action and never selects a method. The core ships no
-profession-specific expert method; a lead supplies and governs each extension.
+installation is a separate action and never selects a method. A lead supplies
+and governs each expert-owned extension. The distribution also includes optional
+canonical buy-side supporting skills, composed like other product skills; they
+do not admit a house method, set financial assumptions or acquire use authority.
 
 Project context, expert methods, client templates, runtime capabilities, and
 reusable lessons are distinct tailoring surfaces. Project context states
@@ -236,6 +238,7 @@ knowledge-work-sdlc/
     skills/
     recipes/
     templates/
+    references/              shared optional supporting guidance
   docs/
     README.md  methodology.md  getting-started.md  guides/
   examples/
@@ -246,7 +249,7 @@ knowledge-work-sdlc/
 
 The source contains one authored skill corpus. A fresh workspace contains one
 generated runtime corpus at `.agents/skills/`; it does **not** also contain
-`.knowledge-sdlc/skills`. It receives managed agents, recipes, templates and
+`.knowledge-sdlc/skills`. It receives managed agents, recipes, templates, references and
 VERSION under `.knowledge-sdlc/`, one compact initiative index, and one
 marker-owned `AGENTS.md` block. Other `ai_docs` state appears only when earned
 and is immediately project-owned. These are ordinary repository files, not an
@@ -254,11 +257,19 @@ operating-system read-only mount; the install record makes edits to managed
 files visible and requires explicit upgrade handling.
 
 The plugin archive contains generated native skills/agents, provider manifests,
-managed recipe/template resources, user documentation, and a licence. It
-contains no profession-specific expert method. Generated views are deterministic
+managed recipe/template/reference resources, user documentation, and a licence.
+The four optional buy-side skills and one shared reference tree are included;
+no admitted project method or company policy is created. Generated views are deterministic
 derivatives, not independently maintained authorities. Every generated skill
 and agent states the relative path of the one shared resource root; the package
 does not rely on a second copied prompt corpus.
+
+Optional method `references` declarations identify regular Markdown files under
+`.knowledge-sdlc/references/`. Source checks reject missing, traversing or linked
+dependencies; both projections preserve their exact bytes. Logical managed-root
+cues resolve at the repository root or the existing plugin resource binding.
+This is mechanical dependency closure, not a semantic router or automatic
+method selection. Canonical skill bodies remain verbatim in generated views.
 
 ## Tooling and installation
 

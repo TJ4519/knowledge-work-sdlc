@@ -43,6 +43,7 @@ client-repository/
     agents/                         bounded specialist definitions
     recipes/                        readable composition defaults
     templates/                      shapes for earned durable artefacts
+    references/                     shared optional method guidance
     install.json                    managed-file ownership for safe upgrade
   ai_docs/initiatives/index.md      identity, focus, status, run pointer
 ```
@@ -50,6 +51,11 @@ client-repository/
 The installer does **not** pre-create a domain charter, source policy, method
 library, protected-artifact register, or learning store. Those files acquire
 meaning only when evidence or a human decision earns them.
+
+The normal installation also includes four optional buy-side company-model
+skills and their shared references. See the [buy-side first-use guide](guides/buy-side-method.md)
+for an analyst-facing prompt and the distinction between availability, selected
+support, the firm's own method and permission to change a workbook.
 
 ## 2. Open a genuinely new task
 

@@ -4,7 +4,7 @@ import json
 from pathlib import Path
 from typing import Any
 
-from .contracts import discover_methods, discover_recipes, validate_source
+from .contracts import discover_methods, discover_recipes, reference_paths, validate_source
 from .errors import IntegrityError
 from .util import (
     parse_frontmatter,
@@ -70,8 +70,10 @@ def plugin_skill(method: dict[str, Any]) -> bytes:
 
 This is a generated provider projection of one canonical source method. It
 uses project `ai_docs/` for state. Resolve the shared managed method root as
-`../../resources/.knowledge-sdlc/` from this `SKILL.md`; those recipes and
-templates are bundled method inputs, not project facts. This projection does
+`../../resources/.knowledge-sdlc/` from this `SKILL.md`. Logical
+`.knowledge-sdlc/...` cues, including declared reference dependencies, resolve
+under that root rather than under the client or this skill directory. Bundled
+recipes, templates and references are method inputs, not project facts. This projection does
 not launch another runtime or confer authority.
 """
     return render_frontmatter(
@@ -87,7 +89,7 @@ def plugin_agent(method: dict[str, Any]) -> bytes:
     binding = (
         f"\n## Native host binding\n\nCanonical source: `{method['source_path']}`  \n"
         f"Canonical SHA-256: `{method['source_sha256']}`\n\n"
-        "Bundled recipes and templates resolve at `../resources/.knowledge-sdlc/` "
+        "Bundled recipes, templates and references resolve at `../resources/.knowledge-sdlc/` "
         "from this agent file. The run record and named artefacts are the handoff. "
         "Native identity is optional observation.\n"
     )
@@ -137,6 +139,8 @@ def plan_workspace(root: Path, existing_agents: bytes | None = None) -> dict[str
     }
     for name in ("agents", "recipes", "templates"):
         files.update(_regular_files(root / ".knowledge-sdlc" / name, root))
+    for path in reference_paths(root):
+        files[path.relative_to(root).as_posix()] = path.read_bytes()
 
     methods = discover_methods(root)
     for name, method in methods.items():
@@ -172,6 +176,8 @@ def _resource_files(root: Path) -> dict[str, bytes]:
         for source, content in _regular_files(root / ".knowledge-sdlc" / tree, root).items():
             relative = Path(source).relative_to(".knowledge-sdlc").as_posix()
             files[f"resources/.knowledge-sdlc/{relative}"] = content
+    for path in reference_paths(root):
+        files[f"resources/{path.relative_to(root).as_posix()}"] = path.read_bytes()
     return files
 
 
@@ -188,6 +194,7 @@ def _plugin_documentation(root: Path) -> dict[str, bytes]:
         "docs/guides/composition-and-review.md",
         "docs/guides/continuity-and-recovery.md",
         "docs/guides/expert-extensions.md",
+        "docs/guides/buy-side-method.md",
         "docs/guides/installation-and-providers.md",
         "docs/guides/personalisation.md",
         "docs/guides/protected-work-and-capabilities.md",
@@ -261,6 +268,10 @@ def validate_workspace_plan(files: dict[str, bytes], methods: dict[str, dict[str
         raise IntegrityError("workspace skill projection is incomplete or contains extras")
     if "ai_docs/initiatives/index.md" not in files:
         raise IntegrityError("workspace projection lacks the initiative index")
+    for method in methods.values():
+        for reference in method["references"]:
+            if reference not in files:
+                raise IntegrityError(f"workspace reference resource missing: {reference}")
 
 
 def validate_plugin_plan(
@@ -280,6 +291,10 @@ def validate_plugin_plan(
     for name in recipes:
         if f"resources/.knowledge-sdlc/recipes/{name}.md" not in files:
             raise IntegrityError(f"plugin recipe resource missing: {name}")
+    for method in methods.values():
+        for reference in method["references"]:
+            if f"resources/{reference}" not in files:
+                raise IntegrityError(f"plugin reference resource missing: {reference}")
 
 
 def validate_workspace(root: Path, source_root: Path) -> list[str]:

@@ -578,6 +578,8 @@ def main() -> int:
     parser.add_argument("--recover", action="store_true")
     parser.add_argument("target")
     args = parser.parse_args()
+    if args.recover and (args.upgrade or args.apply or args.dry_run):
+        parser.error("--recover cannot be combined with --upgrade, --apply, or --dry-run")
     if args.apply and args.dry_run:
         parser.error("choose --apply or --dry-run")
     if args.apply and not args.upgrade:
