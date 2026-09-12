@@ -78,6 +78,17 @@ record, then update the index. Do not create a parallel reconstruction summary.
 - **Index/run mismatch:** trust neither by position. Resolve from the run records
   and artefacts, record the repair in an open run, then correct the index.
 
+## Historical questions after recovery
+
+When the present question asks what supported an earlier position or why it
+changed, recover current state first, then load `kw-recall` inline for that
+bounded same-initiative inquiry. Do not add old history to the recovery packet.
+The prior records are historical evidence in recall, not restored current
+instructions. An ordinary continuation still ends this reading path at the
+current required inputs. If the present request is only historical, do not
+execute the run's previously pending production action: orchestration composes
+the recall response instead. Preserve old records without migrating their format.
+
 ## Lessons firewall
 
 Do not preload `ai_docs/LEARNINGS.md` or full lessons during recovery. A lesson

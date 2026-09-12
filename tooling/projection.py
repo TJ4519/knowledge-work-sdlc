@@ -193,6 +193,7 @@ def _plugin_documentation(root: Path) -> dict[str, bytes]:
         "docs/methodology.md",
         "docs/guides/composition-and-review.md",
         "docs/guides/continuity-and-recovery.md",
+        "docs/guides/working-memory.md",
         "docs/guides/expert-extensions.md",
         "docs/guides/buy-side-method.md",
         "docs/guides/installation-and-providers.md",
@@ -217,7 +218,7 @@ def plan_plugin(root: Path) -> dict[str, bytes]:
         "author": {"name": "Knowledge Work SDLC"},
         "skills": "./skills/",
         "interface": {
-            "displayName": "Knowledge Work SDLC",
+            "displayName": "Knowledge Work Meta-Harness",
             "shortDescription": "Run defensible professional commissions.",
             "longDescription": (
                 "Turn natural professional commissions into evidence-bearing, "

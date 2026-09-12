@@ -108,6 +108,24 @@ The operating contract and these skill instructions supply the context path;
 they do not mechanically enforce semantic compliance or prove comparative
 quality.
 
+## Document-based semantic working memory
+
+M1 strengthens consequential meaning, source/use and scoped revision links in
+existing output owners. M2 adds optional `kw-recall` for historical questions
+inside one selected initiative; `kw-prime` still reads only current recovery
+inputs. M3 follows those relationships through ordinary correction and inspection
+of actual successor outputs. The shared reference is
+`.knowledge-sdlc/references/working-memory.md`.
+
+Historical inquiry reads superseded material as evidence without restoring it as
+current instruction. It preserves missing rationale, information cutoffs and
+parallel scenarios. A same-value estimate-to-actual change is still a meaning
+change. No new current-state file, global register, vector store, automatic
+lesson route or installed runtime is introduced. Later cross-initiative recall,
+selected episode-development tools and controlled-reuse demonstrations remain
+outside this increment. Tests of references and packaging are not proof of
+agent compliance or comparative effectiveness.
+
 ## Composition and specialists
 
 Six Markdown recipes live under `.knowledge-sdlc/recipes/`. Each contains one

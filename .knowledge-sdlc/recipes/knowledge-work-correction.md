@@ -34,6 +34,17 @@ challenge exposes a further material issue after the one corrected candidate,
 retain the issue visibly and halt or open a successor method-repair run. Never
 optimise prose until every reviewer is silent.
 
+## Inspect the repaired consumers
+
+Give each re-entered producer the exact changed item and its original and
+successor basis, using the shared working-memory convention. Follow observed
+native and source-to-claim relationships into the actual calculation, chart and
+written conclusion. Inspect a bounded suspected consumer if the recorded map
+may omit it; unresolved coverage stays explicit. Same-value role changes may
+matter, while parallel scenarios can legitimately remain different. A completed
+invalidation/reconciliation record is not completed repair. Preserve unaffected
+history and carry forward earlier checks only where their target and basis apply.
+
 ## Composition
 
 ```json

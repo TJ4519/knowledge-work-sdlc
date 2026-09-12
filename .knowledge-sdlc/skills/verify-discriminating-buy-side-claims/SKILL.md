@@ -13,7 +13,7 @@ authority: candidate-support-only-no-professional-or-protected-authority
 standalone: false
 idempotency: "Reuse only for the same task, candidate, source and method identities and unchanged permitted use."
 phase: verification
-references: [".knowledge-sdlc/references/buy-side-method/README.md",".knowledge-sdlc/references/buy-side-method/semantic-contracts.md",".knowledge-sdlc/references/buy-side-method/cross-context-recipe.md"]
+references: [".knowledge-sdlc/references/buy-side-method/README.md", ".knowledge-sdlc/references/buy-side-method/semantic-contracts.md", ".knowledge-sdlc/references/buy-side-method/cross-context-recipe.md", ".knowledge-sdlc/references/working-memory.md"]
 ---
 # Verify evidence, including what nobody challenged
 
@@ -46,6 +46,16 @@ Follow the selected value or derivation into its actual candidate location. Chec
 For a forecast, assess evidence use, calculation, scenario, assumptions, and truthful status. Do not claim to have verified the future realised outcome. For a plan, assess dependencies and permitted operations, not unexecuted model behaviour.
 
 Check reconciliation without accepting an unauthorised balancing plug. A permitted forecast balancing mechanism is distinct from rewriting a company-reported fact. Check relevant valid alternatives too, so caution does not falsely reject correct work.
+
+## Checks across revisions
+
+Use the shared working-memory convention to inspect a selected item's role,
+original source, exact candidate address and relevant consumers. An old check
+is reusable only if both target and basis still apply. Independently inspect
+an affected chart or written claim where a missing mapping could conceal an
+incomplete correction; the producer's recorded links are not exhaustive proof.
+A preserved scenario difference is not a defect merely because another view is
+newer. Distinguish missing historical rationale from a present reconstruction.
 
 ## Results
 

@@ -16,6 +16,7 @@ phase: production
 allowed_tools: ["Read","Grep","Shell","Write"]
 required_capabilities: ["protected-artifact-read","candidate-artifact-write","candidate-artifact-validate"]
 optional_capabilities: ["client-template-read","native-artifact-diff","protected-artifact-promote"]
+references: [".knowledge-sdlc/references/working-memory.md"]
 ---
 
 # Protected-artifact producer
@@ -70,6 +71,15 @@ native payload must say so and is not promotable.
    every unintended difference.
 10. Write the candidate descriptor and name the native payload path and hash
     separately. Stop on any material mismatch.
+
+## Meaning and consumer links
+
+Apply the shared working-memory convention at consequential native assignments.
+Connect the source/assumption's exact revision to the actual candidate address
+and its relevant charts or written conclusions. An unchanged value can acquire
+a different role or source basis. Retain that transition and inspect its use,
+without rewriting the historical source or treating a mapping as completed repair.
+Preserve unaffected facts and valid parallel scenarios when creating a successor.
 
 ## Evidence threshold
 

@@ -1,4 +1,9 @@
-# Knowledge Work SDLC plugin package
+# Knowledge Work Meta-Harness plugin package
+
+The package identifier remains `knowledge-work-sdlc`. Managed star-shaped
+orchestration is complemented by meaning/revision links, conditional historical
+recall within one initiative, and correction into actual dependent outputs.
+See `docs/guides/working-memory.md` for scope and verification limits.
 
 This generated package supplies a file-native professional-work method to
 Codex, Claude Code, and Claude Cowork. It contains skills, bounded specialist

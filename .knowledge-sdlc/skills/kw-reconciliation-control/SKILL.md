@@ -14,6 +14,7 @@ authority: control-only-human-approved-artefacts-require-proposal
 standalone: partial
 idempotency: "One control run is tied to an exact changed revision and dependency graph head."
 phase: correction
+references: [".knowledge-sdlc/references/working-memory.md"]
 ---
 # Reconciliation control
 
@@ -42,6 +43,17 @@ producer re-entry, reconciliation, challenge, re-derivation, and gates.
    than mutation.
 7. Return the invalidation map to the orchestrator. Do not dispatch another
    worker or close the correction run from this skill.
+
+## Scoped semantic changes
+
+Use the shared working-memory convention for changed item and consumer locators.
+Record observed dependency, suspected impact and inspected no-impact separately.
+A same-value role change may invalidate support; a newer parallel scenario need
+not supersede another. For each material consumer, propose revision, a labelled
+bridge, preserved disagreement, deliberate retention or further inspection.
+Name the original and proposed successor location. Do not treat the invalidation
+map as repair: the orchestrator re-enters the producer and inspects the actual
+successor and its relevant charts/claims. Preserve independently known history.
 
 ## Degraded paths
 
