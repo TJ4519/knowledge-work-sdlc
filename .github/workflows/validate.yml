@@ -1,27 +1,31 @@
-name: Validate method and distribution
+name: Validate exact semantic-memory candidate
 on:
   push:
-  pull_request:
+    branches:
+      - work/semantic-memory-validation-20260912
 permissions:
   contents: read
 jobs:
   validate:
     runs-on: ubuntu-latest
     timeout-minutes: 10
+    permissions:
+      contents: write
     steps:
       - uses: actions/checkout@v4
         with:
+          fetch-depth: 0
           persist-credentials: false
-      - name: Validate source and run tests
-        run: make validate
-      - name: Build local distribution
-        run: make package
-      - name: Archive tested source
-        if: always()
-        run: git archive --format=tar --output=source.tar HEAD
+      - name: Retain integration inputs
+        run: |
+          tar -cf "$RUNNER_TEMP/integration-inputs.tar" .integration
+          cp .integration/integrate.py "$RUNNER_TEMP/integrate.py"
       - uses: actions/upload-artifact@v4
-        if: always()
         with:
-          name: tested-source
-          path: source.tar
+          name: integration-inputs
+          path: ${{ runner.temp }}/integration-inputs.tar
           retention-days: 1
+      - name: Validate and publish immutable tree only
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 "$RUNNER_TEMP/integrate.py"
