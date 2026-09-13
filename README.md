@@ -60,6 +60,22 @@ your host and workspace.
 
 ## Install
 
+### npm / npx
+
+From your existing project, preview and install directly from GitHub:
+
+```bash
+cd /absolute/path/to/your-project
+npx --yes --package=github:TJ4519/knowledge-work-sdlc#main knowledge-work-sdlc install . --dry-run
+npx --yes --package=github:TJ4519/knowledge-work-sdlc#main knowledge-work-sdlc install .
+```
+
+Requires Node.js 22+, Python 3.10+ and Git. Review existing project instructions
+against the preview before applying. Pin the same commit instead of `main` for
+repeatable installation, then open a fresh agent task. See the
+[npm installation guide](docs/guides/npm-installation.md) for archive installs,
+upgrades, recovery and registry publication.
+
 > **Installing into an existing repository**
 >
 > The installer preserves the existing `AGENTS.md` and appends one marked

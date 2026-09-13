@@ -1,0 +1,36 @@
+{
+  "name": "knowledge-work-sdlc",
+  "version": "0.7.0",
+  "description": "Install Knowledge Work Meta-Harness: managed agents, semantic working memory, and professional methods.",
+  "license": "SEE LICENSE IN LICENSE.md",
+  "author": "TJ4519",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TJ4519/knowledge-work-sdlc.git"
+  },
+  "homepage": "https://github.com/TJ4519/knowledge-work-sdlc#readme",
+  "bugs": { "url": "https://github.com/TJ4519/knowledge-work-sdlc/issues" },
+  "bin": { "knowledge-work-sdlc": "bin/knowledge-work-sdlc.cjs" },
+  "engines": { "node": ">=22" },
+  "files": [
+    "bin/knowledge-work-sdlc.cjs",
+    ".knowledge-sdlc/VERSION",
+    ".knowledge-sdlc/agents/*.md",
+    ".knowledge-sdlc/recipes/*.md",
+    ".knowledge-sdlc/references/**/*.md",
+    ".knowledge-sdlc/skills/*/SKILL.md",
+    ".knowledge-sdlc/templates/*.md",
+    "tooling/*.py",
+    "AGENTS.md",
+    "DESIGN.md",
+    "CHANGELOG.md",
+    "LICENSE.md",
+    "docs/**/*.md",
+    "install.sh"
+  ],
+  "scripts": {
+    "test": "node --test tests/npm-installer.test.cjs"
+  },
+  "keywords": ["agents", "skills", "meta-harness", "knowledge-work", "codex"],
+  "publishConfig": { "registry": "https://registry.npmjs.org/", "access": "public" }
+}

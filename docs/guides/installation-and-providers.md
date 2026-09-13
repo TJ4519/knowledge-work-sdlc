@@ -19,6 +19,9 @@ second authored copies of the method.
 
 ## Repository installation
 
+The [npm installer](npm-installation.md) provides an `npx` entry point to this
+same repository installation and guarded upgrade procedure.
+
 Prerequisites: Python 3.10 or newer and an existing client repository.
 
 The ordinary route is agent-led. Give an agent attached to the client

@@ -1,5 +1,13 @@
 # Changelog
 
+## Unreleased — npm distribution
+
+- Add an npm/npx command for explicit install, preview, guarded upgrade and
+  interrupted-upgrade recovery using the existing Python installer.
+- Bundle an allowlisted method source; preserve package identity and licence.
+- Test packed installation, existing-workspace upgrades, collision refusal,
+  recovery and isolated Python imports on Linux and macOS.
+
 ## Unreleased — semantic working memory
 
 - Add optional, same-initiative `kw-recall` for source-backed historical questions

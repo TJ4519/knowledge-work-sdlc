@@ -1,0 +1,40 @@
+name: npm distribution
+on:
+  push:
+    branches: [main, work/npm-distribution-20260913]
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  test:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+      - name: Validate core
+        run: make validate
+      - name: Exercise packed npm installer
+        run: npm test
+      - name: Build plugin and npm archives
+        run: |
+          make package
+          npm pack --pack-destination dist --json > dist/npm-pack.json
+          npm publish --dry-run ./dist/knowledge-work-sdlc-0.7.0.tgz
+          git diff --exit-code
+      - uses: actions/upload-artifact@v4
+        with:
+          name: npm-package-${{ matrix.os }}
+          path: dist/
+          retention-days: 7

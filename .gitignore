@@ -27,3 +27,7 @@ release/
 .extracted-verification-*/
 verification-logs/
 *.log
+
+# npm package outputs and local dependencies
+node_modules/
+*.tgz
