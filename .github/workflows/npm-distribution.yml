@@ -38,7 +38,7 @@ jobs:
           npm test
           make package
           npm pack --pack-destination dist --json > dist/npm-pack.json
-          npm publish --dry-run dist/knowledge-work-sdlc-0.7.0.tgz
+          npm publish --dry-run ./dist/knowledge-work-sdlc-0.7.0.tgz
           git diff --exit-code
       - name: Upload tested immutable tree
         env:

@@ -16,6 +16,9 @@ subprocess.run(['git','reset','--hard','a984ccbb783fd53bfb67162e59c574e1ce935fbd
 subprocess.run(['git','clean','-fdx'],check=True)
 subprocess.run(['git','apply','--check',str(p)],check=True)
 subprocess.run(['git','apply',str(p)],check=True)
+yml=root/'.github/workflows/npm-distribution.yml'
+yml.write_text(yml.read_text().replace('npm publish --dry-run dist/','npm publish --dry-run ./dist/'))
 subprocess.run(['git','diff','--check'],check=True)
 subprocess.run(['git','add','.'],check=True)
+if subprocess.check_output(['git','write-tree'],text=True).strip()!='545e708740a9e6a1f069e18f733252e3f20c8173': raise SystemExit('Unexpected candidate tree')
 subprocess.run(['git','-c','user.name=Knowledge Work build','-c','user.email=build@localhost','commit','-m','Validate npm distribution'],check=True)
