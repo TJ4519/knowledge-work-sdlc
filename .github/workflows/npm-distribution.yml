@@ -21,7 +21,7 @@ jobs:
           git init -q -b main "$work"
           cd "$work"
           printf '# Existing project\n' > AGENTS.md
-          spec='github:TJ4519/knowledge-work-sdlc#d8a251652cc8b3cd936de21c65820cc86f7d63c9'
+          spec='https://github.com/TJ4519/knowledge-work-sdlc/archive/d8a251652cc8b3cd936de21c65820cc86f7d63c9.tar.gz'
           npx --yes --package="$spec" knowledge-work-sdlc install . --dry-run > "$RUNNER_TEMP/preview.json"
           test ! -e .knowledge-sdlc/install.json
           npx --yes --package="$spec" knowledge-work-sdlc install . > "$RUNNER_TEMP/install.json"
