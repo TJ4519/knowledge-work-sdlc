@@ -1,7 +1,7 @@
 # Maintaining the harness
 
-The maintenance rule is one semantic authority, generated delivery views, and
-tests proportional to what code can actually prove.
+Maintain one canonical method, generate the delivery views, and test the
+relationships and behaviours affected by each change.
 
 ## Read before changing structure
 
@@ -88,11 +88,9 @@ This checks:
 - package identities and versions agree; and
 - public documentation links and runtime names remain coherent.
 
-A passing suite does not show that a natural request activated the method, that
-the professional answer is useful, or that a provider supplied an independent
-reviewer. Observe those properties through representative real work, compare a
-no-harness response when attribution matters, and retain only the evidence
-needed to diagnose a consequential failure.
+Use representative host exercises to inspect natural activation, the resulting
+professional work and reviewer context separation. Retain the source revision,
+outputs and observations needed to diagnose any failure.
 
 ## Package and release
 

@@ -1,10 +1,9 @@
 # Document-based semantic working memory
 
-This convention makes existing work usable for production, current recovery,
-historical questions and scoped correction. It is a lightweight working
-ontology: distinctions and relationships, not a new database or truth engine.
-Native notes and search can complement it; persistence alone does not establish
-a statement's role, scope, authority or present applicability.
+Use this working ontology to preserve each consequential statement's role,
+scope, evidence and relationship to the work. It supports production, current
+recovery, historical questions and scoped correction in the existing project
+documents, alongside native notes and search.
 
 ## One owner, recoverable references
 
@@ -70,8 +69,8 @@ remain legitimate when their method, scope and uncertainty are explicit.
 
 Current continuation uses `kw-prime`: selected initiative, current run, meaning,
 decisions and required live outputs. Historical inquiry uses `kw-recall` only
-when the question needs earlier records. Its scope in this increment is the
-same initiative and its authorised source bindings, not other projects.
+when the question needs earlier records. Keep recall within the selected
+initiative and its authorised source bindings.
 
 For historical questions, separate what evidence existed from what the retained
 record shows was used. Report missing rationale; do not fabricate or backdate
@@ -105,17 +104,9 @@ requirements retain their authority. This convention adds no gate and waives no
 required review. A harmless permitted correction does not need another approval
 merely because a new link was recorded.
 
-## Compatibility and limits
+## Record compatibility
 
 All retained material stays project-owned. Closed runs, source snapshots and
 historical decisions are not rewritten to install this convention. Missing
 history narrows an answer; no migration fabricates it. New normative rules and
 reusable lessons retain their existing admission/selection routes.
-
-Same-initiative M1-M3 procedures are implemented here. Cross-initiative recall,
-episode-analysis automation, shared team memory and automatic method promotion
-are not added. A selected past episode can inform a separately authorised
-method-development task under the existing route; that is not automatic learning.
-
-The procedures are fallible. Structural validation verifies references and
-packaging, not agent compliance, semantic truth or comparative improvement.

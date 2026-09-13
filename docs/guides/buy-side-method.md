@@ -1,13 +1,13 @@
 # Buy-side skills are included in the normal installation
 
-The package includes four optional skills for public-equity company-model work: clarify the requested treatment, produce a candidate update, challenge its reasoning, and verify consequential claims. They help keep sources, calculations, assumptions and review evidence connected. They are not a complete stock-selection or valuation system, and they do not supply a firm's model, paid research or an Excel engine.
+The package includes four optional skills for public-equity company-model work: clarify the requested treatment, produce a candidate update, challenge its reasoning, and verify consequential claims. They keep sources, calculations, assumptions and review evidence connected while working with your firm's modelling methods, workbooks, research sources and calculation tools.
 
 ## Install a current main checkout into your own client repository
 
 The ordinary route is to give an agent attached to the intended client repository
 the installation message in the root README. It retrieves current main outside
 the client repository, previews all writes, checks the existing instructions for
-conflicts, and installs only when those checks pass. The tester does not need to
+conflicts, and installs only when those checks pass. You do not need to
 operate Git. See [installation and provider boundaries](installation-and-providers.md).
 
 The manual equivalent, from the Knowledge Work SDLC source checkout, is:
@@ -23,7 +23,7 @@ The standard installer includes all four skills under .agents/skills/ and one sh
 
 For an unedited existing SDLC installation, use the documented [guarded upgrade](installation-and-providers.md#upgrade-and-recovery). A separately copied older buy-side skill must be reconciled explicitly before upgrade; do not delete it merely to suppress the collision.
 
-Plugin packages built from this source include the same skills and shared references. Check their VERSION; an older release archive may predate this addition. The source repository installation is the simplest route for this tester handoff.
+Plugin packages built from this source include the same skills and shared references. Check the package VERSION when installing or upgrading.
 
 ## Start with the analyst's actual problem
 
@@ -54,6 +54,6 @@ The reader should receive the material result and its conditions first, then wha
 
 An analyst-supplied house method remains separately governed through [expert extensions](expert-extensions.md). Using the product's bundled support does not import or approve a house method, adopt a forecast or authorise replacing an original. A check of formulas does not prove that future assumptions will hold.
 
-## Limits of this release
+## Required facilities
 
-Distribution tests establish that the four skills and shared references are present, resolve in both layouts, and participate in normal install/upgrade protection. They do not establish native Excel operation, analyst acceptance or superiority over an ordinary capable agent. Real spreadsheet access, calculation, licensed-source permissions and fresh-context behaviour must be observed in the tester's environment. Use remains subject to the repository licence.
+Your host provides workbook access, calculation, source permissions and any separate reviewer contexts the task requires. The main agent checks the needed operations before production. Use remains subject to the repository licence.

@@ -1,9 +1,8 @@
 # Manual exercises
 
-These optional exercises let a user experience the Knowledge Work SDLC through
-an actual host and inspect whether it improves useful work. They are prompt and
-fixture cheat sheets, not a machine-scored system, release control plane, or
-substitute for professional judgement.
+These optional exercises provide staged prompts and fixtures for trying
+Knowledge Work in your agent host. Inspect the resulting work, corrections and
+continuation through each journey.
 
 | Exercise | What to inspect |
 |---|---|
@@ -12,8 +11,8 @@ substitute for professional judgement.
 | [Expert method and protected work](journeys/expert-method-and-protected-work.md) | A lead-owned method, client workbook, protected/candidate boundary, and real host capability work together or degrade honestly |
 | [Governed personalisation](journeys/governed-personalisation.md) | A past correction influences a later bounded step only after explicit retention and selection, then remains revisable and retireable |
 
-The exercises do not appear in normal runtime state and do not define product
-readiness.
+Exercise fixtures stay outside normal runtime state; copy them into a disposable
+workspace when following a journey.
 
 ## How to use an exercise
 
@@ -32,9 +31,8 @@ readiness.
    reviewer with an explicit omission/gaming prior. Ask for ranked defects with
    exact evidence; do not ask the reviewer to repair while reviewing.
 
-Static tests may falsify broken packaging or contracts. They cannot prove that
-a host discovered the method, that a brief is decision-useful, or that two
-contexts were independent.
+Record method activation, the usefulness of the returned work and the context
+separation used for any independent review.
 
 ## Provider boundary
 

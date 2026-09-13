@@ -101,8 +101,8 @@ Use ordinary intake only if it changes the accepted undertaking materially.
 A follow-on answer requiring durable work after closure uses a linked successor
 run. Do not reopen or edit closed history. No new agent is needed merely to recall.
 Recall returns evidence and gaps; present repairs re-enter the normal producer.
-Do not preload history or lessons on unrelated work. Cross-initiative recall is
-not part of this increment.
+Keep recall within the selected initiative and its permitted source bindings.
+Do not preload history or lessons on unrelated work.
 
 ## Expert-method binding
 

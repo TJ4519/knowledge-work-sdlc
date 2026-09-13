@@ -10,9 +10,7 @@
   preserving unaffected history and legitimate scenarios.
 - Present the product as Knowledge Work Meta-Harness; retain package IDs,
   installation paths and existing release identities.
-- Add mechanical integration/compatibility checks and a staged synthetic exercise.
-  Native behavioural validation and independent professional review are not
-  established by the automated tests. No comparative benefit is claimed.
+- Add integration and compatibility checks and a staged synthetic exercise.
 
 
 ## 0.7.0 — 2026-09-10
@@ -23,8 +21,7 @@
   methods, protected originals and the distinction between availability and use.
 - Validate declared reference containment and delivery, with existing guarded
   ownership handling upgrades and collisions rather than overwriting client work.
-- Add an analyst-facing installation/first-use guide. No financial source pack,
-  practitioner transcript, model, runtime engine or effectiveness claim is shipped.
+- Add an analyst-facing installation and first-use guide.
 - Reject recovery combined with preview, upgrade or apply flags before dispatch;
   a dry-run request must never silently trigger recovery writes.
 

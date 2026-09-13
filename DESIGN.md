@@ -104,9 +104,8 @@ current candidate and applicable records, then presents the substantive result
 and its conditions before artifact availability or resolved-defect history.
 `kw-prime` invokes the same duty for resumed returns. Supporting presentation
 skills may assist composition without becoming a second source of authority.
-The operating contract and these skill instructions supply the context path;
-they do not mechanically enforce semantic compliance or prove comparative
-quality.
+The operating contract and these skills define the agent's reading, production
+and delivery procedures.
 
 ## Document-based semantic working memory
 
@@ -120,11 +119,9 @@ of actual successor outputs. The shared reference is
 Historical inquiry reads superseded material as evidence without restoring it as
 current instruction. It preserves missing rationale, information cutoffs and
 parallel scenarios. A same-value estimate-to-actual change is still a meaning
-change. No new current-state file, global register, vector store, automatic
-lesson route or installed runtime is introduced. Later cross-initiative recall,
-selected episode-development tools and controlled-reuse demonstrations remain
-outside this increment. Tests of references and packaging are not proof of
-agent compliance or comparative effectiveness.
+change. Existing documents retain their ownership; recall stays within the
+selected initiative and its permitted source bindings. Reusable lessons follow
+the separate admission and selection procedure.
 
 ## Composition and specialists
 
@@ -302,29 +299,21 @@ method selection. Canonical skill bodies remain verbatim in generated views.
 An install record owns only generated harness files and the managed
 AGENTS block. `ai_docs` becomes project-owned immediately and is never replaced
 by upgrade. Unexpected process death may leave an explicit recovery marker;
-normal upgrade refuses until recovery restores the recorded backup. No code
-claims a universal filesystem transaction.
+normal upgrade refuses until recovery restores the recorded backup.
 
-## Verification and claim boundary
+## Verification
 
-Local tests attack relation, projection, containment, upgrade, and package
-behaviour. They do not prove that a model produced useful professional work or
-that a host supplied a fresh independent worker.
-
-Native behaviour is inspected through representative real commissions:
-natural activation, fresh-task continuation, protected native work, or
-governed personalisation as relevant to the claim. A useful comparison may run
-the same commission without the harness. Any result binds the exact host,
-source revision, commission, and observed outputs. A fresh reviewer may
-challenge a consequential result, but no repository-authored identity string,
-path, status, or hash proves independence or promotes the product. An
-unavailable provider surface remains unclaimed rather than blocking unrelated
-supported use.
+Local tests cover method relationships, projections, containment, upgrades and
+package behaviour. Manual exercises cover natural activation, fresh-task
+continuation, protected native work and governed personalisation in the host.
+Record the host, source revision, commission and observed outputs for each
+exercise. Inspect the actual work and use a producer-independent reviewer for
+consequential judgments. Continue supported work when an unrelated host
+capability is unavailable.
 
 ## Deliberate absences
 
 There is no Python runtime in an installed workspace or plugin; no `sdlc`
 command; no semantic case file; no automatic transcript append log; no
-automated connector or model selection; no ambient expert method or lesson
-activation; no cross-workspace personalisation claim; and no claim that a
-static provider manifest proves execution on any host.
+automated connector or model selection; and no ambient expert method or lesson
+activation. Host capabilities are bound to the actual actor and operation.

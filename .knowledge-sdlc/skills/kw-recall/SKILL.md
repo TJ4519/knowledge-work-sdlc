@@ -40,8 +40,8 @@ not current instructions. A normal "continue" does not trigger recall.
 
 An explicit historical question permits relevant reading within its authorised
 scope. Do not ask the user to approve each read or restate facts already retained.
-This increment is limited to the selected initiative and the original source
-objects explicitly bound to it. A shared source file can be read when that
+Read within the selected initiative and the original source objects explicitly
+bound to it. A shared source file can be read when that
 binding permits it; an incidental link is not permission to browse another
 initiative, cross a workspace boundary or export licensed material. Where a
 necessary answer depends on unrelated work, return the precise scope gap rather

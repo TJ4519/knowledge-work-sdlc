@@ -22,27 +22,21 @@ you <-> main agent <-> bounded specialists, when needed
 | Capability | What it is for |
 | --- | --- |
 | Managed orchestration | One point of contact, task-specific context and proportionate delegation. |
-| Meaning and revision history (M1) | Keep a reported fact, estimate, assumption and decision distinguishable, even when their numbers match. |
-| Historical recall (M2) | Ask what supported an earlier position and why it changed, inside one selected undertaking. |
-| Consequence-aware correction (M3) | Follow changed evidence into the relevant model, chart or written claim and inspect the repair. |
+| Meaning and revision history | Keep a reported fact, estimate, assumption and decision distinguishable, even when their numbers match. |
+| Historical recall | Ask what supported an earlier position and why it changed, inside one selected undertaking. |
+| Consequence-aware correction | Follow changed evidence into the relevant model, chart or written claim and inspect the repair. |
 | Current continuation | Recover live meaning, decisions and outputs without replaying the whole conversation. |
 | Professional methods | Use existing client practice and optional buy-side supporting skills without making the common core finance-only. |
 
-The M1-M3 procedures are implemented on this development branch. They are not a
-claim of measured time savings, reliable autonomous correction or comparative
-superiority. Cross-initiative recall, automated episode analysis and expanded
-reuse remain later work. See the [working-memory guide](docs/guides/working-memory.md)
-for examples, limits and the distinction between recall and current recovery.
+See the [working-memory guide](docs/guides/working-memory.md) for examples of
+tracing a conclusion to its sources, explaining an earlier position, and
+correcting related work.
 
-The product still installs through the existing `knowledge-work-sdlc` package
-identity and `.knowledge-sdlc/` paths. It sits beside your project files, skills,
-templates and tools in Codex, Claude Cowork or Claude Code. Host compatibility
-requires observed instruction discovery, tool access and any independent context
-claimed for the work. Credentials and client records stay with the host/workspace.
-
-Knowledge Work SDLC is the historical package name. The lifecycle discipline
-remains; the display name makes the product's role clearer. Existing releases,
-install commands, package IDs and client-owned records are not renamed.
+Install using the `knowledge-work-sdlc` package and `.knowledge-sdlc/` paths.
+The method sits beside your project files, skills, templates and tools in Codex,
+Claude Cowork or Claude Code. Your host supplies tool access and the separate
+contexts used for specialist work. Credentials and client records stay with
+your host and workspace.
 
 ## Contents
 
@@ -59,7 +53,7 @@ install commands, package IDs and client-owned records are not renamed.
 - [Distribution and provider boundaries](#distribution-and-provider-boundaries)
 - [Repository map](#repository-map)
 - [Documentation](#documentation)
-- [Validation and claim limits](#validation-and-claim-limits)
+- [Validation](#validation)
 - [Intellectual background](#intellectual-background)
 - [Contributing](#contributing)
 - [Licence](#licence)
@@ -107,7 +101,7 @@ If Git, Python 3.10, or the required filesystem access is unavailable, do not
 improvise a partial installation. Report the missing capability and stop.
 ```
 
-The tester does not operate Git in this route. Git only retrieves the source in
+You do not need to operate Git in this route. Git only retrieves the source in
 the agent's temporary directory; the installer then projects the method into
 the attached repository.
 
@@ -170,9 +164,9 @@ forecasts and their supporting checks distinct without replacing the analyst's
 own modelling method. They are available on installation, not four running
 agents or an automatically approved firm policy.
 
-Send a tester the [buy-side installation and first-use guide](docs/guides/buy-side-method.md).
-Use a current `main` checkout; an older release archive may not include this
-addition. Real workbook, source and calculation access still belong to the host.
+See the [buy-side installation and first-use guide](docs/guides/buy-side-method.md).
+Use a current `main` checkout for these skills. Workbook, source and calculation
+access are supplied by your host.
 
 ## Why knowledge work needs a life cycle
 
@@ -527,10 +521,8 @@ Knowledge Work SDLC has one authored method and two generated delivery shapes.
 | Plugin archive | Native Codex and Claude manifests, skills, specialists, recipes, templates, and user documentation | Python, hooks, connectors, credentials, models, and client files |
 
 The method is model-neutral and avoids provider-specific professional logic.
-Runtime compatibility remains an observed claim.
-
-A host must actually discover the instructions, load the skills, expose the
-required tools, and support any fresh-worker behaviour claimed for that run.
+The host supplies instruction and skill discovery, the tools required for the
+job, and separate worker contexts when the work needs independent review.
 
 Delegated work uses the concierge model by default when the host exposes exact
 inheritance. The method never chooses a cheaper or different model on its own.
@@ -580,7 +572,7 @@ Start with the [documentation map](docs/README.md). Maintainers should read
 [the maintainer guide](docs/guides/maintaining-the-harness.md) before
 changing canonical source or building a package.
 
-## Validation and claim limits
+## Validation
 
 ```bash
 make validate
@@ -589,13 +581,10 @@ make package
 
 `make validate` checks method relationships, containment, installation,
 upgrade, generated projections, documentation links, and package structure.
-Those checks establish mechanical properties of an exact source revision.
+`make package` builds the plugin archive and its source manifest.
 
-They do not prove that an agent understood a commission, that a professional
-work product is useful, or that a host supplied an independent reviewer.
-
-Those claims require observed use on the named host, with the commission,
-revision, outputs, and limitations retained.
+The [manual exercises](examples/manual-exercises/README.md) cover intake,
+correction, fresh-task continuation and governed personalisation in your host.
 
 ## Intellectual background
 

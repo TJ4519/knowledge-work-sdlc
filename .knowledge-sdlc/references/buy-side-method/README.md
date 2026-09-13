@@ -1,6 +1,6 @@
 # Optional buy-side company-model support
 
-These four bundled procedures help an analyst specify, produce, challenge and check company-model work. They preserve the difference between company-reported history, an analytical adjustment, a forecast and a scenario. They are supporting instructions, not a complete equities-research strategy, valuation method, spreadsheet engine or investment recommendation.
+These four bundled procedures help an analyst specify, produce, challenge and check company-model work. They preserve the difference between company-reported history, an analytical adjustment, a forecast and a scenario, and work alongside the analyst's modelling method and tools.
 
 ## Use through the existing SDLC
 
@@ -25,8 +25,6 @@ Skills remain one authored corpus; this shared directory holds their common refe
 - [client-dialogue-guide.md](client-dialogue-guide.md): concrete questions when an analyst's intended treatment remains unclear, not a compulsory interview.
 - [evaluation-episodes.md](evaluation-episodes.md): fictional teaching/test cases. Do not give these expected relationships to a worker and call it a blind test.
 
-## What installation and checks establish
+## Workspace requirements
 
-Installation supplies instructions and references. It does not supply an analyst's workbook, licensed sources, a working Excel connection, fresh-context isolation or proven investment value. A successful source/cell check supports only its named proposition; a balanced workbook or agreement between agents is not blanket assurance. Human adoption and consequential original changes retain their separate authority.
-
-Adapted from the project's PRO-assisted v0.3 method design for canonical distribution. The obsolete private integration commission and all practitioner transcripts, case workbooks and research histories are excluded. Use remains subject to the repository's licence.
+The analyst supplies the workbook, sources and relevant permissions. The host provides source access, calculation tools and any separate reviewer contexts. Bind each check to the proposition and exact candidate it examines. Human adoption and changes to protected originals retain their separate authority. Use remains subject to the repository's licence.

@@ -1,8 +1,8 @@
 # Worked episodes and a proportionate test plan
 
-## Status and limits
+## Using the examples
 
-The three episodes below are authored teaching and evaluation candidates. Every company, value, source label, and workbook arrangement in them is fictional. They illustrate the source, transformation and review distinctions used by this method, not reproduced client incidents. These explanations are test candidates, not reported trial results or evidence of professional effectiveness.
+The three fictional episodes illustrate source interpretation, transformation and review. Their companies, values, source labels and workbook arrangements are teaching examples.
 
 Use these to inspect the instructions, then build or obtain a small authorised source/workbook pair for an actual trial. An evaluator should retain the expected relationships separately from the producer's task. Do not disclose a hidden defect checklist and then call discovery independent.
 

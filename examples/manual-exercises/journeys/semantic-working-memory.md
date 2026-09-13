@@ -1,18 +1,16 @@
 # Semantic working memory: connected exercise
 
-Status: staged synthetic exercise, not an executed trial or benchmark result.
-The fictional Northstar materials test meaning, historical inquiry and scoped
-correction in documents. They do not establish Excel recalculation behaviour.
+Use the fictional Northstar materials to exercise meaning, historical inquiry
+and scoped correction in documents.
 
 ## Operator preparation
 
-Use a disposable client repository and the candidate installation. Keep this
+Use a disposable client repository with the harness installed. Keep this
 journey and the review notes outside the producer's readable workspace. Copy
 only each stage's files when that stage is reached; do not mount the entire
 source repository or later stages. The installed method may be available, but
 not the expected-answer material. If isolation is not available, label the
-exposure and do not claim a blind or held-out exercise. No model runs are
-launched by the source tests or this document.
+exposure in the exercise record.
 
 The inputs are under `../fixtures/semantic-working-memory/` relative to this
 journey: stage-1, stage-2, stage-3 and stage-4. Use the exact ordinary requests,
@@ -60,6 +58,4 @@ successful task that requires no historical reading. Do not penalise a valid
 alternative representation merely because it differs from a preferred layout.
 
 Record source inspection, actual method activation, observed answers, correction
-coverage, preserved work and limitations separately. Without actual execution,
-mark these observations not performed. Mechanical source/package tests do not
-supply agent behaviour, independent review, cost savings or comparative uplift.
+coverage, preserved work and any unresolved findings.

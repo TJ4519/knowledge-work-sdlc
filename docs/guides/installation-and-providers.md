@@ -163,6 +163,5 @@ relevant facility. The method adapts to observed capability instead of shipping
 a hard-coded connector registry. One provider's successful operation never
 proves another provider can perform it.
 
-Provider instructions and linked product documentation were checked on
-2026-09-02. Product interfaces can change; keep the method invariant and update
-only the host-specific route when they do.
+When a provider changes its interface, update the host-specific installation
+route while preserving the common method.
