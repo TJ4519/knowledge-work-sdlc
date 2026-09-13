@@ -23,7 +23,8 @@ npx --yes --package=https://github.com/TJ4519/knowledge-work-sdlc/archive/refs/h
 ```
 
 For repeatable deployment, use the same commit archive in both commands:
-`https://github.com/TJ4519/knowledge-work-sdlc/archive/<commit-sha>.tar.gz`. Open a fresh agent task in the project after installation. Give the agent
+`https://github.com/TJ4519/knowledge-work-sdlc/archive/<commit-sha>.tar.gz`.
+Open a fresh agent task in the project after installation. Give the agent
 an ordinary commission; no workflow commands are needed for the work itself.
 
 The target must be the Git root, not a parent or nested directory. Installation
@@ -57,11 +58,12 @@ npx knowledge-work-sdlc upgrade . --apply
 npx knowledge-work-sdlc recover .
 ```
 
-When using the GitHub route, use the same `--package=github:...#REVISION` prefix
-as for installation. Recovery uses the package revision that attempted the
-interrupted upgrade. Client-owned `ai_docs/` and historical work are preserved.
-Edited managed files require resolution before upgrade; an npm update alone
-does not replace installed agent instructions.
+These commands use an already installed npm dependency. For the direct GitHub
+route, include the same `--package=<HTTPS-archive-URL>` option as for installation,
+pointing to the intended revision. Recovery uses the package revision that
+attempted the interrupted upgrade. Client-owned `ai_docs/` and historical work
+are preserved. Edited managed files require resolution before upgrade; an npm
+update alone does not replace installed agent instructions.
 
 ## Python selection and package removal
 
