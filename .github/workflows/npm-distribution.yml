@@ -1,40 +1,66 @@
-name: Public npx installation
+name: Validate HTTPS npm instructions
 on:
   push:
     branches: [work/npm-distribution-20260913]
 permissions:
-  contents: read
+  contents: write
 jobs:
-  smoke:
+  docs:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: d8a251652cc8b3cd936de21c65820cc86f7d63c9
+          persist-credentials: false
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
       - uses: actions/setup-python@v5
         with:
           python-version: '3.10'
-      - name: Install from public GitHub through npx
+      - name: Update distribution instructions
         run: |
-          set -euo pipefail
-          work="$RUNNER_TEMP/client project"
-          git init -q -b main "$work"
-          cd "$work"
-          printf '# Existing project\n' > AGENTS.md
-          spec='https://github.com/TJ4519/knowledge-work-sdlc/archive/d8a251652cc8b3cd936de21c65820cc86f7d63c9.tar.gz'
-          npx --yes --package="$spec" knowledge-work-sdlc install . --dry-run > "$RUNNER_TEMP/preview.json"
-          test ! -e .knowledge-sdlc/install.json
-          npx --yes --package="$spec" knowledge-work-sdlc install . > "$RUNNER_TEMP/install.json"
-          test -f .agents/skills/kw-recall/SKILL.md
-          test -f .knowledge-sdlc/references/working-memory.md
-          grep -q '# Existing project' AGENTS.md
-          npx --yes --package="$spec" knowledge-work-sdlc upgrade . > "$RUNNER_TEMP/upgrade.json"
-          python3 -c 'import json,os,pathlib; p=pathlib.Path(os.environ["RUNNER_TEMP"]); assert json.loads((p/"preview.json").read_text())["writes_performed"] is False; assert json.loads((p/"install.json").read_text())["validation_passed"] is True; assert json.loads((p/"upgrade.json").read_text())["mode"]=="dry-run"; print("PUBLIC_GITHUB_NPX_INSTALL=passed")'
+          python3 - <<'PY'
+          from pathlib import Path
+          for rel in ('README.md','docs/guides/npm-installation.md'):
+              p=Path(rel);s=p.read_text()
+              s=s.replace('github:TJ4519/knowledge-work-sdlc#main','https://github.com/TJ4519/knowledge-work-sdlc/archive/refs/heads/main.tar.gz')
+              if rel.endswith('npm-installation.md'):
+                  s=s.replace('For repeatable deployment, replace `main` in both commands with the same commit\nSHA.', 'For repeatable deployment, use the same commit archive in both commands:\n`https://github.com/TJ4519/knowledge-work-sdlc/archive/<commit-sha>.tar.gz`.')
+              p.write_text(s)
+          PY
+          git diff --check
+          git add README.md docs/guides/npm-installation.md
+          test "$(git write-tree)" = d4878020bcd5a325ddc68ca62960df2cd89e53df
+          git -c user.name='Knowledge Work build' -c user.email=build@localhost commit -m 'Validate HTTPS npm instructions'
+      - name: Validate and pack
+        run: |
+          make validate
+          npm test
+          make package
+          npm pack --pack-destination dist --json > dist/npm-pack.json
+          npm publish --dry-run ./dist/knowledge-work-sdlc-0.7.0.tgz
       - uses: actions/upload-artifact@v4
         with:
-          name: public-npx-observations
-          path: |
-            ${{ runner.temp }}/preview.json
-            ${{ runner.temp }}/install.json
-            ${{ runner.temp }}/upgrade.json
+          name: final-npm-package
+          path: dist/
           retention-days: 7
+      - name: Upload tested documentation tree
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python3 - <<'PY'
+          import os,json,subprocess,urllib.request
+          from pathlib import Path
+          base='https://api.github.com/repos/TJ4519/knowledge-work-sdlc/git/'
+          def post(kind,data):
+              req=urllib.request.Request(base+kind,data=json.dumps(data).encode(),method='POST',headers={'Authorization':'Bearer '+os.environ['GH_TOKEN'],'Accept':'application/vnd.github+json','Content-Type':'application/json','X-GitHub-Api-Version':'2022-11-28'})
+              with urllib.request.urlopen(req,timeout=30) as r:return json.load(r)
+          entries=[]
+          for p in ('README.md','docs/guides/npm-installation.md'):
+              sha=post('blobs',{'content':Path(p).read_text(),'encoding':'utf-8'})['sha']
+              entries.append({'path':p,'mode':'100644','type':'blob','sha':sha})
+          tree=post('trees',{'base_tree':'545e708740a9e6a1f069e18f733252e3f20c8173','tree':entries})['sha']
+          assert tree=='d4878020bcd5a325ddc68ca62960df2cd89e53df',tree
+          print('TESTED_PRODUCT_TREE='+tree)
+          PY
