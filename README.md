@@ -66,8 +66,8 @@ From your existing project, preview and install directly from GitHub:
 
 ```bash
 cd /absolute/path/to/your-project
-npx --yes --package=github:TJ4519/knowledge-work-sdlc#main knowledge-work-sdlc install . --dry-run
-npx --yes --package=github:TJ4519/knowledge-work-sdlc#main knowledge-work-sdlc install .
+npx --yes --package=https://github.com/TJ4519/knowledge-work-sdlc/archive/refs/heads/main.tar.gz knowledge-work-sdlc install . --dry-run
+npx --yes --package=https://github.com/TJ4519/knowledge-work-sdlc/archive/refs/heads/main.tar.gz knowledge-work-sdlc install .
 ```
 
 Requires Node.js 22+, Python 3.10+ and Git. Review existing project instructions

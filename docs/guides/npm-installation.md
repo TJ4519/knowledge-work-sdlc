@@ -12,18 +12,18 @@ From the project where the agent will work, preview the installation:
 
 ```bash
 cd /absolute/path/to/your-project
-npx --yes --package=github:TJ4519/knowledge-work-sdlc#main knowledge-work-sdlc install . --dry-run
+npx --yes --package=https://github.com/TJ4519/knowledge-work-sdlc/archive/refs/heads/main.tar.gz knowledge-work-sdlc install . --dry-run
 ```
 
 Review the preview and any material conflict between the existing project
 instructions and the proposed Knowledge Work instructions, then install:
 
 ```bash
-npx --yes --package=github:TJ4519/knowledge-work-sdlc#main knowledge-work-sdlc install .
+npx --yes --package=https://github.com/TJ4519/knowledge-work-sdlc/archive/refs/heads/main.tar.gz knowledge-work-sdlc install .
 ```
 
-For repeatable deployment, replace `main` in both commands with the same commit
-SHA. Open a fresh agent task in the project after installation. Give the agent
+For repeatable deployment, use the same commit archive in both commands:
+`https://github.com/TJ4519/knowledge-work-sdlc/archive/<commit-sha>.tar.gz`. Open a fresh agent task in the project after installation. Give the agent
 an ordinary commission; no workflow commands are needed for the work itself.
 
 The target must be the Git root, not a parent or nested directory. Installation
