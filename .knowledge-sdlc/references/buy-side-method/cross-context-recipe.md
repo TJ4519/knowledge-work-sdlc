@@ -4,7 +4,7 @@
 
 The concierge remains the only user-facing agent. Reuse the host's initiative/run, role dispatch, artifact, and disposition mechanisms. This is declarative routing guidance, not another orchestrator or a new active skill.
 
-The underlying standard stays fixed while role contexts change. The method hypothesises that different inspection paths reveal failures; it does not guarantee decorrelation or reproduce a training-time gradient effect.
+The underlying standard stays fixed while role contexts change. Source-first challenge and blind re-derivation provide distinct inspection paths through the evidence and candidate.
 
 ## 1. Clarify only what changes the work
 
