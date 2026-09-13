@@ -1,5 +1,20 @@
 # Changelog
 
+## Unreleased — semantic working memory
+
+- Add optional, same-initiative `kw-recall` for source-backed historical questions
+  without broadening current recovery or activating old instructions.
+- Preserve consequential meaning, scoped revisions and actual consumer links
+  through one shared convention in the existing document owners.
+- Strengthen correction and verification of actual successor outputs while
+  preserving unaffected history and legitimate scenarios.
+- Present the product as Knowledge Work Meta-Harness; retain package IDs,
+  installation paths and existing release identities.
+- Add mechanical integration/compatibility checks and a staged synthetic exercise.
+  Native behavioural validation and independent professional review are not
+  established by the automated tests. No comparative benefit is claimed.
+
+
 ## 0.7.0 — 2026-09-10
 
 - Include four optional buy-side company-model skills and one shared reference

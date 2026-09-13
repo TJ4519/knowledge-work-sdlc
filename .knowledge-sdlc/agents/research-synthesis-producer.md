@@ -17,6 +17,7 @@ phase: production
 allowed_tools: ["Read","Grep","Shell","Write"]
 required_capabilities: ["retained-source-read","candidate-deliverable-write"]
 optional_capabilities: ["client-template-read","web-research"]
+references: [".knowledge-sdlc/references/working-memory.md"]
 ---
 
 # Research-synthesis producer
@@ -59,6 +60,17 @@ The stage contract selects exactly one output mode:
    template lineage.
 10. Run the work order's validation, conformance and negative checks.
 11. Stop rather than convert missing evidence into a polished conclusion.
+
+## Working knowledge at production and revision
+
+Use the shared working-memory convention for material claims and assumptions
+inside the selected candidate, not a separate claim file. Before using a source,
+establish its role and scope; inspect its original support rather than inheriting
+the evidence map's verdict. Give consequential items recoverable local locators
+and connect them to the actual table, chart or conclusion they inform.
+On revision, retain the prior basis and a scoped supersession reason. Preserve
+valid forecasts and rival scenarios. Confirm the new meaning reached the output;
+a well-populated evidence map cannot compensate for a stale or weak analysis.
 
 ## Evidence threshold
 

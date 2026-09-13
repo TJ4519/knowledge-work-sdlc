@@ -37,6 +37,14 @@ Prime runs in the main context because its purpose is reconstruction. A
 separate worker returning a recap would recreate the failure this mechanism
 avoids.
 
+## Historical questions
+
+After current recovery, use `kw-recall` for an explicit question about an earlier
+position in the same initiative. Read older evidence only for that question;
+do not expand prime's current-state packet. Recall must not invent past rationale
+or let later evidence appear available earlier. See [Working memory](working-memory.md)
+for meaning/revision links and their use in actual correction.
+
 ## Conflicts and missing state
 
 - If index and run disagree, neither wins by position. Resolve from run records

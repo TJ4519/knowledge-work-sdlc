@@ -1,57 +1,48 @@
-# Knowledge Work SDLC
+# Knowledge Work Meta-Harness
 
-Knowledge Work SDLC is a plugin you install into a repository you already use
-with Codex, Claude Cowork, or Claude Code.
+An installable meta-harness for professional agents: **managed star-shaped
+orchestration, a controlled context lifecycle, and document-based semantic
+working memory** for research, models, documents and other knowledge work.
 
-It sits beside the repository's existing files, instructions, skills,
-templates, and tools. It does not replace the agent application, supply a
-model, or require a new workflow service.
+Work through one main agent. It clarifies the undertaking, applies relevant
+methods, uses tools and brings in bounded specialists when they help. Their
+work returns to the main agent through named artefacts; you do not manage a
+collection of agent conversations.
 
-The plugin gives one main agent a working method for ambiguous knowledge work:
-research, synthesis, documents, models, and decisions whose meaning can change
-as evidence and human judgment arrive.
+```text
+you <-> main agent <-> bounded specialists, when needed
+              |
+              +-- produce and check useful work
+              +-- retain sources, meanings, assumptions and decisions
+              +-- correct affected outputs without rewriting history
+              +-- resume from the current basis
+              `-- recall why an earlier position changed
+```
 
-The main agent records the request as a durable body of work, plans the present
-attempt, and gives a well-scoped task to another agent when a fresh context or
-specialist would help.
+| Capability | What it is for |
+| --- | --- |
+| Managed orchestration | One point of contact, task-specific context and proportionate delegation. |
+| Meaning and revision history (M1) | Keep a reported fact, estimate, assumption and decision distinguishable, even when their numbers match. |
+| Historical recall (M2) | Ask what supported an earlier position and why it changed, inside one selected undertaking. |
+| Consequence-aware correction (M3) | Follow changed evidence into the relevant model, chart or written claim and inspect the repair. |
+| Current continuation | Recover live meaning, decisions and outputs without replaying the whole conversation. |
+| Professional methods | Use existing client practice and optional buy-side supporting skills without making the common core finance-only. |
 
-Each contribution returns through a named file. The user keeps one point of
-contact rather than managing a collection of agent threads.
+The M1-M3 procedures are implemented on this development branch. They are not a
+claim of measured time savings, reliable autonomous correction or comparative
+superiority. Cross-initiative recall, automated episode analysis and expanded
+reuse remain later work. See the [working-memory guide](docs/guides/working-memory.md)
+for examples, limits and the distinction between recall and current recovery.
 
-When a draft could influence an important decision, the main agent can give the
-draft and its evidence to a fresh reviewer. The reviewer tries to disprove it
-without inheriting the producer's conversation.
+The product still installs through the existing `knowledge-work-sdlc` package
+identity and `.knowledge-sdlc/` paths. It sits beside your project files, skills,
+templates and tools in Codex, Claude Cowork or Claude Code. Host compatibility
+requires observed instruction discovery, tool access and any independent context
+claimed for the work. Credentials and client records stay with the host/workspace.
 
-The findings return to the main agent, and the human decides what to use.
-
-That separation provides the cross-context check. A new context challenges the
-same work; it does not acquire authority to approve it.
-
-When a correction changes the meaning of the work, the main agent finds the
-affected outputs and derives them again. The old assumption does not survive as
-a caveat beside an otherwise unchanged answer.
-
-The repository becomes the system of record for the work. It keeps the accepted
-commission, sources, plan, candidates, challenges, human decisions, and next
-action.
-
-It does not archive every model trace. A later agent or reviewer can recover
-what matters without searching old conversations.
-
-The current run record is the short route into an audit. It points to the live
-meaning, evidence, draft, review, human decision, limitations, and next action.
-
-The included skills and recipes provide the common method. A team can keep its
-own project skills and can import its professional procedures, templates, and
-tools.
-
-Useful feedback first corrects the present work. A human may later retain it as
-a narrow lesson, or commission a separately reviewed change to a skill.
-Provider memory cannot quietly apply it to new work.
-
-Other file-aware agent tools can use the same method when they read repository
-instructions and discover project skills. Compatibility is checked in the host
-rather than inferred from a model name.
+Knowledge Work SDLC is the historical package name. The lifecycle discipline
+remains; the display name makes the product's role clearer. Existing releases,
+install commands, package IDs and client-owned records are not renamed.
 
 ## Contents
 
@@ -64,6 +55,7 @@ rather than inferred from a model name.
 - [Architecture](#architecture)
 - [Bring your own practice](#bring-your-own-practice)
 - [Continuity, memory, and feedback](#continuity-memory-and-feedback)
+- [Working-memory guide](docs/guides/working-memory.md)
 - [Distribution and provider boundaries](#distribution-and-provider-boundaries)
 - [Repository map](#repository-map)
 - [Documentation](#documentation)
@@ -486,6 +478,14 @@ remain thin, and methods load when called.
 
 The index selects one initiative, and the run record names the live files. Each
 piece of context has an owner and a reason to enter the present task.
+
+Historical recall answers a different question: why did an earlier position
+change, and what supported it then? After current recovery, `kw-recall` reads
+only the selected initiative's history needed for that question. Superseded
+records are evidence, not current instructions. It reports missing rationale
+instead of inventing a retrospective story. The shared memory convention links
+consequential meanings to exact source and output locations, so a correction
+can be inspected in the actual work rather than only in a ledger.
 
 Personalisation answers a different question: may a correction from one
 initiative influence later work? Automatic reuse would convert an old episode

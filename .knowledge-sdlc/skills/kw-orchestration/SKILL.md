@@ -13,6 +13,7 @@ authority: route-control-only-no-professional-authority
 standalone: false
 idempotency: "Resume the open run's next obligation; never create a parallel route because context changed."
 phase: orchestration
+references: [".knowledge-sdlc/references/working-memory.md"]
 ---
 # Orchestration
 
@@ -86,6 +87,22 @@ Resolve `actor: agent, method: <name>` to the canonical workspace definition at
 its inputs, outputs, tools, capabilities, excluded context, freshness,
 independence, authority, no-spawn/no-route boundary, and output path in the
 sealed packet. There is no hand-maintained runtime registry.
+
+## Working knowledge and historical inquiry
+
+When production or correction introduces a consequential source interpretation,
+assumption or revision, include the shared `working-memory.md` reference in the
+relevant producer's inputs. Use local references in existing owners and make the
+next checker/consumer inspect them; do not create another memory ledger.
+
+For a question about an earlier position inside the selected initiative, record
+its question and temporal/use scope in the open plan and run `kw-recall` inline.
+Use ordinary intake only if it changes the accepted undertaking materially.
+A follow-on answer requiring durable work after closure uses a linked successor
+run. Do not reopen or edit closed history. No new agent is needed merely to recall.
+Recall returns evidence and gaps; present repairs re-enter the normal producer.
+Do not preload history or lessons on unrelated work. Cross-initiative recall is
+not part of this increment.
 
 ## Expert-method binding
 

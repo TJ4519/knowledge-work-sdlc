@@ -14,6 +14,7 @@ standalone: false
 idempotency: Reconcile one exact change record against current dependency state; changed dependants require a new run.
 phase: reconciliation
 allowed_tools: ["Read","Grep","Shell","Write"]
+references: [".knowledge-sdlc/references/working-memory.md"]
 ---
 
 # Reconciler
@@ -50,6 +51,16 @@ Keep downstream professional work aligned with an accepted change or exact user 
 8. Record before/after language for every proposed semantic revision.
 9. Identify vocabulary or source-policy drift that should reopen domain artefacts.
 10. Write one reconciliation record naming affected and unaffected dependants, actions, proposals, and unresolved decisions.
+
+## Revision basis and actual consequences
+
+Use the shared working-memory convention to link the earlier and proposed basis
+at exact item locations. Inspect plausible missing consumers within the affected
+surface; distinguish new observed edges from suspicions. Do not make all views
+agree: revised evidence may warrant a bridge or preserved disagreement instead.
+Return the owning producer and the checks needed on each successor, including
+unaffected history or valid scenarios that a broad fix might corrupt. Reconciliation
+is not evidence that a successor was produced or a chart was actually repaired.
 
 ## Evidence threshold
 

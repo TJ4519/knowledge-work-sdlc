@@ -36,7 +36,8 @@ provider event stream.
 2. If the message clearly continues existing work, propose the likely
    initiative and load `kw-prime` after confirmation. If the route is materially
    ambiguous, ask only because the choice changes scope, authority, cost, or
-   consequence.
+   consequence. A historical question inside that initiative then uses
+   `kw-recall`; current recovery alone must not import superseded positions.
 3. For new work, create only the files this commission has earned from bundled
    templates. Do not materialise domain policy, model policy, protected-artifact,
    method, memory, or learning surfaces merely to make the workspace look

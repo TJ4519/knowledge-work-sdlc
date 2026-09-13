@@ -15,6 +15,7 @@ standalone: partial
 idempotency: Reuse a current evidence map only when every retained source and protected snapshot hash still matches and the work boundary has not changed.
 phase: evidence
 allowed_tools: ["Read","Grep","Shell","WebSearch","WebFetch","Write"]
+references: [".knowledge-sdlc/references/working-memory.md"]
 ---
 
 # Evidence explorer
@@ -96,6 +97,12 @@ Do not stop after confirming the first route. Search the places where a conflict
 Create a rival route only when two professionally plausible premises or methods would materially alter the output. Each route names the premise, required evidence, consequence, falsifier, and reopen condition.
 
 ### 9. Write the evidence map
+
+Apply the shared working-memory convention to consequential source mappings:
+retain their local locator, role, scope, source basis and actual consumer. Link
+revised interpretations to their prior scoped basis without overwriting it.
+Read the original source before fitting a value to the candidate. A changed
+role or scope can matter even when the retained value does not change.
 
 Use the evidence-map template. Include coverage, retained source revisions, literal facts, interpretations, gaps, conflicts, dependency observations, rival routes, and questions the next stage may not settle by assumption.
 

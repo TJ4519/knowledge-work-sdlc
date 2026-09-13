@@ -13,7 +13,7 @@ authority: candidate-support-only-no-professional-or-protected-authority
 standalone: false
 idempotency: "Reuse only for the same task, candidate, source and method identities and unchanged permitted use."
 phase: production
-references: [".knowledge-sdlc/references/buy-side-method/README.md",".knowledge-sdlc/references/buy-side-method/semantic-contracts.md",".knowledge-sdlc/references/buy-side-method/cross-context-recipe.md"]
+references: [".knowledge-sdlc/references/buy-side-method/README.md", ".knowledge-sdlc/references/buy-side-method/semantic-contracts.md", ".knowledge-sdlc/references/buy-side-method/cross-context-recipe.md", ".knowledge-sdlc/references/working-memory.md"]
 ---
 # Produce a defensible model change
 
@@ -70,6 +70,16 @@ Read back the candidate using the available tools. Compare actual changes with t
 Account for each intended section or item as updated, checked and retained, unresolved with its consequence, or outside scope for a stated reason. Trace source meaning into its use and trace actual workbook changes back to their evidence. Neither direction alone is enough.
 
 Recalculate or refresh only as authorised. Distinguish a produced workbook draft from a recalculated and checked workbook. A draft may be useful when clearly labelled; it cannot inherit a stronger assurance claim.
+
+## Revision and recall support
+
+Apply the shared working-memory convention at material mappings, assumptions
+and changed consumers. Retain local source/candidate locators and predecessor
+basis so a later reader can explain both current and earlier uses. Same-value
+estimate-to-actual transitions still change meaning. Inspect related charts and
+written conclusions where the changed item is used; record missing coverage
+rather than claim that updating a mapping completed the repair. Keep routine
+rows grouped and preserve unrelated historical figures and legitimate scenarios.
 
 ## Handoff and client output
 

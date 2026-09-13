@@ -15,6 +15,9 @@ and continue.
   `ai_docs/initiatives/index.md`, confirm the target, then load `kw-prime`.
 - For an accepted open run, load `kw-orchestration`. The main agent alone
   composes, dispatches, retries, replans, gates, and writes its run record.
+- For a historical question about one selected initiative, recover its current
+  state when needed, then use `kw-recall`. Do not preload history on ordinary
+  continuation; recall reads prior evidence, not new authority.
 - For an explicit request to import, curate, update, bind, retire, or remove a
   lead's method, load `kw-expert-extension`. Installation never selects it.
 

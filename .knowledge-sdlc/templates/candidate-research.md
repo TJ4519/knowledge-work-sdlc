@@ -20,6 +20,12 @@ Separate retained source fact, model-derived inference, rival explanation, and u
 ## Evidence trace
 Each consequential claim links to source snapshot, location, definition, period, transformation, and confidence basis.
 
+## Revision basis, when material
+Use a local claim/assumption locator and link its source, decision or derivation.
+Record what the predecessor meant, what changed within scope, and the documented
+reason. An unchanged value may have a new evidential role. Parallel scenarios
+remain distinct. Record absence of old rationale rather than inventing it.
+
 ## Claim/model consequences
 State what would change and what remains outside scope.
 
