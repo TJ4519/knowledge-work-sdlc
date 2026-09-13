@@ -1,51 +1,40 @@
-name: Validate npm candidate
+name: Public npx installation
 on:
   push:
     branches: [work/npm-distribution-20260913]
 permissions:
   contents: read
 jobs:
-  validate:
+  smoke:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
     steps:
-      - uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-          persist-credentials: false
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
       - uses: actions/setup-python@v5
         with:
           python-version: '3.10'
-      - name: Preserve transfer and scripts
+      - name: Install from public GitHub through npx
         run: |
-          cp .npm-build/changes.patch.gz "$RUNNER_TEMP/changes.patch.gz"
-          cp .npm-build/prepare.py "$RUNNER_TEMP/prepare.py"
-          cp .npm-build/publish-tree.py "$RUNNER_TEMP/publish-tree.py"
+          set -euo pipefail
+          work="$RUNNER_TEMP/client project"
+          git init -q -b main "$work"
+          cd "$work"
+          printf '# Existing project\n' > AGENTS.md
+          spec='github:TJ4519/knowledge-work-sdlc#d8a251652cc8b3cd936de21c65820cc86f7d63c9'
+          npx --yes --package="$spec" knowledge-work-sdlc install . --dry-run > "$RUNNER_TEMP/preview.json"
+          test ! -e .knowledge-sdlc/install.json
+          npx --yes --package="$spec" knowledge-work-sdlc install . > "$RUNNER_TEMP/install.json"
+          test -f .agents/skills/kw-recall/SKILL.md
+          test -f .knowledge-sdlc/references/working-memory.md
+          grep -q '# Existing project' AGENTS.md
+          npx --yes --package="$spec" knowledge-work-sdlc upgrade . > "$RUNNER_TEMP/upgrade.json"
+          python3 -c 'import json,os,pathlib; p=pathlib.Path(os.environ["RUNNER_TEMP"]); assert json.loads((p/"preview.json").read_text())["writes_performed"] is False; assert json.loads((p/"install.json").read_text())["validation_passed"] is True; assert json.loads((p/"upgrade.json").read_text())["mode"]=="dry-run"; print("PUBLIC_GITHUB_NPX_INSTALL=passed")'
       - uses: actions/upload-artifact@v4
         with:
-          name: npm-transfer
-          path: ${{ runner.temp }}/changes.patch.gz
-          retention-days: 2
-      - name: Prepare exact candidate
-        run: python3 "$RUNNER_TEMP/prepare.py"
-      - name: Validate source and exercise packed installer
-        run: |
-          make validate
-          npm test
-          make package
-          npm pack --pack-destination dist --json > dist/npm-pack.json
-          npm publish --dry-run ./dist/knowledge-work-sdlc-0.7.0.tgz
-          git diff --exit-code
-      - name: Upload tested immutable tree
-        env:
-          GH_TOKEN: ${{ github.token }}
-        run: python3 "$RUNNER_TEMP/publish-tree.py"
-      - uses: actions/upload-artifact@v4
-        with:
-          name: tested-npm-package
-          path: dist/
+          name: public-npx-observations
+          path: |
+            ${{ runner.temp }}/preview.json
+            ${{ runner.temp }}/install.json
+            ${{ runner.temp }}/upgrade.json
           retention-days: 7
