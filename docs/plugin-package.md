@@ -2,8 +2,10 @@
 
 The package identifier remains `knowledge-work-sdlc`. Managed star-shaped
 orchestration is complemented by meaning/revision links, conditional historical
-recall within one initiative, and correction into actual dependent outputs.
-See `docs/guides/working-memory.md` for examples and use.
+recall with an explicit related-work scope, and correction into actual dependent
+outputs. Optional replay compares execution choices on isolated copies before a
+live model-policy change. See `docs/guides/working-memory.md` and
+`docs/guides/replay-and-comparison.md` for examples and use.
 
 This generated package supplies a file-native professional-work method to
 Codex, Claude Code, and Claude Cowork. It contains skills, bounded specialist

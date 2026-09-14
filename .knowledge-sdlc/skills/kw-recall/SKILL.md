@@ -1,6 +1,6 @@
 ---
 name: kw-recall
-description: "Answer a historical question inside one selected initiative: why a position changed, what supported an earlier assumption, or which basis applied then. Use only when the question needs prior evidence, not for ordinary current-state recovery."
+description: "Recover the basis of earlier work or compare explicitly named related initiatives in one authorised workspace. Establish applicability without importing old decisions as current authority. Ordinary recovery remains with kw-prime."
 primitive: skill
 fresh_context: false
 independence: main-agent-bounded-historical-inquiry
@@ -40,12 +40,27 @@ not current instructions. A normal "continue" does not trigger recall.
 
 An explicit historical question permits relevant reading within its authorised
 scope. Do not ask the user to approve each read or restate facts already retained.
-Read within the selected initiative and the original source objects explicitly
-bound to it. A shared source file can be read when that
-binding permits it; an incidental link is not permission to browse another
-initiative, cross a workspace boundary or export licensed material. Where a
-necessary answer depends on unrelated work, return the precise scope gap rather
-than silently perform cross-initiative recall.
+By default, read within the selected initiative and its permitted source
+bindings. When the user explicitly names related initiatives to compare or reuse,
+record those exact targets and the permitted question in the current run. Read
+only those targets inside the same authorised workspace; an incidental link or
+thematic similarity does not expand the set. Resolve ambiguous names from the
+compact catalogue before reading substantive contents. A permission boundary
+still applies when a file is discoverable. A broad organisation-wide search is
+not this procedure.
+
+Keep the current initiative as the answer's owner. Do not change another
+initiative's focus, records, assumptions or decisions. For each relevant finding,
+compare subject, definition, period, scenario, evidence and intended use. State
+whether it transfers, requires a bridge, conflicts, or remains unresolved, and
+why. Shared vocabulary is not proof of equivalence. Retain an exact pointer in
+the current evidence map only when later work needs it; no cross-project summary
+or new global index is created.
+
+Reading earlier research does not adopt its method, lesson or permission. A
+material defect noticed in another initiative is a finding, not authority to
+repair that initiative. Cross-workspace access, source export and changes of
+standing practice use their existing explicit permission/admission routes.
 
 ## Reading method
 
@@ -55,8 +70,8 @@ than silently perform cross-initiative recall.
 2. Start at the selected run's exact output references. Follow the necessary
    supersession links, predecessor runs, source snapshots and decisions. Read
    the material passages or native locations, not just search hits or an index.
-   Use bounded search inside this initiative if links are missing. Do not scan
-   all history when exact references already resolve the question.
+   Use bounded search inside the selected reading scope if links are missing.
+   Do not scan all history when exact references already resolve the question.
 3. Check the referenced file/revision and hash where supplied. Resolve an
    index/run mismatch from the owning records, not the newest timestamp. If
    identity or ordering cannot be established, say which part of the answer it

@@ -58,8 +58,12 @@ choice to the provider and proves nothing about model identity or inheritance.
 
 ## Stage outcomes
 
-Append one row per material stage outcome. Artefact paths and hashes are the
-handoff; a worker's prose completion claim is not.
+Append one row per material stage outcome. Record planned, dispatched, returned,
+inspected or unresolved in that row, with the task identity when observable.
+Bind an inspected check to its actual candidate, basis, intended use and result.
+Artefact paths and hashes are the handoff; a worker's completion claim is not.
+Record an explicit no-longer-required reason when a changed goal removes an
+obligation. Reconcile requested coverage against the actual delivered work.
 
 | Stage | Actor | Outcome | Inputs/authority | Produced or superseded artefacts | Verification or limitation |
 |---|---|---|---|---|---|

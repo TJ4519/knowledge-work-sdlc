@@ -1,66 +1,50 @@
-name: Store validated continuity source
+name: npm distribution
 on:
   push:
-    branches: [work/continuity-replay-20260914]
+    branches: [main, 'work/**']
+  pull_request:
+  workflow_dispatch:
 permissions:
   contents: read
 jobs:
-  store:
-    runs-on: ubuntu-latest
-    permissions:
-      contents: write
+  test:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+    runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v4
         with:
-          fetch-depth: 0
           persist-credentials: false
+      - name: Export exact source
+        if: matrix.os == 'ubuntu-latest'
+        run: git archive --format=tar HEAD > "${{ runner.temp }}/source.tar"
+      - uses: actions/upload-artifact@v4
+        if: matrix.os == 'ubuntu-latest'
+        with:
+          name: source-checkout
+          path: ${{ runner.temp }}/source.tar
+          retention-days: 2
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
       - uses: actions/setup-python@v5
         with:
           python-version: '3.10'
-      - name: Reconstruct validated tree
+      - name: Validate core
+        run: make validate
+      - name: Exercise packed npm installer
+        run: npm test
+      - name: Build plugin and npm archives
         run: |
-          cp .build/continuity_candidate.py "$RUNNER_TEMP/continuity_candidate.py"
-          git reset --hard be2fdb4a02f97d29361e4d5036fefaea551a69d9
-          git clean -fdx
-          python3 "$RUNNER_TEMP/continuity_candidate.py"
-          git diff --check
-          git add .
-          test "$(git write-tree)" = c3df1e502dcfeab9da76406961786ca0f0a4063d
-          git -c user.name='Knowledge Work build' -c user.email=build@localhost commit -m 'Reconstruct validated continuity source'
-          mkdir -p dist
-          git archive --format=tar HEAD > dist/source.tar
-      - name: Store content-addressed blobs
-        env:
-          GH_TOKEN: ${{ github.token }}
-        run: |
-          python3 - <<'PY'
-          import json,os,subprocess,urllib.request,urllib.error
-          from pathlib import Path
-          expected='c3df1e502dcfeab9da76406961786ca0f0a4063d'
-          assert subprocess.check_output(['git','rev-parse','HEAD^{tree}'],text=True).strip()==expected
-          paths=subprocess.check_output(['git','diff','--name-only','70ab7879915058f505b086f551dc56fe98635814','HEAD'],text=True).splitlines()
-          assert len(paths)==28 and not any(p.startswith(('.build/','ai_docs/')) for p in paths)
-          entries=[]
-          for p in paths:
-              mode,sha,*_=subprocess.check_output(['git','ls-files','-s','--',p],text=True).split()
-              assert mode in ('100644','100755')
-              if p=='.github/workflows/npm-distribution.yml':
-                  assert sha=='e673dd23e3a825f8fd6c11e3b68142636dad8a47'
-              else:
-                  req=urllib.request.Request('https://api.github.com/repos/TJ4519/knowledge-work-sdlc/git/blobs',data=json.dumps({'content':Path(p).read_text(),'encoding':'utf-8'}).encode(),method='POST',headers={'Authorization':'Bearer '+os.environ['GH_TOKEN'],'Accept':'application/vnd.github+json','Content-Type':'application/json','X-GitHub-Api-Version':'2022-11-28'})
-                  try:
-                      with urllib.request.urlopen(req,timeout=30) as r: result=json.load(r)
-                  except urllib.error.HTTPError as exc:
-                      print('BLOB_TRANSFER_FAILED',p,exc.code,exc.read().decode())
-                      raise
-                  assert result['sha']==sha,(p,result['sha'],sha)
-              entries.append({'path':p,'mode':mode,'type':'blob','sha':sha})
-          Path('dist/tree-entries.json').write_text(json.dumps({'base_tree':'d2601f4d6a3ba16cf6799a1008833388cd2e1815','expected_tree':expected,'tree':entries},indent=2)+'\n')
-          print(json.dumps(entries))
-          PY
+          make package
+          npm pack --pack-destination dist --json > dist/npm-pack.json
+          version=$(node -p 'require("./package.json").version')
+          npm publish --dry-run "./dist/knowledge-work-sdlc-${version}.tgz"
+          git diff --exit-code
       - uses: actions/upload-artifact@v4
-        if: always()
         with:
-          name: validated-continuity-source
+          name: npm-package-${{ matrix.os }}
           path: dist/
           retention-days: 7

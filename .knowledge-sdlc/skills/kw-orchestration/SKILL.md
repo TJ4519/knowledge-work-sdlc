@@ -42,10 +42,11 @@ operation requires it.
    Remove a default only when its absence cannot materially change meaning,
    evidence coverage, candidate quality, independence, authority, custody,
    reconciliation, or recovery.
-4. Write every inclusion and exclusion, its rationale, required inputs, expected
-   output, human gate, verification, and first legal action to the run record
-   before execution. If reality defeats a default, revise the plan visibly;
-   never create a second control path.
+4. Record the chosen route, required inputs, useful outputs, earned checks,
+   authority and first action before execution. Explain material inclusions,
+   exclusions and departures from the recipe; do not enumerate irrelevant skills
+   or create paperwork for routine steps. If evidence changes the route, revise
+   this plan rather than creating a second control path.
 5. Perform human-guided work inline through the relevant skill. Use a fresh
    specialist only when context weight, autonomy, tool isolation, or independent
    challenge makes it materially better.
@@ -88,6 +89,33 @@ its inputs, outputs, tools, capabilities, excluded context, freshness,
 independence, authority, no-spawn/no-route boundary, and output path in the
 sealed packet. There is no hand-maintained runtime registry.
 
+## Dispatch, waiting and resource use
+
+Keep source reading, arithmetic, triage and delivery in the main context unless
+independence, context weight or tool isolation actually requires separation.
+A context ceiling is a maximum, not a target. Do not replace an earned review
+with self-checking merely to reduce cost.
+
+For each dispatched obligation, retain its task identity when exposed, exact
+output target and expected completion signal in the existing plan/outcome row.
+Dispatch once. Prefer a supported blocking wait or completion event. Do useful
+independent work only when it is already in scope. After an unchanged status
+observation, do not call again without a changed result, expired declared wait
+interval, actionable failure or user instruction. Bound the wait/retry route
+before entering it. When no completion mechanism is available, return the useful
+work and pending state; do not promise a background wake the host cannot perform.
+
+On resumption inspect the returned work, not just the worker's completion prose.
+If a timed-out operation may have succeeded, inspect its effect before retrying.
+Record denied or unsupported operations and use only an authorised alternative.
+
+Use the smallest sufficient context packet and exact evidence locations. Reuse
+still-applicable checks rather than copying histories or repeating whole reviews.
+When usage is available, separate production, coordination, checking and repair;
+include failures and retries. Cached input is part of input, not an extra total.
+Missing usage and human time stay unknown; token counts are not an invoice.
+Do not claim a whole-run cap unless every executing path is actually covered.
+
 ## Working knowledge and historical inquiry
 
 When production or correction introduces a consequential source interpretation,
@@ -95,14 +123,22 @@ assumption or revision, include the shared `working-memory.md` reference in the
 relevant producer's inputs. Use local references in existing owners and make the
 next checker/consumer inspect them; do not create another memory ledger.
 
-For a question about an earlier position inside the selected initiative, record
-its question and temporal/use scope in the open plan and run `kw-recall` inline.
+For a question about an earlier position, or explicitly named related work in
+the same authorised workspace, record the question and reading scope in the open
+plan and run `kw-recall` inline.
 Use ordinary intake only if it changes the accepted undertaking materially.
 A follow-on answer requiring durable work after closure uses a linked successor
 run. Do not reopen or edit closed history. No new agent is needed merely to recall.
 Recall returns evidence and gaps; present repairs re-enter the normal producer.
-Keep recall within the selected initiative and its permitted source bindings.
-Do not preload history or lessons on unrelated work.
+Keep ordinary recall within the selected initiative and its source bindings.
+Named related-initiative reading follows `kw-recall` without switching focus or
+importing standing policy. Do not preload history or lessons on unrelated work.
+
+For an explicit replay/comparison request, use `kw-replay` to prepare the bounded
+work order and later interpret frozen returns. The existing main agent dispatches
+the selected producers and checker, preserves each attempt and owns stopping.
+Do not give evaluation answers or later corrections to an independent producer.
+No replay or live model switch follows merely from a discussion of cost.
 
 ## Expert-method binding
 
@@ -246,7 +282,11 @@ Record a correction in its exact meaning, decision, and affected output
 artefacts. When a material consequence may support reuse,
 `kw-feedback-review` writes an inactive lesson candidate. Orchestration cannot
 admit or activate it automatically. Outcome review follows only after a selected
-lesson's named effect has produced observable evidence.
+lesson's named effect has produced observable evidence. When that evidence is
+available, use `kw-learning-outcome-review` inline and link its actual outcome;
+do not launch a new experiment just to fill the outcome record. Application can
+be visible while benefit remains inconclusive. No lesson is admitted or retired
+through this review.
 
 ## Correction re-entry
 
@@ -330,6 +370,32 @@ run; do not create another ledger. Financial/professional work may be complete
 while its delivery remains incomplete: return the supported work promptly with
 the precise gap. Do not withhold useful work pending comparative superiority,
 or use a polished explanation as evidence of that superiority.
+
+## Completion reconciliation
+
+Before a consequential delivery or declaring a run complete, reconcile three
+things in the existing run: the actual request/current meaning, the actual
+candidate, and the evidence for the checks being claimed.
+
+- Compare requested coverage with the deliverable itself, not only the plan or
+  change log. Account for material omissions and valid retained work. Inspect a
+  bounded plausible omitted source-to-output path when the producer's list could
+  miss it; do not turn this into another full review or an item-count quota.
+- Distinguish planned, dispatched, returned, inspected and unresolved obligations
+  in the existing outcome row. A completed task ID or an empty findings list does
+  not establish the critical assertions. Open the referenced check and its exact
+  candidate/basis; compare its observations with the claim made in the delivery.
+- After repair, inspect the affected successor calculation, chart and conclusion.
+  Carry earlier checks forward only for unchanged targets, dependencies and use.
+  A new interpretation can invalidate an assurance claim even when bytes match.
+- Do not drop a missing obligation retrospectively to obtain completion. A genuine
+  goal or evidence change can remove its relevance; retain the reason and affected
+  scope. Distinguish an unresolved required check from work already completed.
+
+If a required check is missing or stale, arrange the remaining authorised check
+within the bound or return the candidate with the exact pending limitation.
+Do not add another manager, accept a known falsehood as a residual, withhold
+unrelated useful work, or label the candidate independently checked prematurely.
 
 ## Completion
 

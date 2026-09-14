@@ -43,8 +43,11 @@ main agent's own context.
 4. Verify paths and hashes where recorded. Check that plan, stage outcomes,
    gates, unresolved matters, and next legal action agree with the named
    artefacts.
-5. Treat `complete` as a claim. If an earned review, authority, promotion,
-   reconciliation, or recovery obligation remains open, do not rewrite the
+5. Treat `complete` as a claim. Reconcile the recorded obligations with actual
+   deliverables and their check records through orchestration's completion
+   reconciliation; do not create a second recovery checklist. If an earned
+   review, authority, promotion, reconciliation, or recovery obligation remains
+   open, do not rewrite the
    closed record. Open a successor recovery/correction run linked to it, make the
    missing obligation the plan, and update the index.
 6. Resume an `open` or `halted` run in its existing record. Do not mint a new
@@ -82,7 +85,8 @@ record, then update the index. Do not create a parallel reconstruction summary.
 
 When the present question asks what supported an earlier position or why it
 changed, recover current state first, then load `kw-recall` inline for that
-bounded same-initiative inquiry. Do not add old history to the recovery packet.
+bounded inquiry. Explicit related-initiative comparisons widen only recall's
+named reading scope, not this recovery packet. Do not add old history to recovery.
 The prior records are historical evidence in recall, not restored current
 instructions. An ordinary continuation still ends this reading path at the
 current required inputs. If the present request is only historical, do not

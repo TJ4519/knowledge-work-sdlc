@@ -33,11 +33,11 @@ collisions, and retains the existing project-state ownership rules.
 
 ## Install an archive as a project dependency
 
-A maintainer can produce `knowledge-work-sdlc-0.7.0.tgz` with `npm pack`.
+A maintainer can produce `knowledge-work-sdlc-0.7.1.tgz` with `npm pack`.
 Given a trusted copy of that archive:
 
 ```bash
-npm install --save-dev /absolute/path/to/knowledge-work-sdlc-0.7.0.tgz
+npm install --save-dev /absolute/path/to/knowledge-work-sdlc-0.7.1.tgz
 npx knowledge-work-sdlc install . --dry-run
 npx knowledge-work-sdlc install .
 ```
@@ -90,7 +90,7 @@ make validate
 npm test
 npm pack --dry-run
 npm pack
-npm publish --dry-run ./knowledge-work-sdlc-0.7.0.tgz
+npm publish --dry-run ./knowledge-work-sdlc-0.7.1.tgz
 ```
 
 Inspect the archive inventory and source version before publication. Package
@@ -103,9 +103,9 @@ name, and any required two-factor authentication. After signing in with that
 publishing account, publish the exact tested archive:
 
 ```bash
-npm publish ./knowledge-work-sdlc-0.7.0.tgz --access public
+npm publish ./knowledge-work-sdlc-0.7.1.tgz --access public
 ```
 
 The GitHub installation route works independently of registry publication. Use
-registry-only instructions such as `npx knowledge-work-sdlc@0.7.0 install .`
+registry-only instructions such as `npx knowledge-work-sdlc@0.7.1 install .`
 only once that version has actually been published and read back.
