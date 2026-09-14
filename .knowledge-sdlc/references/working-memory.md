@@ -69,8 +69,11 @@ remain legitimate when their method, scope and uncertainty are explicit.
 
 Current continuation uses `kw-prime`: selected initiative, current run, meaning,
 decisions and required live outputs. Historical inquiry uses `kw-recall` only
-when the question needs earlier records. Keep recall within the selected
-initiative and its authorised source bindings.
+when the question needs earlier records. Ordinary recall stays within the
+selected initiative and its authorised source bindings. An explicit comparison
+may name related initiatives in the same authorised workspace; `kw-recall` checks
+the scope and applicability without moving their decisions into current policy.
+Current recovery never preloads those other initiatives.
 
 For historical questions, separate what evidence existed from what the retained
 record shows was used. Report missing rationale; do not fabricate or backdate

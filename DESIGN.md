@@ -111,16 +111,19 @@ and delivery procedures.
 
 M1 strengthens consequential meaning, source/use and scoped revision links in
 existing output owners. M2 adds optional `kw-recall` for historical questions
-inside one selected initiative; `kw-prime` still reads only current recovery
-inputs. M3 follows those relationships through ordinary correction and inspection
-of actual successor outputs. The shared reference is
+inside the selected initiative or an explicitly named related-work scope;
+`kw-prime` still reads only current recovery inputs. M3 follows those
+relationships through ordinary correction and inspection of actual successors. The shared reference is
 `.knowledge-sdlc/references/working-memory.md`.
 
 Historical inquiry reads superseded material as evidence without restoring it as
 current instruction. It preserves missing rationale, information cutoffs and
 parallel scenarios. A same-value estimate-to-actual change is still a meaning
 change. Existing documents retain their ownership; recall stays within the
-selected initiative and its permitted source bindings. Reusable lessons follow
+selected initiative and its permitted source bindings unless an explicit
+same-workspace comparison names additional initiatives. Reading those records
+does not select their methods, adopt their decisions or change their state.
+Reusable lessons follow
 the separate admission and selection procedure.
 
 ## Composition and specialists
@@ -145,6 +148,22 @@ may prune it visibly. A required but unavailable review degrades or blocks.
 The plugin projection retains the canonical tool contract and emits Claude's
 native `tools` allowlist, translating the internal `Shell` name to `Bash`. A
 specialist receives no delegation tool unless its canonical contract names one.
+
+## Replay and execution comparison
+
+`kw-replay` is an optional inline procedure selected for an explicit comparison
+request. It prepares the existing work order with exact starting inputs, staged
+evidence, candidate configurations, assessment and resource bounds. The main
+agent uses its normal producer/checker dispatch; replay adds no standing actor.
+Trajectory replays use each candidate's own predecessor. Fixed-start diagnostics
+are identified separately. Frozen normal submissions precede feedback and repair.
+
+The comparison reads actual work against source meaning and intended use, permits
+legitimate alternatives, and reports complete observed effort. Results remain in
+existing research/evidence owners. Development cases stay distinct from fresh
+numerical measurement. A comparison supports a proposal, not automatic model
+selection or a change to live research. Host isolation and usage observations
+come from the host, not from a prompt or file naming convention.
 
 ## Project state and authority
 

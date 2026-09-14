@@ -23,14 +23,18 @@ you <-> main agent <-> bounded specialists, when needed
 | --- | --- |
 | Managed orchestration | One point of contact, task-specific context and proportionate delegation. |
 | Meaning and revision history | Keep a reported fact, estimate, assumption and decision distinguishable, even when their numbers match. |
-| Historical recall | Ask what supported an earlier position and why it changed, inside one selected undertaking. |
+| Historical recall | Recover an earlier basis, or compare explicitly named related work without importing its assumptions as current policy. |
 | Consequence-aware correction | Follow changed evidence into the relevant model, chart or written claim and inspect the repair. |
 | Current continuation | Recover live meaning, decisions and outputs without replaying the whole conversation. |
+| Replay and comparison | Test an authorised alternative execution route in a separate copy and compare the work, support and effort before changing the live setup. |
 | Professional methods | Use existing client practice and optional buy-side supporting skills without making the common core finance-only. |
 
 See the [working-memory guide](docs/guides/working-memory.md) for examples of
 tracing a conclusion to its sources, explaining an earlier position, and
-correcting related work.
+correcting related work. [Replay and comparison](docs/guides/replay-and-comparison.md)
+explains how to try a different model or checking arrangement on selected past
+work. The main agent also reconciles completed checks with the actual delivery
+and uses bounded waiting rather than repeated status polling.
 
 Install using the `knowledge-work-sdlc` package and `.knowledge-sdlc/` paths.
 The method sits beside your project files, skills, templates and tools in Codex,
@@ -141,8 +145,10 @@ The repository route installs the context life cycle into one project. A host
 plugin is the other delivery form: Codex, Claude Code, and Claude Cowork can
 load a generated plugin archive through their own plugin surfaces.
 
-The [latest release](https://github.com/TJ4519/knowledge-work-sdlc/releases/latest)
-contains the archive, which needs no Python at run time.
+Build a matching plugin archive from this source revision with `make package`.
+[Published releases](https://github.com/TJ4519/knowledge-work-sdlc/releases)
+contain the methods from their tagged revision. The installed plugin needs no
+Python at run time.
 
 The [installation and provider guide](docs/guides/installation-and-providers.md)
 gives the exact route supported by each host.

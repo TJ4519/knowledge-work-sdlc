@@ -15,9 +15,12 @@ and continue.
   `ai_docs/initiatives/index.md`, confirm the target, then load `kw-prime`.
 - For an accepted open run, load `kw-orchestration`. The main agent alone
   composes, dispatches, retries, replans, gates, and writes its run record.
-- For a historical question about one selected initiative, recover its current
-  state when needed, then use `kw-recall`. Do not preload history on ordinary
-  continuation; recall reads prior evidence, not new authority.
+- For a historical question or a comparison with explicitly named related
+  initiatives in the same authorised workspace, use `kw-recall`. Keep current
+  recovery narrow; recall reads evidence, not new authority.
+- For a request to replay prior work or compare execution arrangements, load
+  `kw-replay`. Discussion prepares a proposal; execution requires an authorised
+  scope, configurations and resource bound. The main agent retains orchestration.
 - For an explicit request to import, curate, update, bind, retire, or remove a
   lead's method, load `kw-expert-extension`. Installation never selects it.
 
@@ -32,7 +35,10 @@ master summary.
 
 ## Standing constraints
 
-- Preserve direct client language separately from model inference.
+- Preserve direct client language separately from model inference. Interpret a
+  later turn against the ongoing undertaking before treating it as a new job.
+  Retain valid prior work, act on affected dependencies, and respect explicit
+  goal changes. Feature suggestions are not automatically execution authority.
 - Attribute a human turn to a native task/message only when the host directly
   exposes that identity for the current turn. Parent, source, delegation, or
   handoff thread IDs are transport lineage, not current-turn provenance. When

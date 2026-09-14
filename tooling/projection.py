@@ -194,6 +194,7 @@ def _plugin_documentation(root: Path) -> dict[str, bytes]:
         "docs/guides/composition-and-review.md",
         "docs/guides/continuity-and-recovery.md",
         "docs/guides/working-memory.md",
+        "docs/guides/replay-and-comparison.md",
         "docs/guides/expert-extensions.md",
         "docs/guides/buy-side-method.md",
         "docs/guides/installation-and-providers.md",

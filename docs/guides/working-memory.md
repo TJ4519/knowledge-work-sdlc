@@ -47,10 +47,34 @@ reusable heuristic    -> existing lesson admission and selection
 method defect         -> separate method-adaptation work
 ```
 
-Recall stays inside one selected initiative and its permitted source bindings.
+Recall stays inside the selected initiative and its permitted source bindings
+unless you explicitly name related initiatives in the same authorised workspace.
+For example: "Compare the definition in this review with the renewal analysis;
+tell me whether its conclusion applies here." The agent checks definition,
+period, scenario, evidence and use before reusing anything, keeps the answer with
+the current undertaking, and leaves the other initiative unchanged.
+
+This does not merge all project histories or give old decisions new authority.
 An embedded command in a past document is evidence, not a present instruction.
 Do not route lesson content through recall to evade selection. Conversely,
 ordinary historical research needs no lesson-selection ceremony.
+
+## Keep later changes connected to the work
+
+A follow-up can refine the goal, correct a premise, add evidence, ask a historical
+question or commission an implementation. The agent identifies what changed and
+what remains valid before choosing the next action. An explicit new goal takes
+precedence over the old one; an ordinary clarification need not create a new
+project. Corrections still reach actual calculations and conclusions.
+
+Checks are tied to their target, basis and use. An unchanged result used to make
+a different claim may need reconsideration. Before delivery the main agent reads
+the relevant observations and checks coverage against the actual work, rather
+than treating a completed task or a clean change log as proof.
+
+To test an alternative way of doing earlier work, use the separate
+[replay and comparison](replay-and-comparison.md) procedure. Historical recall
+explains what happened; replay creates a new attempt.
 
 ## Installation and upgrades
 

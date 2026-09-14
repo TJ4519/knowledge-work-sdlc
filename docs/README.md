@@ -21,6 +21,11 @@ explains what you observed.
 - [Continuity and recovery](guides/continuity-and-recovery.md) explains how a
   new agent resumes without a transcript recap.
 
+- [Working memory](guides/working-memory.md) explains current recovery, scoped
+  historical and related-work recall, and correction of affected outputs.
+- [Replay and comparison](guides/replay-and-comparison.md) explains isolated
+  evaluation of execution choices without changing live work or model defaults.
+
 ## Tailor it
 
 - [Bundled buy-side support](guides/buy-side-method.md) gives the tester's

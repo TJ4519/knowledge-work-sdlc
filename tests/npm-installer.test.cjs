@@ -86,7 +86,8 @@ test('published payload is allowlisted and has no install lifecycle scripts', ()
 test('help and version run without Python', () => {
   const env = { ...process.env, KNOWLEDGE_WORK_PYTHON: '/does/not/exist' };
   assert.match(ok(cli(['--help'], { env })).stdout, /upgrade/);
-  assert.match(ok(cli(['--version'], { env })).stdout, /^knowledge-work-sdlc 0\.7\.0/m);
+  const version = JSON.parse(fs.readFileSync(path.join(packedRoot, 'package.json'))).version;
+  assert.equal(ok(cli(['--version'], { env })).stdout.trim(), `knowledge-work-sdlc ${version}`);
 });
 
 test('invalid options fail before touching a workspace', () => {

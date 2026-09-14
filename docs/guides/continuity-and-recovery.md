@@ -40,8 +40,9 @@ avoids.
 ## Historical questions
 
 After current recovery, use `kw-recall` for an explicit question about an earlier
-position in the same initiative. Read older evidence only for that question;
-do not expand prime's current-state packet. Recall must not invent past rationale
+position in the same initiative. An explicit comparison may also name related
+initiatives in the same authorised workspace. Read only that defined scope;
+do not expand prime's current-state packet or change the other initiatives. Recall must not invent past rationale
 or let later evidence appear available earlier. See [Working memory](working-memory.md)
 for meaning/revision links and their use in actual correction.
 

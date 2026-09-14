@@ -26,6 +26,23 @@ Keep both visibly separate in the immutable `meaning-rN.md` revision.
 Load during intake when an inferred field can materially alter the route, or
 when later correction reopens the meaning of the commission.
 
+## Evolving intent
+
+Read a later turn against the current purpose, accepted decisions and actual
+work. Distinguish a clarification, corrected premise, new evidence, scenario,
+additional question, implementation instruction and explicit change of goal.
+State only the consequential delta: what changes, what remains valid, which
+outputs or checks depend on it, and what is still proposed. Preserve the literal
+turn separately from that interpretation. Do not invent a new initiative because
+the user is thinking aloud, nor preserve an old goal after they replace it.
+
+A proposal starts from the use of the work, not a preferred mechanism or rubric.
+Ask how it could meet the visible requirements while leaving the real problem
+unsolved: omitted work, wrong source meaning, stale downstream use, excess human
+work or resource cost. Inspect the plausible failure and valid alternative;
+revise the proposal where the evidence warrants it. A successful check of one
+aspect is not success in usefulness, correctness, cost and adoption together.
+
 ## Method
 
 1. Read the exact commission and inspect the referenced workspace evidence.

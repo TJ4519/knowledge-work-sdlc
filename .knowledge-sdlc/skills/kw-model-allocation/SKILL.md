@@ -35,4 +35,8 @@ the user's behalf.
    correctness or epistemic independence.
 
 The project model-policy file stores only confirmed overrides and observed
-limitations. Provisional model names are ignored.
+limitations. Provisional model names are ignored. `kw-replay` may supply a
+source-linked comparison for a proposed choice; that result is not an override.
+An evaluation-only override stays within its experimental run. A future-use
+instruction must name its own exact scope, settings, fallback and effective
+revision before it changes the live route.

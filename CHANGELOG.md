@@ -1,5 +1,18 @@
 # Changelog
 
+## 0.7.1 — 2026-09-14
+
+- Add optional `kw-replay` for bounded, isolated execution comparison before an
+  explicit model-policy change, using existing work-order and result records.
+- Extend `kw-recall` to explicitly named related initiatives in one authorised
+  workspace while preserving narrow current-state recovery.
+- Reconcile evolving intent, actual deliverable coverage and target-bound checks
+  before completion; preserve valid work and inspect affected repairs.
+- Bound waiting and repeated status observations, retain unknown resource costs,
+  and connect selected-lesson outcome review to actual later evidence.
+- Add user guidance, staged developer exercises and package/upgrade checks.
+
+
 ## Unreleased — npm distribution
 
 - Add an npm/npx command for explicit install, preview, guarded upgrade and

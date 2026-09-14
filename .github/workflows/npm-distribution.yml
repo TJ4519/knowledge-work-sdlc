@@ -1,7 +1,7 @@
 name: npm distribution
 on:
   push:
-    branches: [main, work/npm-distribution-20260913]
+    branches: [main, 'work/**']
   pull_request:
   workflow_dispatch:
 permissions:
@@ -17,6 +17,15 @@ jobs:
       - uses: actions/checkout@v4
         with:
           persist-credentials: false
+      - name: Export exact source
+        if: matrix.os == 'ubuntu-latest'
+        run: git archive --format=tar HEAD > "${{ runner.temp }}/source.tar"
+      - uses: actions/upload-artifact@v4
+        if: matrix.os == 'ubuntu-latest'
+        with:
+          name: source-checkout
+          path: ${{ runner.temp }}/source.tar
+          retention-days: 2
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
@@ -31,7 +40,8 @@ jobs:
         run: |
           make package
           npm pack --pack-destination dist --json > dist/npm-pack.json
-          npm publish --dry-run ./dist/knowledge-work-sdlc-0.7.0.tgz
+          version=$(node -p 'require("./package.json").version')
+          npm publish --dry-run "./dist/knowledge-work-sdlc-${version}.tgz"
           git diff --exit-code
       - uses: actions/upload-artifact@v4
         with:

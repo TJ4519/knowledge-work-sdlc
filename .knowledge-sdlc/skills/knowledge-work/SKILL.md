@@ -112,6 +112,18 @@ candidate, challenge, decision, and run-record artefacts. Add a new artefact
 kind only when one named downstream consumer requires a function none of those
 owners can carry; record that necessity in the run before creating it.
 
+## Replay and related-work requests
+
+For an explicit replay or execution-comparison request, establish the evaluation
+as its own initiative/run linked to the source work, then use `kw-replay`. Do not
+replace a live production plan, mutate its history, or execute a proposed test
+before its scope and resource authority are settled. A later comparison question
+can resume that evaluation without creating another manager or method library.
+
+An explicit request to compare named related initiatives uses `kw-recall` after
+recovering the current undertaking. Only the named, authorised same-workspace
+reading scope widens; ordinary recovery and lesson selection remain unchanged.
+
 ## Feedback and expert-method routes
 
 - For a company-model commission that requests or warrants the bundled buy-side
