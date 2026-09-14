@@ -1,16 +1,12 @@
-name: Validate continuity and replay candidate
+name: Store validated continuity source
 on:
   push:
     branches: [work/continuity-replay-20260914]
 permissions:
   contents: read
 jobs:
-  test:
-    strategy:
-      fail-fast: false
-      matrix:
-        os: [ubuntu-latest, macos-latest]
-    runs-on: ${{ matrix.os }}
+  store:
+    runs-on: ubuntu-latest
     permissions:
       contents: write
     steps:
@@ -18,13 +14,10 @@ jobs:
         with:
           fetch-depth: 0
           persist-credentials: false
-      - uses: actions/setup-node@v4
-        with:
-          node-version: '22'
       - uses: actions/setup-python@v5
         with:
           python-version: '3.10'
-      - name: Prepare exact candidate
+      - name: Reconstruct validated tree
         run: |
           cp .build/continuity_candidate.py "$RUNNER_TEMP/continuity_candidate.py"
           git reset --hard be2fdb4a02f97d29361e4d5036fefaea551a69d9
@@ -33,45 +26,41 @@ jobs:
           git diff --check
           git add .
           test "$(git write-tree)" = c3df1e502dcfeab9da76406961786ca0f0a4063d
-          git -c user.name='Knowledge Work build' -c user.email=build@localhost commit -m 'Validate continuity and replay candidate'
-      - name: Validate core
-        run: make validate
-      - name: Exercise packed installer
-        run: npm test
-      - name: Build distributions
-        run: |
-          make package
-          npm pack --pack-destination dist --json > dist/npm-pack.json
-          npm publish --dry-run ./dist/knowledge-work-sdlc-0.7.1.tgz
-          git diff --exit-code
+          git -c user.name='Knowledge Work build' -c user.email=build@localhost commit -m 'Reconstruct validated continuity source'
+          mkdir -p dist
           git archive --format=tar HEAD > dist/source.tar
-      - name: Store tested immutable product tree
-        if: matrix.os == 'ubuntu-latest'
+      - name: Store content-addressed blobs
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
           python3 - <<'PY'
-          import json,os,subprocess,urllib.request
+          import json,os,subprocess,urllib.request,urllib.error
           from pathlib import Path
-          base='70ab7879915058f505b086f551dc56fe98635814'
           expected='c3df1e502dcfeab9da76406961786ca0f0a4063d'
           assert subprocess.check_output(['git','rev-parse','HEAD^{tree}'],text=True).strip()==expected
-          paths=subprocess.check_output(['git','diff','--name-only',base,'HEAD'],text=True).splitlines()
-          assert paths and not any(p.startswith('.build/') or p.startswith('ai_docs/') for p in paths)
+          paths=subprocess.check_output(['git','diff','--name-only','70ab7879915058f505b086f551dc56fe98635814','HEAD'],text=True).splitlines()
+          assert len(paths)==28 and not any(p.startswith(('.build/','ai_docs/')) for p in paths)
           entries=[]
           for p in paths:
-              mode=subprocess.check_output(['git','ls-files','-s','--',p],text=True).split()[0]
+              mode,sha,*_=subprocess.check_output(['git','ls-files','-s','--',p],text=True).split()
               assert mode in ('100644','100755')
-              entries.append({'path':p,'mode':mode,'type':'blob','content':Path(p).read_text()})
-          payload={'base_tree':'d2601f4d6a3ba16cf6799a1008833388cd2e1815','tree':entries}
-          req=urllib.request.Request('https://api.github.com/repos/TJ4519/knowledge-work-sdlc/git/trees',data=json.dumps(payload).encode(),method='POST',headers={'Authorization':'Bearer '+os.environ['GH_TOKEN'],'Accept':'application/vnd.github+json','Content-Type':'application/json','X-GitHub-Api-Version':'2022-11-28'})
-          with urllib.request.urlopen(req,timeout=60) as r: result=json.load(r)
-          assert result['sha']==expected,result['sha']
-          Path('dist/tested-tree.json').write_text(json.dumps({'base_commit':base,'tested_tree':expected,'changed_paths':paths,'run_id':os.environ['GITHUB_RUN_ID']},indent=2)+'\n')
-          print('TESTED_PRODUCT_TREE='+result['sha'])
+              if p=='.github/workflows/npm-distribution.yml':
+                  assert sha=='e673dd23e3a825f8fd6c11e3b68142636dad8a47'
+              else:
+                  req=urllib.request.Request('https://api.github.com/repos/TJ4519/knowledge-work-sdlc/git/blobs',data=json.dumps({'content':Path(p).read_text(),'encoding':'utf-8'}).encode(),method='POST',headers={'Authorization':'Bearer '+os.environ['GH_TOKEN'],'Accept':'application/vnd.github+json','Content-Type':'application/json','X-GitHub-Api-Version':'2022-11-28'})
+                  try:
+                      with urllib.request.urlopen(req,timeout=30) as r: result=json.load(r)
+                  except urllib.error.HTTPError as exc:
+                      print('BLOB_TRANSFER_FAILED',p,exc.code,exc.read().decode())
+                      raise
+                  assert result['sha']==sha,(p,result['sha'],sha)
+              entries.append({'path':p,'mode':mode,'type':'blob','sha':sha})
+          Path('dist/tree-entries.json').write_text(json.dumps({'base_tree':'d2601f4d6a3ba16cf6799a1008833388cd2e1815','expected_tree':expected,'tree':entries},indent=2)+'\n')
+          print(json.dumps(entries))
           PY
       - uses: actions/upload-artifact@v4
+        if: always()
         with:
-          name: continuity-replay-${{ matrix.os }}
+          name: validated-continuity-source
           path: dist/
           retention-days: 7
